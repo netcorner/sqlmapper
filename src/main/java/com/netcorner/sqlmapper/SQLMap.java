@@ -34,7 +34,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 
-public class SQLMap   implements Serializable {
+public class SQLMap   {
 	private static Logger logger = Logger.getLogger(SQLMap.class); 
 	public static final String JDBC_ERROR_KEY="JdbcErrorKey";
 	private static final long serialVersionUID = 1L;
