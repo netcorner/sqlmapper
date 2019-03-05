@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap [
+	<!ELEMENT sqlMap (function,statement)>
+	<!ATTLIST sqlMap
+	merge CDATA #REQUIRED
+	>
+	<!ELEMENT function      (#PCDATA)>
+	<!ELEMENT statement    (insert | update | delete | page | select | ext)*>
+	<!ATTLIST statement
+	id CDATA #REQUIRED
+	>
+	<!ELEMENT insert      (#PCDATA)>
+	<!ATTLIST insert
+	id CDATA #IMPLIED
+	>
+	<!ELEMENT update      (#PCDATA)>
+	<!ATTLIST update
+	id CDATA #IMPLIED
+	>
+	<!ELEMENT delete      (#PCDATA)>
+	<!ATTLIST delete
+	id CDATA #IMPLIED
+	>
+	<!ELEMENT select      (#PCDATA | query)*>
+	<!ATTLIST select
+	id CDATA #IMPLIED
+	>
+	<!ELEMENT query      (#PCDATA)>
+	<!ATTLIST query
+	id CDATA #REQUIRED
+	primary CDATA #IMPLIED
+	parent CDATA #IMPLIED
+	foreign CDATA #IMPLIED
+	>
+	<!ELEMENT ext      (#PCDATA)>
+	<!ATTLIST ext
+	id CDATA #IMPLIED
+	key CDATA #IMPLIED
+	>
+	<!ELEMENT page      (select | from | where | order | count |children)*>
+	<!ATTLIST page
+	id CDATA #IMPLIED
+	primary CDATA #IMPLIED
+	>
+	<!ELEMENT select      (#PCDATA)>
+	<!ELEMENT from      (#PCDATA)>
+	<!ELEMENT where      (#PCDATA)>
+	<!ELEMENT order      (#PCDATA)>
+	<!ELEMENT count      (#PCDATA)>
+	<!ELEMENT query      (#PCDATA)>
+	<!ELEMENT children      (#PCDATA)>
+	<!ATTLIST children
+	id CDATA #REQUIRED
+	parent CDATA #REQUIRED
+	foreign CDATA #REQUIRED
+	>
+]>

@@ -1,3 +1,5 @@
+package com.netcorner.sqlmapper.demo;
+
 import com.alibaba.druid.pool.DruidDataSource;
 import com.netcorner.sqlmapper.QueryPage;
 import com.netcorner.sqlmapper.SQLMap;
@@ -34,18 +36,18 @@ public class TestMain {
     }
 
     public void testAll(){
-		TestInsert();
-		TestMulti();
-		TestFun();
-		TestUseStatementID();
-		TestSelect();
-		TestPage1();
-		TestPage2();
-		TestPage3();
-		TestPage4();
-		TestPage5();
-		TestMerge();
-		TestExt();
+//		TestInsert();
+//		TestMulti();
+//		TestFun();
+//		TestUseStatementID();
+//		TestSelect();
+//		TestPage1();
+//		TestPage2();
+//		TestPage3();
+//		TestPage4();
+//		TestPage5();
+//		TestMerge();
+//		TestExt();
 
 		TestExtMore();
 	}
@@ -77,11 +79,11 @@ public class TestMain {
 		List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
 		hash=new HashMap<String,Object>();
 		hash.put("a", "123");
-		hash.put("b", "cba");
+		hash.put("b", "1212");
 		list.add(hash);
 		hash=new HashMap<String,Object>();
 		hash.put("a", "lklk");
-		hash.put("b", "8989");
+		hash.put("b", "11111111111111222222222221111111111");
 		list.add(hash);
 		properties.put("a", list);
 

@@ -34,7 +34,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 
-public class SQLMap   {
+public class SQLMap   implements Serializable {
 	private static Logger logger = Logger.getLogger(SQLMap.class); 
 	public static final String JDBC_ERROR_KEY="JdbcErrorKey";
 	private static final long serialVersionUID = 1L;
@@ -516,7 +516,7 @@ public class SQLMap   {
     public String executeForResultString(String statementid, Map<String,Object> properties){
     	return (String)executeForResultValue(statementid,properties);
     }
-    private TransactionStatus transactionStatus;
+    private transient TransactionStatus transactionStatus;//排除序列化
     private void setTransactionStatus(TransactionStatus transactionStatus){
 		this.transactionStatus=transactionStatus;
 	}
@@ -562,7 +562,11 @@ public class SQLMap   {
 					if (tmp != null) returnValue = tmp;
 					if (properties != null) {
 						if (properties.containsKey(JDBC_ERROR_KEY)) {
-							dstm.rollback(status);
+							try {
+								dstm.rollback(status);
+							}catch (Exception e){
+
+							}
 							throw new DALException("dal配置文件有误:" + this.key + "." + statementid + ",错误为：" + properties.get(JDBC_ERROR_KEY));
 						}
 					}
@@ -580,7 +584,13 @@ public class SQLMap   {
 					if (tmp != null) returnValue = tmp;
 					if (properties != null) {
 						if (properties.containsKey(JDBC_ERROR_KEY)) {
-							if(transactionStatus!=null) dstm.rollback(transactionStatus);
+							if(transactionStatus!=null) {
+								try {
+									dstm.rollback(transactionStatus);
+								}catch (Exception e){
+
+								}
+							}
 							throw new DALException("dal配置文件有误:" + this.key + "." + statementid + ",错误为：" + properties.get(JDBC_ERROR_KEY));
 						}
 					}
@@ -818,8 +828,12 @@ public class SQLMap   {
 	    				}catch(Exception e){
 	    					properties.put(JDBC_ERROR_KEY,e.getMessage());
 							DataSourceTransactionManager dstm = dataSourceTransactionManagers.get(dbName);
-							if(transactionStatus!=null) dstm.rollback(transactionStatus);
-	    					return null;
+							if(transactionStatus!=null) {
+								try {
+									dstm.rollback(transactionStatus);
+								}catch (Exception ee){}
+							}
+							throw new DALException("dal配置文件有误:"+this.key+"."+statementid+",错误为："+properties.get(JDBC_ERROR_KEY));
 	    				}
 	    				returnValue=properties.get(crud.getId());
 	    			}
