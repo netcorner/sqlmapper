@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "http://netcorner.qiniudn.com/sqlMap.dtd"-->
+<sqlMap>
+	<statement id="add">
+		<config>
+		set names utf8mb4;
+		</config>
+		<insert>
+			#Insert()
+		</insert>
+	</statement>
+	<statement id="edit">
+		<update>
+			#Update()
+		</update>
+	</statement>
+	<statement id="del">
+		<delete>
+			#Delete()
+		</delete>
+	</statement>
+	<statement id="finder">
+		<select id="t1">
+			select*from $table where #Where() order by $primary desc
+		</select>
+	</statement>
+	<statement id="page">
+		<page></page>
+	</statement>
+
+</sqlMap>

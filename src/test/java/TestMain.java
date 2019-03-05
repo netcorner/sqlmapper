@@ -1,0 +1,212 @@
+import com.alibaba.druid.pool.DruidDataSource;
+import com.netcorner.sqlmapper.QueryPage;
+import com.netcorner.sqlmapper.SQLMap;
+import org.apache.velocity.VelocityContext;
+import org.apache.velocity.app.VelocityEngine;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class TestMain {
+    public static void main(String[] args)  {
+		TestMain testMain=new TestMain();
+		DruidDataSource db=new DruidDataSource();
+		db.setDriverClassName("com.mysql.jdbc.Driver");
+		db.setUsername("root");
+		db.setPassword("sjf2008");
+		db.setUrl("jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
+		JdbcTemplate jdbcTemplate=new JdbcTemplate(db);
+		SQLMap.setJdbcTemplates("Jobmate",jdbcTemplate);
+
+		db=new DruidDataSource();
+		db.setDriverClassName("com.mysql.jdbc.Driver");
+		db.setUsername("root");
+		db.setPassword("sjf2008");
+		db.setUrl("jdbc:mysql://localhost:3306/test1?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
+		jdbcTemplate=new JdbcTemplate(db);
+		SQLMap.setJdbcTemplates("Jobmate1",jdbcTemplate);
+
+		testMain.testAll();
+    }
+
+    public void testAll(){
+		TestInsert();
+		TestMulti();
+		TestFun();
+		TestUseStatementID();
+		TestSelect();
+		TestPage1();
+		TestPage2();
+		TestPage3();
+		TestPage4();
+		TestPage5();
+		TestMerge();
+		TestExt();
+
+		TestExtMore();
+	}
+
+	public static void TestVelocity(){
+      VelocityContext vcontext = new VelocityContext();
+      vcontext.put("map", "aaa");
+      StringWriter w = new StringWriter(); 
+      VelocityEngine v=new VelocityEngine();
+      v.evaluate(vcontext, w, "sqlmap", "\\#set($tmp=\\$map)");  
+      System.out.println(" string : " + w );
+	}
+    
+    public static void TestFun(){
+    	Map<String,Object> properties=new HashMap<String,Object>();
+    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	System.out.println(map.execute("fun", properties));
+    }
+	/**
+	 * 测试<ext>标签用途,支持多数据源事务级
+	 */
+	public static void TestExtMore(){
+		Map<String,Object> properties=new HashMap<String,Object>();
+
+		Map<String,Object> hash=new HashMap<String,Object>();
+		hash.put("a", "1");
+		properties.put("b", hash);
+
+		List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
+		hash=new HashMap<String,Object>();
+		hash.put("a", "123");
+		hash.put("b", "cba");
+		list.add(hash);
+		hash=new HashMap<String,Object>();
+		hash.put("a", "lklk");
+		hash.put("b", "8989");
+		list.add(hash);
+		properties.put("a", list);
+
+		SQLMap map=SQLMap.getMap("Jobmate.b");
+		System.out.println(map.execute("extMore", properties));
+	}
+
+	/**
+	 * 测试<ext>标签用途,单数据源事务级
+	 */
+	public static void TestExt(){
+    	Map<String,Object> properties=new HashMap<String,Object>();
+    	
+    	Map<String,Object> hash=new HashMap<String,Object>();
+    	hash.put("a", "1");
+    	properties.put("b", hash);
+    	
+    	List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
+    	hash=new HashMap<String,Object>();
+    	hash.put("a", "aaa423a");
+    	hash.put("b", "cba");
+    	list.add(hash);
+    	hash=new HashMap<String,Object>();
+    	hash.put("a", "lklk");
+    	hash.put("b", "8989");
+    	list.add(hash);
+    	properties.put("a", list);
+    	
+    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	System.out.println(map.execute("ext", properties));
+	}
+	/**
+	 * 测试合并功能
+	 */
+	public static void TestMerge(){
+		SQLMap map=SQLMap.getMap("Jobmate.b");
+    	Map<String,Object> properties=new HashMap<String,Object>();
+    	properties.put("a", "abc");
+		System.out.println(map.execute("add", properties));
+	}
+	/**
+	 * 多条数据插入功能
+	 */
+	public static void TestInsert(){
+		List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
+    	Map<String,Object> properties=new HashMap<String,Object>();
+    	
+    	Map<String,Object> hash=new HashMap<String,Object>();
+    	hash.put("a", "abc");
+    	list.add(hash);
+    	hash=new HashMap<String,Object>();
+    	hash.put("a", "abcx");
+    	list.add(hash);
+    	properties.put("list", list);
+    	
+    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	System.out.println(map.execute("insert", properties));
+	}
+	/**
+	 * 多条语句同时执行（事务级的）
+	 */
+	public static  void TestMulti(){
+		SQLMap map=SQLMap.getMap("Jobmate.b");
+    	Map<String,Object> properties=new HashMap<String,Object>();
+		System.out.println(map.execute("multi", properties));
+	}
+	/**
+	 * statement的子标签的id作用
+	 */
+	public static void TestUseStatementID(){
+		SQLMap map=SQLMap.getMap("Jobmate.b");
+    	Map<String,Object> properties=new HashMap<String,Object>();
+
+
+
+
+		System.out.println(map.execute("ids", properties));
+	}
+	/**
+	 * select的使用，可得到子集合
+	 */
+	public static void TestSelect(){
+		SQLMap map=SQLMap.getMap("Jobmate.b");
+    	Map<String,Object> properties=new HashMap<String,Object>();
+		System.out.println(map.execute("select", properties));
+	}
+
+	public static  void TestPage1(){
+    	QueryPage qpage=new QueryPage();
+    	qpage.setCurrent(2);
+    	qpage.setSize(2);
+    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	System.out.println(map.executeForList("simplepage1", qpage));
+    	System.out.println(qpage.getTotal());
+	}
+	public static void TestPage2(){
+    	QueryPage qpage=new QueryPage();
+    	qpage.setCurrent(2);
+    	qpage.setSize(2);
+    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	System.out.println(map.executeForList("simplepage2", qpage));
+    	System.out.println(qpage.getTotal());
+	}
+	public static void TestPage3(){
+    	QueryPage qpage=new QueryPage();
+    	qpage.setCurrent(2);
+    	qpage.setSize(2);
+    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	System.out.println(map.executeForList("simplepage3", qpage));
+    	System.out.println(qpage.getCountResult());
+	}
+	public static void TestPage4(){
+    	QueryPage qpage=new QueryPage();
+    	qpage.setCurrent(2);
+    	qpage.setSize(2);
+    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	System.out.println(map.executeForList("simplepage4", qpage));
+    	System.out.println(qpage.getCountResult());
+	}
+	public static void TestPage5(){
+    	QueryPage qpage=new QueryPage();
+    	qpage.setCurrent(2);
+    	qpage.setSize(2);
+    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	System.out.println(map.executeForList("simplepage5", qpage));
+    	System.out.println(qpage.getTotal());
+	}
+}

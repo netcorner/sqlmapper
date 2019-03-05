@@ -1,0 +1,775 @@
+2019-03-05 08:05:55,986 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:05:55,986 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:05:55,986 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:05:55,987 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:05:55,989 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:05:55,989 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:05:55,989 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:05:55,989 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:05:55,989 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:05:55,999 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:05:56,000 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:05:56,000 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:05:56,000 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:05:56,008 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:05:56,008 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:05:56,008 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:05:56,008 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:05:56,011 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:05:56,011 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:05:56,011 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:05:56,011 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,508 - Log4JLogChute initialized using file 'velocity.log'
+2019-03-05 08:27:11,508 - Initializing Velocity, Calling init()...
+2019-03-05 08:27:11,509 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-03-05 08:27:11,509 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2019-03-05 08:27:11,509 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-03-05 08:27:11,509 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-03-05 08:27:11,509 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:27:11,509 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:27:11,514 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-03-05 08:27:11,515 - Do unicode file recognition:  false
+2019-03-05 08:27:11,515 - FileResourceLoader : adding path '.'
+2019-03-05 08:27:11,528 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-03-05 08:27:11,529 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-03-05 08:27:11,530 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-03-05 08:27:11,530 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-03-05 08:27:11,531 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-03-05 08:27:11,532 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-03-05 08:27:11,533 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-03-05 08:27:11,534 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-03-05 08:27:11,535 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-03-05 08:27:11,536 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-03-05 08:27:11,580 - Created '20' parsers.
+2019-03-05 08:27:11,584 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-03-05 08:27:11,584 - Velocimacro : Default library not found.
+2019-03-05 08:27:11,584 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-03-05 08:27:11,584 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-03-05 08:27:11,584 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-03-05 08:27:11,584 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-03-05 08:27:11,612 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,617 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,617 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,617 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,617 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,618 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,618 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,618 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,618 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,618 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,618 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,619 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,619 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,620 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,628 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:27:11,629 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,629 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,629 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,629 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,629 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,629 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,646 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,646 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,646 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,646 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,647 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,647 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,647 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,647 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,647 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,647 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,655 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:27:11,656 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,656 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,656 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,656 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,707 - Log4JLogChute initialized using file 'velocity.log'
+2019-03-05 08:27:11,707 - Log4JLogChute initialized using file 'velocity.log'
+2019-03-05 08:27:11,707 - Initializing Velocity, Calling init()...
+2019-03-05 08:27:11,707 - Initializing Velocity, Calling init()...
+2019-03-05 08:27:11,707 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-03-05 08:27:11,707 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-03-05 08:27:11,707 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2019-03-05 08:27:11,707 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2019-03-05 08:27:11,710 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-03-05 08:27:11,710 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-03-05 08:27:11,710 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-03-05 08:27:11,710 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-03-05 08:27:11,710 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:27:11,710 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:27:11,710 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:27:11,710 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:27:11,711 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-03-05 08:27:11,711 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-03-05 08:27:11,711 - Do unicode file recognition:  false
+2019-03-05 08:27:11,711 - Do unicode file recognition:  false
+2019-03-05 08:27:11,711 - FileResourceLoader : adding path '.'
+2019-03-05 08:27:11,711 - FileResourceLoader : adding path '.'
+2019-03-05 08:27:11,711 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-03-05 08:27:11,711 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-03-05 08:27:11,711 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-03-05 08:27:11,711 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-03-05 08:27:11,711 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-03-05 08:27:11,711 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-03-05 08:27:11,712 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-03-05 08:27:11,727 - Created '20' parsers.
+2019-03-05 08:27:11,727 - Created '20' parsers.
+2019-03-05 08:27:11,727 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-03-05 08:27:11,727 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-03-05 08:27:11,727 - Velocimacro : Default library not found.
+2019-03-05 08:27:11,727 - Velocimacro : Default library not found.
+2019-03-05 08:27:11,727 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-03-05 08:27:11,727 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-03-05 08:27:11,727 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-03-05 08:27:11,727 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-03-05 08:27:11,727 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2019-03-05 08:27:11,727 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2019-03-05 08:27:11,727 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-03-05 08:27:11,727 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-03-05 08:27:11,732 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:27:11,732 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:27:11,733 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,733 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,734 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,734 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,734 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,734 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,734 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,734 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,736 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:27:11,736 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:27:11,737 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,737 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,738 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,738 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,738 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,738 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,738 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,738 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,745 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:27:11,745 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:27:11,746 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,746 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,747 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,747 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,747 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,747 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,747 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,747 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,785 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,785 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,786 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,786 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,787 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,788 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,788 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,788 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,788 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,788 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,788 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,788 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,788 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,788 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,788 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,791 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:27:11,791 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:27:11,791 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,791 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,792 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,792 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,792 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,792 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,796 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,796 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,796 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,796 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,797 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,797 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,802 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:27:11,809 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,809 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:27:11,813 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:27:11,813 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:27:11,813 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,813 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,814 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,814 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,814 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,814 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:27:11,814 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,814 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:27:11,926 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,926 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,926 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,926 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,926 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,926 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,926 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,926 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,929 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,929 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,930 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,930 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,930 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,930 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,930 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,930 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,935 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,935 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:27:11,935 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,935 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:27:11,935 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,935 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:27:11,935 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:27:11,935 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,380 - Log4JLogChute initialized using file 'velocity.log'
+2019-03-05 08:36:38,380 - Initializing Velocity, Calling init()...
+2019-03-05 08:36:38,380 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-03-05 08:36:38,380 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2019-03-05 08:36:38,380 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-03-05 08:36:38,381 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-03-05 08:36:38,381 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:36:38,381 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:36:38,384 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-03-05 08:36:38,384 - Do unicode file recognition:  false
+2019-03-05 08:36:38,385 - FileResourceLoader : adding path '.'
+2019-03-05 08:36:38,399 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-03-05 08:36:38,401 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-03-05 08:36:38,401 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-03-05 08:36:38,402 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-03-05 08:36:38,403 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-03-05 08:36:38,403 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-03-05 08:36:38,404 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-03-05 08:36:38,404 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-03-05 08:36:38,405 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-03-05 08:36:38,406 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-03-05 08:36:38,428 - Created '20' parsers.
+2019-03-05 08:36:38,434 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-03-05 08:36:38,434 - Velocimacro : Default library not found.
+2019-03-05 08:36:38,434 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-03-05 08:36:38,434 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-03-05 08:36:38,434 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-03-05 08:36:38,434 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-03-05 08:36:38,454 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,458 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,458 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,458 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,459 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,459 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,459 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,459 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,459 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,459 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,459 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,460 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,460 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,460 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,467 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:36:38,467 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,467 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,467 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,467 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,467 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,467 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,478 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,478 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,479 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,479 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,479 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,479 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,479 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,479 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,479 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,479 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,485 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:36:38,486 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,486 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,486 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,486 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,509 - Log4JLogChute initialized using file 'velocity.log'
+2019-03-05 08:36:38,509 - Log4JLogChute initialized using file 'velocity.log'
+2019-03-05 08:36:38,509 - Initializing Velocity, Calling init()...
+2019-03-05 08:36:38,509 - Initializing Velocity, Calling init()...
+2019-03-05 08:36:38,509 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-03-05 08:36:38,509 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-03-05 08:36:38,509 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2019-03-05 08:36:38,509 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2019-03-05 08:36:38,511 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-03-05 08:36:38,511 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-03-05 08:36:38,511 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-03-05 08:36:38,511 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-03-05 08:36:38,511 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:36:38,511 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:36:38,511 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:36:38,511 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-03-05 08:36:38,511 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-03-05 08:36:38,511 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-03-05 08:36:38,512 - Do unicode file recognition:  false
+2019-03-05 08:36:38,512 - Do unicode file recognition:  false
+2019-03-05 08:36:38,512 - FileResourceLoader : adding path '.'
+2019-03-05 08:36:38,512 - FileResourceLoader : adding path '.'
+2019-03-05 08:36:38,512 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-03-05 08:36:38,512 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-03-05 08:36:38,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-03-05 08:36:38,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-03-05 08:36:38,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-03-05 08:36:38,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-03-05 08:36:38,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-03-05 08:36:38,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-03-05 08:36:38,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-03-05 08:36:38,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-03-05 08:36:38,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-03-05 08:36:38,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-03-05 08:36:38,513 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-03-05 08:36:38,513 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-03-05 08:36:38,513 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-03-05 08:36:38,513 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-03-05 08:36:38,513 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-03-05 08:36:38,513 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-03-05 08:36:38,513 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-03-05 08:36:38,513 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-03-05 08:36:38,524 - Created '20' parsers.
+2019-03-05 08:36:38,524 - Created '20' parsers.
+2019-03-05 08:36:38,524 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-03-05 08:36:38,524 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-03-05 08:36:38,524 - Velocimacro : Default library not found.
+2019-03-05 08:36:38,524 - Velocimacro : Default library not found.
+2019-03-05 08:36:38,524 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-03-05 08:36:38,524 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-03-05 08:36:38,524 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-03-05 08:36:38,524 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-03-05 08:36:38,524 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2019-03-05 08:36:38,524 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2019-03-05 08:36:38,525 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-03-05 08:36:38,525 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-03-05 08:36:38,530 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,530 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,531 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,531 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,531 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,531 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,531 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,531 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,531 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,531 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,544 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,544 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,545 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,545 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,545 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,545 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,546 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,546 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,546 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,546 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,548 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,548 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,548 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,548 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,549 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,549 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,549 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,549 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,549 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,549 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,552 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,552 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,552 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,552 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,553 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,553 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,553 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,553 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,553 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,553 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,558 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,558 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,559 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,559 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,560 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,560 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,560 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,560 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,560 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,560 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,565 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,565 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,565 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,565 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,566 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,566 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,566 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,566 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,566 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,566 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,568 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,568 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,568 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,568 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,568 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,568 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,569 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,569 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,569 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,569 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,571 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,571 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,571 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,571 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,571 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,571 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,572 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,572 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,572 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,572 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,572 - Left side ($map.updatestate) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. sqlmap[line 90, column 47]
+2019-03-05 08:36:38,572 - Left side ($map.updatestate) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. sqlmap[line 90, column 47]
+2019-03-05 08:36:38,573 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,573 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,574 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,574 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,574 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,574 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,574 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,574 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,574 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,574 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,577 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,577 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,578 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,578 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,579 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,579 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,579 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,579 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,579 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,579 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,581 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,581 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,582 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,582 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,582 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,582 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,582 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,582 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,582 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,582 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,585 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,585 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,586 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,586 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,586 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,586 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,586 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,586 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,586 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,586 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,591 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,591 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,591 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,591 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,592 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,592 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,592 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,592 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,592 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,592 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,635 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,635 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,635 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,635 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,636 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,636 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,636 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,636 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,636 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,636 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,656 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,656 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,657 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,657 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,657 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,657 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,657 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,657 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,657 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,657 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,662 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,662 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,670 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,670 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,671 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,671 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,671 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,671 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,671 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,671 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,675 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,675 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,675 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,675 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,675 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,675 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,676 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,676 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,676 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,676 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,680 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,680 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,680 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,680 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,681 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,681 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,681 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,681 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,681 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,681 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,683 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,683 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,683 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,683 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,683 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,683 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,684 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,684 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,684 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,684 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,687 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,687 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,687 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,687 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,688 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,688 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,688 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,688 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,688 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,688 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,689 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,689 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,689 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,689 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,689 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,689 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,690 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,690 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,690 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,690 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,693 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,693 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,694 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,694 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,694 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,694 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,694 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,694 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,694 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,694 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,712 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,712 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,713 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,713 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,713 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,713 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,713 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,713 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,715 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,715 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,715 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,715 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,715 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,715 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,715 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,715 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,717 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,717 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,718 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,718 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,718 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,718 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,718 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,718 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,720 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,720 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,720 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,720 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,722 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,722 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,722 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,722 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,727 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,727 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,727 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,727 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,728 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,728 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,728 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,728 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,728 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,728 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,732 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,732 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,733 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,733 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,733 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,733 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,733 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,733 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,733 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,733 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,738 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,738 - Velocimacro : added VM Test: source=sqlmap
+2019-03-05 08:36:38,738 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,738 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,739 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,739 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,739 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,739 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,739 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,739 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,795 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,795 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,796 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,797 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,797 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,797 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,797 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,797 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,797 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,797 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,797 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,797 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,797 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,800 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,801 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,801 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,807 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,807 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,807 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,807 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,807 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,807 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,807 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,807 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,807 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,807 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,808 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,808 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2019-03-05 08:36:38,808 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,808 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,808 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,808 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,808 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,808 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2019-03-05 08:36:38,808 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,808 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2019-03-05 08:36:38,810 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:36:38,810 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2019-03-05 08:36:38,811 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,811 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,811 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,811 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,811 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,811 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2019-03-05 08:36:38,812 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,812 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2019-03-05 08:36:38,817 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,817 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,817 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,817 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,817 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,817 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,817 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,817 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,822 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,822 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,822 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,822 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,822 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,822 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,822 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,822 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,826 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,826 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,826 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,826 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,827 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,827 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,827 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,827 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,838 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,838 - Velocimacro : added VM Insert: source=sqlmap
+2019-03-05 08:36:38,841 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,841 - Velocimacro : added VM Update: source=sqlmap
+2019-03-05 08:36:38,841 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,841 - Velocimacro : added VM Delete: source=sqlmap
+2019-03-05 08:36:38,841 - Velocimacro : added VM Where: source=sqlmap
+2019-03-05 08:36:38,841 - Velocimacro : added VM Where: source=sqlmap

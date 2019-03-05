@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+">
+
+	<!-- 配置数据源 -->
+	<bean id="Jobmate" name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close"> 
+		<property name="url" value="jdbc:sqlserver://localhost:1433;DatabaseName=Jobmate" />
+		<property name="username" value="sa" />
+		<property name="password" value="sjf@2008" />
+	 
+		<!--初始化连接:连接池启动时创建的初始化连接数量,1.2版本后支持-->
+		<property name="initialSize" value="10"/>
+		<!--最大活动连接:连接池在同一时间能够分配的最大活动连接的数量, 如果设置为非正数则表示不限制,达到MaxActive后,池将不会再创建连接,而会等待其他使用者释放连接,默认为8 -->      
+		<property name="maxActive" value="220"/>
+		<!-- 最大空闲连接:连接池中容许保持空闲状态的最大连接数量,超过的空闲连接将被释放,如果设置为负数表示不限制 ,默认8-->
+		<property name="maxIdle" value="20"/>
+		<!-- 最小空闲连接:连接池中容许保持空闲状态的最小连接数量,低于这个数量将创建新的连接,如果设置为0则不创建-->
+		<property name="minIdle" value="10"/>
+		<!-- 最大等待时间:当没有可用连接时,连接池等待连接被归还的最大时间(以毫秒计数),超过时间则抛出异常,如果设置为-1表示无限等待 -->
+		<property name="maxWait" value="10000" />
+		<!-- SQL查询,用来验证从连接池取出的连接,在将连接返回给调用者之前.如果指定,则查询必须是一个SQL SELECT并且必须返回至少一行记录  
+		<property name="validationQuery" value="SELECT 1" />-->
+		<!-- 是否在自动回收超时连接的时候打印连接的超时错误 -->
+		<property name="logAbandoned" value="true" />
+		<!-- 是否自动回收超时连接 -->
+		<property name="removeAbandoned" value="true" />
+		<!-- 超时时间(以秒数为单位),设置超时时间有一个要注意的地方,超时时间=现在的时间-程序中创建Connection的时间,
+		如果 maxActive比较大,比如超过100,那么removeAbandonedTimeout可以设置长一点比如180,也就是三分钟无响应的连接进行 回收,
+		当然应用的不同设置长度也不同 -->
+		<property name="removeAbandonedTimeout" value="180" />
+	</bean>
+</beans>

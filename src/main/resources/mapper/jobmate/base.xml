@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "http://netcorner.qiniudn.com/sqlMap.dtd"-->
+<sqlMap>
+	<statement id="add">
+		<insert>
+			#Insert()
+		</insert>
+	</statement>
+	<statement id="edit">
+		<update>
+			#Update()
+		</update>
+	</statement>
+	<statement id="del">
+		<delete>
+			#Delete()
+		</delete>
+	</statement>
+	<statement id="finder">
+		<select>
+			select*from $table where #Where()
+			order by 
+			#set($flag=false)
+			#foreach($p in $primarys)
+				#if($p.getIsPrimary())
+					#if($flag),#end
+					order by $p.getName() desc
+					#set($flag=true)
+				#end
+			#end
+		</select>
+	</statement>
+	<statement id="page">
+		<page></page>
+	</statement>
+</sqlMap>
