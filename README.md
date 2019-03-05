@@ -35,7 +35,7 @@
     <span style="white-space:pre"></span>&nbsp; &nbsp; &lt;artifactId&gt;sqlmapper&lt;/artifactId&gt;
 </p>
 <p>
-    <span style="white-space:pre"></span>&nbsp; &nbsp; &lt;version&gt;Tag&lt;/version&gt;
+    <span style="white-space:pre"></span>&nbsp; &nbsp; &lt;version&gt;1.0&lt;/version&gt;
 </p>
 <p>
     <span style="white-space:pre"></span>&lt;/dependency&gt;
