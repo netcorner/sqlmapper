@@ -3,8 +3,7 @@ package com.netcorner.sqlmapper.utils;
 import com.netcorner.sqlmapper.DALException;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -224,14 +223,7 @@ public  class StringTools {
 		if((str+"").equals(""))return true;
 		return false;
 	}
-	/**
-	 * 密码加密,在md5上再加一层加密
-	 * @param message
-	 * @return
-	 */
-	public static String getPwdEncrypt(String message) {
-		return getMD5(encrypt(message,"19191919"));
-	}
+
 	/**
 	 * md加密
 	 * @param message
@@ -344,42 +336,7 @@ public  class StringTools {
 		}
 		return sb.toString();
 	}
-	private static BASE64Encoder encoder = new BASE64Encoder();// 加密
-	private static BASE64Decoder decoder = new BASE64Decoder();// 解密
-	/**
-	 * 加密
-	 * 
-	 * @param inputStr
-	 * @return
-	 * @throws Exception
-	 */
-	public static String encryptBASE64(String inputStr) {
-		String value = "";
-		try {
-			byte[] key = inputStr.getBytes();
-			value = encoder.encodeBuffer(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return value;
-	}
 
-	/**
-	 * 解密
-	 * 
-	 * @param outputStr
-	 * @return
-	 * @throws Exception
-	 */
-	public static String decryptBASE64(String outputStr) {
-		String value = "";
-		try {
-			byte[] key = decoder.decodeBuffer(outputStr);
-			value = new String(key);
-		} catch (Exception e) {
-		}
-		return value;
-	}
 	/**
 	 * 将某种编码(如GB2312)转换成另外一种编码(如UTF-8)
 	 * @param str
@@ -468,109 +425,7 @@ public  class StringTools {
 	}
 
     
-    private final static String DES = "DES";
-    /**
-     * Description 根据键值进行加密
-     * @param data 
-     * @param key  加密键byte数组
-     * @return
-     * @throws Exception
-     */
-    public static String encrypt(String data, String key) {
-        byte[] bt=null;
-		try {
-			bt = encrypt(data.getBytes(), key.getBytes());
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        String strs = new BASE64Encoder().encode(bt);
-        return strs;
-    }
- 
-    /**
-     * Description 根据键值进行解密
-     * @param data
-     * @param key  加密键byte数组
-     * @return
-     * @throws IOException
-     * @throws Exception
-     */
-    public static String decrypt(String data, String key){
-        if (data == null)
-            return null;
-        BASE64Decoder decoder = new BASE64Decoder();
-        byte[] buf=null;
-		try {
-			buf = decoder.decodeBuffer(data);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        byte[] bt=null;
-		try {
-			bt = decrypt(buf,key.getBytes());
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        return new String(bt);
-    }
- 
-    /**
-     * Description 根据键值进行加密
-     * @param data
-     * @param key  加密键byte数组
-     * @return
-     * @throws Exception
-     */
-    private static byte[] encrypt(byte[] data, byte[] key) throws Exception {
-        // 生成一个可信任的随机数源
-        SecureRandom sr = new SecureRandom();
- 
-        // 从原始密钥数据创建DESKeySpec对象
-        DESKeySpec dks = new DESKeySpec(key);
- 
-        // 创建一个密钥工厂，然后用它把DESKeySpec转换成SecretKey对象
-        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance(DES);
-        SecretKey securekey = keyFactory.generateSecret(dks);
- 
-        // Cipher对象实际完成加密操作
-        Cipher cipher = Cipher.getInstance(DES);
- 
-        // 用密钥初始化Cipher对象
-        cipher.init(Cipher.ENCRYPT_MODE, securekey, sr);
- 
-        return cipher.doFinal(data);
-    }
-     
-     
-    /**
-     * Description 根据键值进行解密
-     * @param data
-     * @param key  加密键byte数组
-     * @return
-     * @throws Exception
-     */
-    private static byte[] decrypt(byte[] data, byte[] key) throws Exception {
-        // 生成一个可信任的随机数源
-        SecureRandom sr = new SecureRandom();
- 
-        // 从原始密钥数据创建DESKeySpec对象
-        DESKeySpec dks = new DESKeySpec(key);
- 
-        // 创建一个密钥工厂，然后用它把DESKeySpec转换成SecretKey对象
-        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance(DES);
-        SecretKey securekey = keyFactory.generateSecret(dks);
- 
-        // Cipher对象实际完成解密操作
-        Cipher cipher = Cipher.getInstance(DES);
- 
-        // 用密钥初始化Cipher对象
-        cipher.init(Cipher.DECRYPT_MODE, securekey, sr);
- 
-        return cipher.doFinal(data);
-    }
+
     /**
      * 特殊字符过滤
      * @param val

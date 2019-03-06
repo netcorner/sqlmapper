@@ -22,9 +22,6 @@ import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 
 import org.springframework.jdbc.core.*;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.apache.log4j.Logger;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
@@ -142,7 +139,7 @@ public class SQLMap   implements Serializable {
 		}else {
 			jdbcTemplate=  jdbcTemplateMap.get(dbName);
 		}
-		setDataSourceTransactionManager(dbName,jdbcTemplate);
+		SqlSessionFactory.setSessions(dbName,jdbcTemplate.getDataSource());
 		return jdbcTemplate;
 	}
 	private static Map<String,JdbcTemplate> jdbcTemplateMap;
@@ -150,16 +147,8 @@ public class SQLMap   implements Serializable {
 		if(jdbcTemplateMap==null)
 			jdbcTemplateMap=new HashMap<String, JdbcTemplate>();
 		jdbcTemplateMap.put(dbName,jdbcTemplate);
-		setDataSourceTransactionManager(dbName,jdbcTemplate);
+		SqlSessionFactory.setSessions(dbName,jdbcTemplate.getDataSource());
 	}
-	private static void setDataSourceTransactionManager(String dbName,JdbcTemplate jdbcTemplate){
-		if(!dataSourceTransactionManagers.containsKey(dbName)){
-			DataSourceTransactionManager dstm=new DataSourceTransactionManager();
-			dstm.setDataSource(jdbcTemplate.getDataSource());
-			dataSourceTransactionManagers.put(dbName,dstm);
-		}
-	}
-
 
 	
 	private String dbVersion;
@@ -201,22 +190,14 @@ public class SQLMap   implements Serializable {
 		}
 		return dbVersion;
 	}
-	/**
-	 * 得到sqlmap对象 的静态方法（文件存缓存）
-	 * @param key
-	 * @return
-	 */
-	public static SQLMap getMap(String key){
-		return getMap(key,null);
-	}
+
 
 	/**
 	 * 得到sqlmap对象 的静态方法（文件存缓存）
 	 * @param key
-	 * @param status
 	 * @return
 	 */
-	private static SQLMap getMap(String key,TransactionStatus status)
+	public static SQLMap getMap(String key)
     {
         String path = getPath(getConfigPath(),key);
         CacheManager manager = CacheManager.create(); 
@@ -253,7 +234,7 @@ public class SQLMap   implements Serializable {
 		        cache.put(element); 
         	}
     	}
-		map.setTransactionStatus(status);
+		//map.setTransactionStatus(status);
         return map;
     }
     private static String appPath=Thread.currentThread().getContextClassLoader().getResource("").toString().replace("file:/", "");
@@ -516,10 +497,10 @@ public class SQLMap   implements Serializable {
     public String executeForResultString(String statementid, Map<String,Object> properties){
     	return (String)executeForResultValue(statementid,properties);
     }
-    private transient TransactionStatus transactionStatus;//排除序列化
-    private void setTransactionStatus(TransactionStatus transactionStatus){
-		this.transactionStatus=transactionStatus;
-	}
+//    private transient TransactionStatus transactionStatus;//排除序列化
+//    private void setTransactionStatus(TransactionStatus transactionStatus){
+//		this.transactionStatus=transactionStatus;
+//	}
     /**
      * 执行操作
      * @param statementid
@@ -551,62 +532,29 @@ public class SQLMap   implements Serializable {
 	        	}
 	        }
         }else{
-			DataSourceTransactionManager dstm = dataSourceTransactionManagers.get(dbName);
-        	if(transactionStatus==null) {
-				//PlatformTransactionManager ptm=(PlatformTransactionManager)dstm;
-				DefaultTransactionDefinition def = new DefaultTransactionDefinition();
-				TransactionStatus status = dstm.getTransaction(def);
-				setTransactionStatus(status);
-				for (CRUDBase crud : statement.getSqlList()) {
-					tmp = execStatementSQL(jdbc, crud, properties, qpage, statementid);
-					if (tmp != null) returnValue = tmp;
-					if (properties != null) {
-						if (properties.containsKey(JDBC_ERROR_KEY)) {
-							try {
-								dstm.rollback(status);
-							}catch (Exception e){
+//			DataSourceTransactionManager dstm = SqlSessionFactory.getSessions().get(dbName);
+//			DefaultTransactionDefinition def = new DefaultTransactionDefinition();
+//			TransactionStatus status = dstm.getTransaction(def);
 
-							}
-							throw new DALException("dal配置文件有误:" + this.key + "." + statementid + ",错误为：" + properties.get(JDBC_ERROR_KEY));
-						}
+			SqlSessionFactory sqlSessionFactory=new SqlSessionFactory();
+			for (CRUDBase crud : statement.getSqlList()) {
+				tmp = execStatementSQL(jdbc, crud, properties, qpage, statementid);
+				if (tmp != null) returnValue = tmp;
+				if (properties != null) {
+					if (properties.containsKey(JDBC_ERROR_KEY)) {
+						//dstm.rollback(status);
+						sqlSessionFactory.rollback();
+						throw new DALException("dal配置文件有误:" + this.key + "." + statementid + ",错误为：" + properties.get(JDBC_ERROR_KEY));
 					}
 				}
-				try {
-					dstm.commit(status);
-				}catch (Exception e){
-					properties.put(JDBC_ERROR_KEY,e.getMessage());
-					throw new DALException("dal配置文件有误:" + this.key + "." + statementid + ",错误为：" + properties.get(JDBC_ERROR_KEY));
-				}
-				clearTransactionStatus();
-			}else{
-				for (CRUDBase crud : statement.getSqlList()) {
-					tmp = execStatementSQL(jdbc, crud, properties, qpage, statementid);
-					if (tmp != null) returnValue = tmp;
-					if (properties != null) {
-						if (properties.containsKey(JDBC_ERROR_KEY)) {
-							if(transactionStatus!=null) {
-								try {
-									dstm.rollback(transactionStatus);
-								}catch (Exception e){
-
-								}
-							}
-							throw new DALException("dal配置文件有误:" + this.key + "." + statementid + ",错误为：" + properties.get(JDBC_ERROR_KEY));
-						}
-					}
-				}
-
 			}
+			sqlSessionFactory.commit();
+			//dstm.commit(status);
         }
         return returnValue;
     }
 
-	private void clearTransactionStatus() {
-    	transactionStatus=null;
-	}
 
-
-    private static Map<String,DataSourceTransactionManager> dataSourceTransactionManagers=new HashMap<String,DataSourceTransactionManager>();
 
 
 	private Object execStatementSQL(CRUDBase crud,Map<String,Object> properties,QueryPage qpage,String statementid){
@@ -647,6 +595,7 @@ public class SQLMap   implements Serializable {
 		String sql = getTemplateValue(crud.getSql(), properties);
 		Ext ext=(Ext)crud;
 		List<Map<String,Object>> list=null;
+
 		Map<String,Object> prop=properties;
 		if(properties.containsKey(ext.getKey())){
 			Object o=properties.get(ext.getKey());
@@ -670,7 +619,7 @@ public class SQLMap   implements Serializable {
 			String fun=sql.replace("{", "").replace("}", "");
 			String[] arr=fun.split("\\.");
 			if(arr.length==3){
-				SQLMap map=SQLMap.getMap(arr[0]+"."+arr[1],transactionStatus);
+				SQLMap map=SQLMap.getMap(arr[0]+"."+arr[1]);
 				Statement statement=map.getStatement(arr[2]);
 		        for(CRUDBase crudBase : statement.getSqlList()){
 		        	if(list==null){
@@ -827,12 +776,7 @@ public class SQLMap   implements Serializable {
 	    					properties.put(crud.getId(),jdbc.update(s.substring(1,s.length()-1)));
 	    				}catch(Exception e){
 	    					properties.put(JDBC_ERROR_KEY,e.getMessage());
-							DataSourceTransactionManager dstm = dataSourceTransactionManagers.get(dbName);
-							if(transactionStatus!=null) {
-								try {
-									dstm.rollback(transactionStatus);
-								}catch (Exception ee){}
-							}
+
 							throw new DALException("dal配置文件有误:"+this.key+"."+statementid+",错误为："+properties.get(JDBC_ERROR_KEY));
 	    				}
 	    				returnValue=properties.get(crud.getId());
