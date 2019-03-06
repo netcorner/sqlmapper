@@ -5,6 +5,7 @@ package com.netcorner.hotelanalysis.config;
  */
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
+import com.netcorner.sqlmapper.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -65,7 +66,9 @@ public class MutileDataSourceConfig {
     @Bean(name = "testTransactionManager")
     public PlatformTransactionManager testTransactionManager(@Qualifier("testDataSource") DataSource myqlDataSource)
     {
-        return new DataSourceTransactionManager(myqlDataSource);
+        PlatformTransactionManager platformTransactionManager= new DataSourceTransactionManager(myqlDataSource);
+        SqlSessionFactory.setSessions("test",platformTransactionManager);
+        return platformTransactionManager;
     }
 
 
@@ -78,6 +81,8 @@ public class MutileDataSourceConfig {
     @Bean(name = "test1TransactionManager")
     public PlatformTransactionManager test1TransactionManager(@Qualifier("test1DataSource") DataSource myqlDataSource)
     {
-        return new DataSourceTransactionManager(myqlDataSource);
+        PlatformTransactionManager platformTransactionManager= new DataSourceTransactionManager(myqlDataSource);
+        SqlSessionFactory.setSessions("test",platformTransactionManager);
+        return platformTransactionManager;
     }
 }
