@@ -1,6 +1,19 @@
+# sqlmapper
 <p>
-    <br/>
+   <strong> &nbsp;&nbsp;&nbsp;&nbsp;可能是比mybatis更好用的数据映射关系框架。</strong>
+    
+    产生背景：mybatis很强大，但是感觉没那么好用，有很多我想要的功能很难实现，适合自己的才是最好的！
+    
+    1.传递的参数调用不好使
+    mysqbatis的xml就是一个模板，通过传递的参数动态生成组合的sql语句，但语法用起来没那么方便得去查询使用手册，我想用一种我自己习惯的模板语句（我在视图端用的velocity，所以我想着用这个语言直接编写模版）。
+    
+    2.未写完，待续...
+    
+    
+
+    
 </p>
+
 <p>
     <strong><span style="white-space:pre"></span>Step 1. Add the JitPack repository to your build file</strong>
 </p>
