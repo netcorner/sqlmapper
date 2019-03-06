@@ -19,15 +19,6 @@
 	<statement id="finder">
 		<select>
 			select*from $table where #Where()
-			order by 
-			#set($flag=false)
-			#foreach($p in $primarys)
-				#if($p.getIsPrimary())
-					#if($flag),#end
-					order by $p.getName() desc
-					#set($flag=true)
-				#end
-			#end
 		</select>
 	</statement>
 	<statement id="page">
