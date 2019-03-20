@@ -1,17 +1,11 @@
 package com.netcorner.sqlmapper;
 
-import java.io.File;
-import java.io.Serializable;
-import java.io.StringWriter;
+import java.io.*;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -21,6 +15,7 @@ import com.netcorner.sqlmapper.utils.StringTools;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.*;
 import org.apache.log4j.Logger;
 import org.apache.velocity.VelocityContext;
@@ -237,16 +232,42 @@ public class SQLMap   implements Serializable {
 		//map.setTransactionStatus(status);
         return map;
     }
+
     private static String appPath=Thread.currentThread().getContextClassLoader().getResource("").toString().replace("file:/", "");
     private static String configPath;
+
+
     private static String rootPath;
+
+
+
+
+
+
+	public static String getProperty(String propertyName){
+		Properties props = new Properties();
+		InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("application.properties");
+		if(inputStream==null) inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("bootstrap.properties");
+		if(inputStream==null) return null;
+		try {
+			props.load(inputStream);
+		} catch (IOException e) {
+			return null;
+		}
+		return props.getProperty(propertyName);
+	}
+
+
     /**
      * 得到根目录路径
      * @return
      */
     public static String getRootPath() {
     	if(rootPath==null){
-    		rootPath=appPath;
+			rootPath=getProperty("spring.sqlmapper.location");
+			if(rootPath==null){
+				rootPath=appPath;
+			}
     		/*
             if(isWebApp()){
             	//去除classes/

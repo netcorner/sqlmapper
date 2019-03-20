@@ -3,15 +3,13 @@ package com.netcorner.sqlmapper.demo;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.netcorner.sqlmapper.QueryPage;
 import com.netcorner.sqlmapper.SQLMap;
+import com.netcorner.sqlmapper.utils.SpringTools;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.io.StringWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class TestMain {
     public static void main(String[] args)  {
@@ -36,7 +34,8 @@ public class TestMain {
     }
 
     public void testAll(){
-//		TestInsert();
+
+		TestInsert();
 //		TestMulti();
 //		TestFun();
 //		TestUseStatementID();
@@ -49,8 +48,10 @@ public class TestMain {
 //		TestMerge();
 //		TestExt();
 
-		TestExtMore();
+		//TestExtMore();
 	}
+
+
 
 	public static void TestVelocity(){
       VelocityContext vcontext = new VelocityContext();
