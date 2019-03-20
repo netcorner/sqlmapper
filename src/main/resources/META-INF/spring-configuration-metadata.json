@@ -1,0 +1,26 @@
+{
+  "hints": [
+    {
+      "name": "spring.sqlmapper.location",
+      "values": [
+        {
+          "value": "classpath:/static"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "sourceType": "com.netcorner.sqlmapper.SQLMapProperties",
+      "name": "...",
+      "type": "com.netcorner.sqlmapper.SQLMapProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.netcorner.sqlmapper.SQLMapProperties",
+      "name": "spring.sqlmapper.location",
+      "type": "java.lang.String"
+    }
+  ]
+}

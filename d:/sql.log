@@ -1,0 +1,34 @@
+[INFO ]_2019-03-19 15:08:14 :{dataSource-1} inited
+  [INFO ]_2019-03-19 15:08:15 :{dataSource-2} inited
+  [ERROR]_2019-03-19 15:08:15 :dal配置文件有误:Jobmate1.a.extMore,错误为：StatementCallback; SQL [
+
+			
+insert into a(
+													a
+											,			b
+						)values(
+																						'lklk'
+															,												'11111111111111222222222221111111111'
+										)
+	]; Data truncation: Data too long for column 'b' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'b' at row 1
+  [INFO ]_2019-03-19 15:08:42 :{dataSource-1} inited
+  [INFO ]_2019-03-19 15:08:42 :{dataSource-2} inited
+  [INFO ]_2019-03-19 15:09:45 :{dataSource-1} inited
+  [INFO ]_2019-03-19 15:09:46 :{dataSource-2} inited
+  [INFO ]_2019-03-19 15:25:42 :{dataSource-1} inited
+  [INFO ]_2019-03-19 15:25:42 :{dataSource-2} inited
+  [INFO ]_2019-03-19 15:26:11 :{dataSource-1} inited
+  [INFO ]_2019-03-19 15:26:15 :{dataSource-2} inited
+  [INFO ]_2019-03-20 13:33:20 :{dataSource-1} inited
+  [INFO ]_2019-03-20 13:33:21 :{dataSource-2} inited
+  [INFO ]_2019-03-20 13:39:15 :{dataSource-1} inited
+  [INFO ]_2019-03-20 13:39:16 :{dataSource-2} inited
+  [INFO ]_2019-03-20 20:13:41 :{dataSource-1} inited
+  [INFO ]_2019-03-20 20:13:42 :{dataSource-2} inited
+  [INFO ]_2019-03-20 20:14:21 :{dataSource-1} inited
+  [INFO ]_2019-03-20 20:14:21 :{dataSource-2} inited
+  [INFO ]_2019-03-20 20:15:07 :{dataSource-1} inited
+  [INFO ]_2019-03-20 20:15:08 :{dataSource-2} inited
+  [INFO ]_2019-03-20 20:53:59 :{dataSource-1} inited
+  [INFO ]_2019-03-20 20:54:00 :{dataSource-2} inited
+  
