@@ -246,6 +246,7 @@ public class SQLMap   implements Serializable {
 
 
 
+
     /**
      * 得到根目录路径
      * @return

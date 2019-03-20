@@ -202,7 +202,8 @@ public  class StringTools {
         return w.toString();
 	}
 	
-	
+
+
 	/**
 	 * 字符串是空还是null
 	 * @param str
