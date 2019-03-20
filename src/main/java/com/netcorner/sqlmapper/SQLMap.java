@@ -244,18 +244,6 @@ public class SQLMap   implements Serializable {
 
 
 
-	public static String getProperty(String propertyName){
-		Properties props = new Properties();
-		InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("application.properties");
-		if(inputStream==null) inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("bootstrap.properties");
-		if(inputStream==null) return null;
-		try {
-			props.load(inputStream);
-		} catch (IOException e) {
-			return null;
-		}
-		return props.getProperty(propertyName);
-	}
 
 
     /**
@@ -264,7 +252,7 @@ public class SQLMap   implements Serializable {
      */
     public static String getRootPath() {
     	if(rootPath==null){
-			rootPath=getProperty("spring.sqlmapper.location");
+			rootPath=SpringTools.getEnvironmentValue("spring.sqlmapper.location");
 			if(rootPath==null){
 				rootPath=appPath;
 			}

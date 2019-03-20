@@ -42,6 +42,19 @@ public class SpringTools implements ApplicationContextAware {
     }
 
     /**
+     * 得到配置文件对应key值
+     * @param key
+     * @return
+     */
+    public static String getEnvironmentValue(String key) {
+        if(applicationContext!=null) {
+            String object = applicationContext.getEnvironment().getProperty(key);
+            return object;
+        }else{
+            return null;
+        }
+    }
+    /**
      * 从当前IOC获取datasource
      * 
      * @param id
