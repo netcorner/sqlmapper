@@ -31,4 +31,83 @@ insert into a(
   [INFO ]_2019-03-20 20:15:08 :{dataSource-2} inited
   [INFO ]_2019-03-20 20:53:59 :{dataSource-1} inited
   [INFO ]_2019-03-20 20:54:00 :{dataSource-2} inited
+  [INFO ]_2019-10-17 12:08:13 :{dataSource-1} inited
+  [INFO ]_2019-10-17 12:08:14 :{dataSource-2} inited
+  [ERROR]_2019-10-17 12:08:14 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('11111111111111111111111111111111111111111111','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2019-10-17 12:08:29 :{dataSource-1} inited
+  [INFO ]_2019-10-17 12:08:30 :{dataSource-2} inited
+  [ERROR]_2019-10-17 12:08:30 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('11111111111111111111111111111111111111111111','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2019-10-17 12:08:52 :{dataSource-1} inited
+  [INFO ]_2019-10-17 12:08:53 :{dataSource-2} inited
+  [ERROR]_2019-10-17 12:08:53 :dal配置文件有误:Jobmate.b.mutile2,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2019-10-17 12:10:06 :{dataSource-1} inited
+  [INFO ]_2019-10-17 12:10:06 :{dataSource-2} inited
+  [ERROR]_2019-10-17 12:10:06 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2019-10-17 14:28:21 :{dataSource-1} inited
+  [INFO ]_2019-10-17 14:28:21 :{dataSource-2} inited
+  [ERROR]_2019-10-17 14:28:22 :dal配置文件有误:Jobmate.b.mutile2,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2019-10-17 14:28:57 :{dataSource-1} inited
+  [INFO ]_2019-10-17 14:28:57 :{dataSource-2} inited
+  [ERROR]_2019-10-17 14:28:58 :dal配置文件有误:Jobmate.b.mutile2,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2019-10-17 14:30:51 :{dataSource-1} inited
+  [INFO ]_2019-10-17 14:30:52 :{dataSource-2} inited
+  [INFO ]_2019-10-17 14:31:36 :{dataSource-1} inited
+  [INFO ]_2019-10-17 14:31:51 :{dataSource-2} inited
+  [ERROR]_2019-10-17 14:32:26 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2019-10-17 14:32:55 :{dataSource-1} inited
+  [INFO ]_2019-10-17 14:32:56 :{dataSource-2} inited
+  [ERROR]_2019-10-17 14:35:15 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2019-10-17 14:37:19 :{dataSource-1} inited
+  [INFO ]_2019-10-17 14:37:19 :{dataSource-2} inited
+  [ERROR]_2019-10-17 14:38:53 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2019-10-17 14:43:18 :{dataSource-1} inited
+  [INFO ]_2019-10-17 14:43:18 :{dataSource-2} inited
+  [ERROR]_2019-10-17 14:43:44 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2019-10-17 14:44:34 :{dataSource-1} inited
+  [INFO ]_2019-10-17 14:44:34 :{dataSource-2} inited
+  [ERROR]_2019-10-17 14:44:35 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
   

@@ -28,6 +28,33 @@
 	<!--</statement>-->
 
 
+	<statement id="mutile1">
+		<insert>
+			insert into a(a,b)
+			values('777','1')
+		</insert>
+		<select>
+			select 1 status
+		</select>
+		<insert>
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+		</insert>
+		<insert>
+			insert into a(a,b)
+			values('777','1')
+		</insert>
+	</statement>
+
+	<statement id="mutile2">
+		<insert>
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+		</insert>
+		<select>
+			select 1 status
+		</select>
+	</statement>
 
 
 

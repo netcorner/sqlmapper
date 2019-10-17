@@ -30,7 +30,6 @@ public  class DALException extends RuntimeException {
 				Properties props = System.getProperties();
 				ip = "[" + ClientTools.getHostIpAddr() + "] [os:" + props.getProperty("os.name") + "," + props.getProperty("os.version") + " jdk:" + props.getProperty("java.version") + "]";
 			}
-
 			logger.error(ip + " - " + message);
 		}catch (Exception e){
 			logger.error(message);

@@ -3,6 +3,7 @@ package com.netcorner.sqlmapper.demo;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.netcorner.sqlmapper.QueryPage;
 import com.netcorner.sqlmapper.SQLMap;
+import com.netcorner.sqlmapper.SqlSessionFactory;
 import com.netcorner.sqlmapper.utils.SpringTools;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
@@ -34,8 +35,8 @@ public class TestMain {
     }
 
     public void testAll(){
-
-		TestInsert();
+		//TestMutilSql();
+		//TestInsert();
 //		TestMulti();
 //		TestFun();
 //		TestUseStatementID();
@@ -51,6 +52,12 @@ public class TestMain {
 		//TestExtMore();
 	}
 
+
+	public static void TestMutilSql(){
+		SQLMap map=SQLMap.getMap("Jobmate.b");
+		HashMap<String,Object> obj=new HashMap<String,Object>();
+		System.out.println(map.execute("mutile1", obj));
+	}
 
 
 	public static void TestVelocity(){

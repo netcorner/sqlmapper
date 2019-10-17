@@ -786,8 +786,8 @@ public class SQLMap   implements Serializable {
 	    					properties.put(crud.getId(),jdbc.update(s.substring(1,s.length()-1)));
 	    				}catch(Exception e){
 	    					properties.put(JDBC_ERROR_KEY,e.getMessage());
-
-							throw new DALException("dal配置文件有误:"+this.key+"."+statementid+",错误为："+properties.get(JDBC_ERROR_KEY));
+							return null;
+							//throw new DALException("dal配置文件有误:"+this.key+"."+statementid+",错误为："+properties.get(JDBC_ERROR_KEY));
 	    				}
 	    				returnValue=properties.get(crud.getId());
 	    			}
