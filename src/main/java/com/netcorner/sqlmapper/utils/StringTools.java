@@ -444,6 +444,9 @@ public  class StringTools {
             //防止模糊查询
             val = val.replaceAll("[%]", "&#37;");
             //val = val.replaceAll("[?]", "&#63;");
+
+			val = val.replaceAll("[{]", "｛");
+			val = val.replaceAll("[}]", "｝");
         }
         
         return val;
