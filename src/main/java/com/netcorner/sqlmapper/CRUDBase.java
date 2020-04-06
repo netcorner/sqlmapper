@@ -8,6 +8,7 @@ public class CRUDBase implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private String id;
+	private boolean filter;
 	/**
 	 * 得到id
 	 * @return
@@ -57,4 +58,11 @@ public class CRUDBase implements Serializable {
 		this.sql = sql;
 	}
 
+	public boolean isFilter() {
+		return filter;
+	}
+
+	public void setFilter(boolean filter) {
+		this.filter = filter;
+	}
 }

@@ -778,7 +778,13 @@ public class SQLMap   implements Serializable {
 		if(!sql.replaceAll("[\r\n\t ]*", "").equals("")){
 			
 
-	    	List<String> arr=StringTools.split(sql, "[{][^}]+[}]");
+	    	List<String> arr;
+			if(crud.isFilter()){
+				arr=new ArrayList<String>();
+				arr.add(sql);
+			}else {
+				arr = StringTools.split(sql, "[{][^}]+[}]");
+			}
 	    	if(arr.size()>0){
 	    		for(String s:arr){
 	    			if(!s.replaceAll("[\r\n\t ]*", "").equals("")){
@@ -1311,11 +1317,16 @@ public class SQLMap   implements Serializable {
         		id=statement.getId()+idIndex;
         	}
         }
+
     	String sql=getInnerText(node);
 		CRUDBase crud=new CRUDBase();
 		crud.setTagName(node.getTagName());
 		crud.setSql(sql,this.commonTemplate);
 		crud.setId(id);
+		String filter = getAttributesValue(node, "filter");
+		if(filter.equals("true")){
+			crud.setFilter(true);
+		}
 		statement.getSqlList().add(crud);
     }
     private int idIndex=1;
