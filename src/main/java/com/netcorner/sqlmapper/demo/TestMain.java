@@ -41,7 +41,7 @@ public class TestMain {
 //		TestFun();
 //		TestUseStatementID();
 //		TestSelect();
-//		TestPage1();
+		TestPage1();
 //		TestPage2();
 //		TestPage3();
 //		TestPage4();

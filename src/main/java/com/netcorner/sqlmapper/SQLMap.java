@@ -1,6 +1,7 @@
 package com.netcorner.sqlmapper;
 
 import java.io.*;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
@@ -233,8 +234,23 @@ public class SQLMap   implements Serializable {
         return map;
     }
 
-    private static String appPath=Thread.currentThread().getContextClassLoader().getResource("").toString().replace("file:/", "");
-    private static String configPath;
+    private static String _appPath;
+
+	private static String getAppPath(){
+		if(_appPath==null){
+			URL url=Thread.currentThread().getContextClassLoader().getResource("");
+			if(url==null){
+				//对于直接运行的jar 包
+				_appPath=System.getProperty("user.dir");
+			}else{
+				_appPath=url.toString().replace("file:/", "");
+			}
+		}
+		return _appPath;
+	}
+
+
+	private static String configPath;
 
 
     private static String rootPath;
@@ -255,7 +271,7 @@ public class SQLMap   implements Serializable {
     	if(rootPath==null){
 			rootPath=SpringTools.getEnvironmentValue("spring.sqlmapper.location");
 			if(rootPath==null){
-				rootPath=appPath;
+				rootPath=getAppPath();
 			}
     		/*
             if(isWebApp()){
@@ -277,7 +293,7 @@ public class SQLMap   implements Serializable {
      */
     private static boolean isWebApp(){
     	if(isWebAppFlag==-1){
-	    	String[] arr=appPath.split("/");
+	    	String[] arr=getAppPath().split("/");
 	    	boolean f=arr[arr.length-2].toUpperCase().equals("WEB-INF");
 	    	if(f){
 	    		isWebAppFlag=1;
