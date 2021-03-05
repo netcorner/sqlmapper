@@ -12,7 +12,10 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 public class WebQueryPage  extends QueryPage {
 	private HttpServletRequest request;
 	public WebQueryPage(){
-		request=((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
+		request=((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();//在多线程可能会取到空值
+        if(request==null){
+            throw  new DALException("多线中RequestContextHolder取值为空！");
+        }
 		this.setCurrent(-1);
 		this.setSize(-1);
 	}
