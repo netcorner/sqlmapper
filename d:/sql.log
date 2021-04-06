@@ -110,4 +110,501 @@ insert into a(
 			insert into a(a,b)
 			values('1233333333333333333333333333333333','1')
 	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2020-12-05 11:34:49 :{dataSource-1} inited
+  [ERROR]_2020-12-05 11:35:08 :create connection SQLException, url: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+  com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 10 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1014)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2299)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2220)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1558)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2262)
+	... 13 more
+Caused by: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 15 more
+[ERROR]_2020-12-05 11:35:26 :create connection SQLException, url: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+  com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 10 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1014)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2299)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2220)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1558)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2262)
+	... 13 more
+Caused by: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 15 more
+[ERROR]_2020-12-05 11:35:44 :create connection SQLException, url: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+  com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 10 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1014)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2299)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2220)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1558)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2262)
+	... 13 more
+Caused by: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 15 more
+[ERROR]_2020-12-05 11:36:03 :create connection SQLException, url: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+  com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 10 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1014)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2299)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2220)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1558)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2262)
+	... 13 more
+Caused by: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 15 more
+[ERROR]_2020-12-05 11:36:22 :create connection SQLException, url: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+  com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 10 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1014)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2299)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2220)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1558)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2262)
+	... 13 more
+Caused by: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 15 more
+[ERROR]_2020-12-05 11:36:40 :create connection SQLException, url: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+  com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 10 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1014)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2299)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2220)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1558)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2262)
+	... 13 more
+Caused by: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 15 more
+[ERROR]_2020-12-05 11:36:59 :create connection SQLException, url: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+  com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 10 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1014)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2299)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2220)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1558)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2262)
+	... 13 more
+Caused by: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 15 more
+[ERROR]_2020-12-05 11:37:18 :create connection SQLException, url: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+  com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 10 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1014)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2299)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2220)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1558)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2262)
+	... 13 more
+Caused by: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 15 more
+[ERROR]_2020-12-05 11:37:36 :create connection SQLException, url: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull, errorCode 0, state 08001
+  com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 10 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1014)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2299)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2220)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1558)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2262)
+	... 13 more
+Caused by: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 15 more
+[INFO ]_2020-12-05 11:39:51 :{dataSource-1} inited
+  [INFO ]_2020-12-05 11:39:52 :{dataSource-2} inited
+  [ERROR]_2020-12-05 11:39:52 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2020-12-05 16:46:22 :{dataSource-1} inited
+  [INFO ]_2020-12-05 16:46:23 :{dataSource-2} inited
+  [ERROR]_2020-12-05 16:46:23 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2020-12-05 16:47:52 :{dataSource-1} inited
+  [INFO ]_2020-12-05 16:47:52 :{dataSource-2} inited
+  [ERROR]_2020-12-05 16:47:53 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2020-12-05 16:50:09 :{dataSource-1} inited
+  [INFO ]_2020-12-05 16:50:09 :{dataSource-2} inited
+  [INFO ]_2020-12-05 16:51:00 :{dataSource-1} inited
+  [INFO ]_2020-12-05 16:51:01 :{dataSource-2} inited
+  [INFO ]_2020-12-05 16:52:27 :{dataSource-1} inited
+  [INFO ]_2020-12-05 16:52:27 :{dataSource-2} inited
+  [INFO ]_2020-12-05 16:52:47 :{dataSource-1} inited
+  [INFO ]_2020-12-05 16:52:48 :{dataSource-2} inited
+  [INFO ]_2020-12-05 16:53:56 :{dataSource-1} inited
+  [INFO ]_2020-12-05 16:53:56 :{dataSource-2} inited
+  [INFO ]_2020-12-05 16:54:49 :{dataSource-1} inited
+  [INFO ]_2020-12-05 16:54:49 :{dataSource-2} inited
+  [INFO ]_2020-12-05 16:55:05 :{dataSource-1} inited
+  [INFO ]_2020-12-05 16:55:45 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:46:49 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:47:55 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:49:27 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:49:50 :{dataSource-1} inited
+  [ERROR]_2021-04-05 20:50:16 :dal配置文件有误:Jobmate.b._detail,错误为：StatementCallback; bad SQL grammar [
+			
+
+			select*from b 1=1
+				and
+		id
+									= 1
+						
+							]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1=1
+				and
+		id
+									= 1' at line 1
+  [INFO ]_2021-04-05 20:50:19 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:51:09 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:52:27 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:53:15 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:54:05 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:56:42 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:57:02 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:57:36 :{dataSource-1} inited
+  [INFO ]_2021-04-05 20:58:24 :{dataSource-1} inited
+  [INFO ]_2021-04-05 21:02:37 :{dataSource-1} inited
+  [INFO ]_2021-04-05 21:03:06 :{dataSource-1} inited
+  [INFO ]_2021-04-05 21:06:38 :{dataSource-1} inited
+  [INFO ]_2021-04-05 21:07:01 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:08:54 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:11:24 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:12:26 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:12:27 :{dataSource-2} inited
+  [ERROR]_2021-04-05 22:12:27 :dal配置文件有误:Jobmate.b._insert,错误为：StatementCallback; bad SQL grammar [			
+
+			
+insert into b(
+													a
+											,			c
+						)values(
+																						'xxx1'
+															,							
+						)
+	]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 7
+  [INFO ]_2021-04-05 22:13:33 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:13:34 :{dataSource-2} inited
+  [ERROR]_2021-04-05 22:13:35 :dal配置文件有误:Jobmate.b._insert,错误为：StatementCallback; bad SQL grammar [			
+
+			
+insert into b(
+													a
+											,			c
+						)values(
+																						'xxx1'
+															,							
+						)
+	]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 7
+  [INFO ]_2021-04-05 22:19:00 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:22:53 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:25:32 :{dataSource-2} inited
+  [ERROR]_2021-04-05 22:27:57 :dal配置文件有误:Jobmate.b._insert,错误为：StatementCallback; bad SQL grammar [			
+
+			
+insert into b(
+													a
+											,			c
+						)values(
+																						'xxx1'
+															,							
+						)
+	]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 7
+  [INFO ]_2021-04-05 22:28:02 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:28:03 :{dataSource-2} inited
+  [ERROR]_2021-04-05 22:28:04 :dal配置文件有误:Jobmate.b._insert,错误为：StatementCallback; bad SQL grammar [			
+
+			1.0
+	]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1.0' at line 1
+  [INFO ]_2021-04-05 22:29:44 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:34:21 :{dataSource-2} inited
+  [ERROR]_2021-04-05 22:34:26 :dal配置文件有误:Jobmate.b._insert,错误为：StatementCallback; bad SQL grammar [			
+
+			1.0
+	]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1.0' at line 1
+  [INFO ]_2021-04-05 22:36:51 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:37:22 :{dataSource-2} inited
+  [ERROR]_2021-04-05 22:37:34 :dal配置文件有误:Jobmate.b._insert,错误为：StatementCallback; bad SQL grammar [			
+
+			1.0
+	]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1.0' at line 1
+  [INFO ]_2021-04-05 22:37:48 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:40:55 :{dataSource-2} inited
+  [INFO ]_2021-04-05 22:47:59 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:48:00 :{dataSource-2} inited
+  [ERROR]_2021-04-05 22:48:01 :dal配置文件有误:Jobmate.b._insert,错误为：StatementCallback; bad SQL grammar [			
+
+			1.0
+	]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1.0' at line 1
+  [INFO ]_2021-04-05 22:55:06 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:55:07 :{dataSource-2} inited
+  [ERROR]_2021-04-05 22:55:08 :dal配置文件有误:Jobmate.b._insert,错误为：StatementCallback; bad SQL grammar [			
+
+			1
+	]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 1
+  [INFO ]_2021-04-05 22:55:30 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:55:31 :{dataSource-2} inited
+  [INFO ]_2021-04-05 22:58:24 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:58:25 :{dataSource-2} inited
+  [INFO ]_2021-04-05 22:59:05 :{dataSource-1} inited
+  [INFO ]_2021-04-05 22:59:06 :{dataSource-2} inited
+  [INFO ]_2021-04-05 22:59:57 :{dataSource-1} inited
+  [INFO ]_2021-04-05 23:00:07 :{dataSource-1} inited
+  [INFO ]_2021-04-05 23:03:23 :{dataSource-1} inited
+  [INFO ]_2021-04-05 23:05:05 :{dataSource-1} inited
+  [INFO ]_2021-04-05 23:07:32 :{dataSource-1} inited
+  [INFO ]_2021-04-05 23:24:31 :{dataSource-1} inited
+  [INFO ]_2021-04-05 23:26:30 :{dataSource-1} inited
+  [INFO ]_2021-04-06 07:25:37 :{dataSource-1} inited
+  [INFO ]_2021-04-06 07:42:52 :{dataSource-1} inited
+  [INFO ]_2021-04-06 07:44:14 :{dataSource-1} inited
   

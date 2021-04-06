@@ -1,16 +1,20 @@
 package com.netcorner.sqlmapper;
 
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Map.Entry;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import com.netcorner.sqlmapper.entity.Entity;
 import com.netcorner.sqlmapper.utils.SpringTools;
 import com.netcorner.sqlmapper.utils.StringTools;
 import net.sf.ehcache.Cache;
@@ -40,6 +44,13 @@ public class SQLMap   implements Serializable {
     private long fileTime;
     private String resPath;
 
+	/**
+	 * 得到表格名称
+	 * @return
+	 */
+	public String getTable(){
+    	return table;
+	}
 	/**
      * 得到资源文件路径
      * @return
@@ -362,6 +373,10 @@ public class SQLMap   implements Serializable {
 		table = arr[1].toLowerCase();
 		resPath= getPath(getResourcePath(),key);
 		initDocument(path);
+	}
+
+	public SQLMap(String db){
+		this.dbName = db;
 	}
 //    /**
 //     * 插入操作

@@ -1,10 +1,9 @@
 package com.netcorner.sqlmapper.demo;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.netcorner.sqlmapper.DBDictionary;
 import com.netcorner.sqlmapper.QueryPage;
 import com.netcorner.sqlmapper.SQLMap;
-import com.netcorner.sqlmapper.SqlSessionFactory;
-import com.netcorner.sqlmapper.utils.SpringTools;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -31,6 +30,9 @@ public class TestMain {
 		jdbcTemplate=new JdbcTemplate(db);
 		SQLMap.setJdbcTemplates("Jobmate1",jdbcTemplate);
 
+
+
+
 		testMain.testAll();
     }
 
@@ -41,7 +43,7 @@ public class TestMain {
 //		TestFun();
 //		TestUseStatementID();
 //		TestSelect();
-		TestPage1();
+		//TestPage1();
 //		TestPage2();
 //		TestPage3();
 //		TestPage4();
@@ -50,8 +52,66 @@ public class TestMain {
 //		TestExt();
 
 		//TestExtMore();
+		//TestEntity();
+
+		TestGen();
 	}
 
+	public static void TestGen(){
+		SQLMap sqlMap=new SQLMap("Jobmate");
+		for(String table:sqlMap.getDbStructure().getTables()){
+			System.out.println(sqlMap.getDbStructure().getFields().get(table));
+		}
+	}
+
+
+
+	public static void TestEntity(){
+//		TestEntity tee=new TestEntity();
+//		tee.setA("xxx1");
+//		tee.setC(1);
+//		tee.insert();
+
+//		TestEntity tee=new TestEntity();
+//		tee.setA("yxxx111");
+//		tee.setC(1117);
+//		tee.setId(1);
+//		tee.update();
+
+
+//		TestEntity tee=new TestEntity();
+//		tee.setId(2800);
+//		tee.delete();
+
+
+//		TestEntity tee=new TestEntity();
+//		tee.get(1);
+//		System.out.println(tee.getC());
+
+
+
+//				TestEntity tee=new TestEntity();
+//				tee.setC(1117);
+//		tee.get();
+//		System.out.println(tee.getC());
+
+
+//		TestEntity tee=new TestEntity();
+//		tee.setA("kkk");
+//		System.out.println(tee.getList().size());
+
+			TestEntity tee=new TestEntity();
+		tee.setA("kkk");
+
+		QueryPage qp=new QueryPage();
+		int[] showPage = { 15 };
+		qp.setShowPage(showPage);
+		tee.getPageList(qp);
+
+		System.out.println(qp.getTotal());
+
+
+	}
 
 	public static void TestMutilSql(){
 		SQLMap map=SQLMap.getMap("Jobmate.b");
