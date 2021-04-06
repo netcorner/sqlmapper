@@ -58,6 +58,7 @@ public class TestMain {
 	}
 
 	public static void TestGen(){
+
 		SQLMap sqlMap=new SQLMap("Jobmate");
 		for(String table:sqlMap.getDbStructure().getTables()){
 			System.out.println(sqlMap.getDbStructure().getFields().get(table));
