@@ -1606,6 +1606,8 @@ public class SQLMap   implements Serializable {
 			String template= FileTools.getResFile("/template/Entity.tpl");
 
 
+
+			
 			VelocityContext vcontext = new VelocityContext();
 			vcontext.put("map", hash);
 			StringWriter w = new StringWriter();
