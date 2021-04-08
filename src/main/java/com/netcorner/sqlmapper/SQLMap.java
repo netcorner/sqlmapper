@@ -1594,12 +1594,13 @@ public class SQLMap   implements Serializable {
 				sb.append(s.substring(0,1).toUpperCase());
 				sb.append(s.substring(1));
 			}
-			String tableName=sb.toString();
+			String className=sb.toString();
 
 
 			hash.put("package",packages);
 			hash.put("DBName",sqlMap.getDbName());
-			hash.put("Table",tableName);
+			hash.put("ClassName",className);
+			hash.put("Table",table);
 			hash.put("TableComment",tableComment+"");
 			hash.put("Fields",fields);
 
@@ -1607,7 +1608,7 @@ public class SQLMap   implements Serializable {
 
 
 
-			
+
 			VelocityContext vcontext = new VelocityContext();
 			vcontext.put("map", hash);
 			StringWriter w = new StringWriter();
@@ -1617,7 +1618,7 @@ public class SQLMap   implements Serializable {
 
 
 
-			createFile(path+"/"+tableName+".java",w.toString(),true);
+			createFile(path+"/"+className+".java",w.toString(),true);
 
 
 			String tmp=FileTools.getResFile("/template/base.xml");
