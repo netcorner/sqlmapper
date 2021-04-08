@@ -8,14 +8,24 @@ import com.netcorner.sqlmapper.entity.Table;
  */
 @Table("Jobmate.b")
 public class TestEntity extends Entity<TestEntity,Integer> {
-    private Integer id;
+
     private String a;
     private Integer c;
 
+    //@ApiModelProperty(value = "ID", name = "id")
+    private Integer id;
+    /**
+     * 得到 ID
+     * @return
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * 设置 ID
+     * @param id
+     */
     public void setId(int id) {
         this.id = id;
     }

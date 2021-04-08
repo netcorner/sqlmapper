@@ -15,6 +15,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import com.netcorner.sqlmapper.entity.Entity;
+import com.netcorner.sqlmapper.utils.FileTools;
 import com.netcorner.sqlmapper.utils.SpringTools;
 import com.netcorner.sqlmapper.utils.StringTools;
 import net.sf.ehcache.Cache;
@@ -43,6 +44,14 @@ public class SQLMap   implements Serializable {
     private String commonTemplate;
     private long fileTime;
     private String resPath;
+
+	/**
+	 * 得到数据库名
+	 * @return
+	 */
+	public String getDbName() {
+		return dbName;
+	}
 
 	/**
 	 * 得到表格名称
@@ -1563,6 +1572,60 @@ public class SQLMap   implements Serializable {
 //	}
 
 
+
+	public static void genEntities(String dbName,String packages){
+//		String dbName="Jobmate";
+//		String packages="com.netcorner.test.model.entity";
+
+		String path=System.getProperty("user.dir")+"/src/main/java/"+packages.replace(".","/");
+
+
+		SQLMap sqlMap=new SQLMap(dbName);
+
+		for(String table:sqlMap.getDbStructure().getTables()){
+			List<Field> fields=sqlMap.getDbStructure().getFields().get(table);
+			String tableComment=sqlMap.getDbStructure().getTableComments().get(table);
+			Map<String,Object> hash=new HashMap<String,Object>();
+			hash.put("package",packages);
+			hash.put("DBName",sqlMap.getDbName());
+			hash.put("Table",table);
+			hash.put("TableComment",tableComment+"");
+			hash.put("Fields",fields);
+
+			String template= FileTools.getResFile("/template/Entity.tpl");
+
+
+			VelocityContext vcontext = new VelocityContext();
+			vcontext.put("map", hash);
+			StringWriter w = new StringWriter();
+			VelocityEngine v=new VelocityEngine();
+			v.evaluate(vcontext, w, "sqlmap", template);
+			//System.out.println(" string : " + w );
+
+
+
+			File file = new File(path+"/"+table+".java");
+			if(!file.exists()){
+				file.getParentFile().mkdirs();
+			}else{
+				file.delete();
+			}
+			try {
+				file.createNewFile();
+				// write
+				FileWriter fw = new FileWriter(file, true);
+				BufferedWriter bw = new BufferedWriter(fw);
+				bw.write(w.toString());
+				bw.flush();
+				bw.close();
+				fw.close();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+		}
+	}
 
 
 

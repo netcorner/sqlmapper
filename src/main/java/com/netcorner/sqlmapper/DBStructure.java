@@ -19,13 +19,18 @@ public abstract  class DBStructure  implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private Map<String,List<Field>> fields=new HashMap<String, List<Field>>();
 	private List<String> tables=new ArrayList<String>();
+	protected Map<String,String> tableComments=new HashMap<String, String>();
 	private Map<String,List<Field>> primarys=new HashMap<String,List<Field>>();
 	private Map<String,String> insertScript=new HashMap<String,String>();
     private Map<String,String> updateScript=new HashMap<String,String>();
     private Map<String,String> deleteScript=new HashMap<String,String>();
     private Map<String,String> whereScript=new HashMap<String,String>();
 
-    public Map<String, String> getWhereScript() {
+	public Map<String,String> getTableComments() {
+		return tableComments;
+	}
+
+	public Map<String, String> getWhereScript() {
 		return whereScript;
 	}
 	public Map<String, List<Field>> getPrimarys() {

@@ -15,6 +15,7 @@ public class Field implements Serializable {
 	private int id;
     private String name;
     private String type;
+    private String comment;
     private boolean isPrimary;
     private int len;
     private boolean isNullable;
@@ -148,4 +149,19 @@ public class Field implements Serializable {
 		this.isClusterKey = isClusterKey;
 	}
 
+	/**
+	 * 得到字段注释
+	 * @return
+	 */
+	public String getComment() {
+		return comment;
+	}
+
+	/**
+	 * 设置字段注释
+	 * @param comment
+	 */
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
 }

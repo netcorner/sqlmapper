@@ -6,7 +6,7 @@ update ${struct.table} set
 	\#if($${tmp}${f.getName()})
 		\#if($flag),\#end
 		$f.getName() =
-		#if($f.type=='long'||$f.type=='double'||$f.type=='bit'||$f.type=='integer'||$f.type=='mediumint'||$f.type=='smallmoney'||$f.type=='smallmoney'||$f.type=='smallint'||$f.type=='int'||$f.type=='bigint'||$f.type=='money'||$f.type=='numeric'||$f.type=='float'||$f.type=='real'||$f.type=='real')
+		#if($f.type=='long'||$f.type=='double'||$f.type=='bit'||$f.type=='integer'||$f.type=='mediumint'||$f.type=='smallmoney'||$f.type=='smallint'||$f.type=='int'||$f.type=='bigint'||$f.type=='money'||$f.type=='numeric'||$f.type=='float'||$f.type=='real')
 			$!{${tmp}${f.getName()}}
 		#else
 			'$!{${tmp}${f.getName()}}'
@@ -23,7 +23,7 @@ where
 		\#if(${${tmp}${f.getName()}.replaceAll("^#[^#]+#$","")}!=${${tmp}${f.getName()}})
 			$!{${tmp}${f.getName()}.replaceAll("^#","").replaceAll("#$","")}
 		\#else
-			#if($f.type=='long'||$f.type=='double'||$f.type=='bit'||$f.type=='integer'||$f.type=='mediumint'||$f.type=='smallmoney'||$f.type=='smallmoney'||$f.type=='smallint'||$f.type=='int'||$f.type=='bigint'||$f.type=='money'||$f.type=='numeric'||$f.type=='float'||$f.type=='real'||$f.type=='real')
+			#if($f.type=='long'||$f.type=='double'||$f.type=='bit'||$f.type=='integer'||$f.type=='mediumint'||$f.type=='smallmoney'||$f.type=='smallmoney'||$f.type=='smallint'||$f.type=='int'||$f.type=='bigint'||$f.type=='money'||$f.type=='numeric'||$f.type=='float'||$f.type=='real')
 				$!{${tmp}${f.getName()}}
 			#else
 				'$!{${tmp}${f.getName()}}'

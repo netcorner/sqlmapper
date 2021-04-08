@@ -2,13 +2,15 @@ package com.netcorner.sqlmapper.demo;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.netcorner.sqlmapper.DBDictionary;
+import com.netcorner.sqlmapper.Field;
 import com.netcorner.sqlmapper.QueryPage;
 import com.netcorner.sqlmapper.SQLMap;
+import com.netcorner.sqlmapper.utils.FileTools;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.io.StringWriter;
+import java.io.*;
 import java.util.*;
 
 public class TestMain {
@@ -59,10 +61,7 @@ public class TestMain {
 
 	public static void TestGen(){
 
-		SQLMap sqlMap=new SQLMap("Jobmate");
-		for(String table:sqlMap.getDbStructure().getTables()){
-			System.out.println(sqlMap.getDbStructure().getFields().get(table));
-		}
+		SQLMap.genEntities("Jobmate","com.netcorner.test.model.entity");
 	}
 
 
