@@ -84,15 +84,15 @@ public abstract class Entity<T,R>  implements Serializable {
      * 根据多个主键 ID 获取对象
      * @param id
      */
-    public void get(Object id){
-        get(new Object[]{id});
+    public void find(Object id){
+        find(new Object[]{id});
     }
 
     /**
      * 根据主键 ID 获取对象
      * @param ids
      */
-    public void get(Object[] ids) {
+    public void find(Object[] ids) {
         List<Field> list = sqlMap.getDbStructure().getPrimarys().get(sqlMap.getTable());
         Map<String,Object> params=new HashMap<String,Object>();
         int i = 0;
@@ -113,15 +113,15 @@ public abstract class Entity<T,R>  implements Serializable {
     /**
      * 根据对象参数 获取对象
      */
-    public void get() {
-        get(entity2Map(this));
+    public void find() {
+        find(entity2Map(this));
     }
 
     /**
      * 根据hash参数 获取对象
      * @param params
      */
-    public void get(Map<String,Object> params) {
+    public void find(Map<String,Object> params) {
         Map<String, Object> obj= sqlMap.executeForMap("_list", params);
         T t= (T)map2Entity(obj,this.getClass());
         BeanUtils.copyProperties(t, this);
