@@ -1631,6 +1631,7 @@ public class SQLMap   implements Serializable {
 	}
 
 	private static void createFile(String filepath,String template,boolean isReplace){
+
 		File file = new File(filepath);
 		if(!file.exists()){
 			file.getParentFile().mkdirs();
@@ -1640,7 +1641,6 @@ public class SQLMap   implements Serializable {
 		}
 		try {
 			file.createNewFile();
-			// write
 			FileWriter fw = new FileWriter(file, true);
 			BufferedWriter bw = new BufferedWriter(fw);
 			bw.write(template);
