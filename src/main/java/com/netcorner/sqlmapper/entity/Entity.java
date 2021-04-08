@@ -52,7 +52,7 @@ public abstract class Entity<T>  implements Serializable {
      * @return
      */
     public <B> B  insert(String statementid,Map<String,Object> params){
-        return insert(statementid,params);
+        return insert(statementid,params,null);
     }
 
     /**
