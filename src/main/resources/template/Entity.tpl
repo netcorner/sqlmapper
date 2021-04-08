@@ -10,6 +10,7 @@ import com.netcorner.sqlmapper.entity.Table;
 @Table("${map.DBName}.${map.Table}")
 public class ${map.Table} extends Entity<${map.Table},Integer> {
 
+
     #foreach($field in $map.Fields)
 
         #if($field.type=='smallmoney'||$field.type=='numeric'||$field.type=='float'||$field.type=='real'||$field.type=='numeric')
