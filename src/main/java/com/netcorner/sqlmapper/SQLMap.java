@@ -1586,6 +1586,16 @@ public class SQLMap   implements Serializable {
 			List<Field> fields=sqlMap.getDbStructure().getFields().get(table);
 			String tableComment=sqlMap.getDbStructure().getTableComments().get(table);
 			Map<String,Object> hash=new HashMap<String,Object>();
+
+			String[] ls=table.split("_");
+			StringBuilder sb=new StringBuilder();
+			for(String s:ls){
+				sb.append(s.substring(0,1).toUpperCase());
+				sb.append(s.substring(1));
+			}
+			table=sb.toString();
+
+
 			hash.put("package",packages);
 			hash.put("DBName",sqlMap.getDbName());
 			hash.put("Table",table);
