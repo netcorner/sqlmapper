@@ -294,6 +294,7 @@ public abstract class Entity<T>  implements Serializable {
         return gson.fromJson(str, type);
     }
 
+    
     /**
      * 记录转换结果
      * @param obj
