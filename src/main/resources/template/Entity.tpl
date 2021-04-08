@@ -17,7 +17,7 @@ public class ${map.Table} extends Entity<${map.Table},Integer> {
         #elseif($field.type=='money'||$field.type=='long'||$field.type=='bigint')
             #set($dbType='Long')
         #elseif($field.type=='int'||$field.type=='smallint'||$field.type=='smallint')
-            #set($dbType='Long')
+            #set($dbType='Integer')
         #elseif($field.Type=='date')
             #set($dbType='Date')
         #else
