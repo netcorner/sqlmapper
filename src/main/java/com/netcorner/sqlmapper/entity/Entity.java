@@ -84,15 +84,15 @@ public abstract class Entity<T,R>  implements Serializable {
      * 根据多个主键 ID 获取对象
      * @param id
      */
-    public void find(Object id){
-        find(new Object[]{id});
+    public void get(Object id){
+        get(new Object[]{id});
     }
 
     /**
      * 根据主键 ID 获取对象
      * @param ids
      */
-    public void find(Object[] ids) {
+    public void get(Object[] ids) {
         List<Field> list = sqlMap.getDbStructure().getPrimarys().get(sqlMap.getTable());
         Map<String,Object> params=new HashMap<String,Object>();
         int i = 0;
@@ -105,7 +105,7 @@ public abstract class Entity<T,R>  implements Serializable {
         Map<String, Object> obj= sqlMap.executeForMap("_list", params);
 
         T t=(T)map2Entity(obj,this.getClass());
-        BeanUtils.copyProperties(t, this);
+        //BeanUtils.copyProperties(t, this);
 
 
     }
@@ -113,15 +113,15 @@ public abstract class Entity<T,R>  implements Serializable {
     /**
      * 根据对象参数 获取对象
      */
-    public void find() {
-        find(entity2Map(this));
+    public void get() {
+        get(entity2Map(this));
     }
 
     /**
      * 根据hash参数 获取对象
      * @param params
      */
-    public void find(Map<String,Object> params) {
+    public void get(Map<String,Object> params) {
         Map<String, Object> obj= sqlMap.executeForMap("_list", params);
         T t= (T)map2Entity(obj,this.getClass());
         BeanUtils.copyProperties(t, this);
@@ -131,8 +131,8 @@ public abstract class Entity<T,R>  implements Serializable {
      * 根据对象参数 获取对象列表
      * @return
      */
-    public List<T> getList(){
-        return getList(entity2Map(this));
+    public List<T> find(){
+        return find(entity2Map(this));
     }
 
     /**
@@ -140,7 +140,7 @@ public abstract class Entity<T,R>  implements Serializable {
      * @param params
      * @return
      */
-    public List<T> getList(Map<String,Object> params){
+    public List<T> find(Map<String,Object> params){
         List<Map<String, Object>> list= sqlMap.executeForList("_list", params);
 
         List<T> list1=new ArrayList<T>();
@@ -155,8 +155,8 @@ public abstract class Entity<T,R>  implements Serializable {
      * @param qp
      * @return
      */
-    public List<T> getPageList(QueryPage qp){
-        return getPageList(qp,entity2Map(this));
+    public List<T> page(QueryPage qp){
+        return page(qp,entity2Map(this));
     }
 
     /**
@@ -165,7 +165,7 @@ public abstract class Entity<T,R>  implements Serializable {
      * @param params
      * @return
      */
-    public List<T> getPageList(QueryPage qp,Map<String,Object> params){
+    public List<T> page(QueryPage qp,Map<String,Object> params){
 
 
         List<Map<String, Object>> list= sqlMap.executeForList("_page",qp );

@@ -18,7 +18,7 @@ public class TestEntity extends Entity<TestEntity,Integer> {
      * 得到 ID
      * @return
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -26,7 +26,7 @@ public class TestEntity extends Entity<TestEntity,Integer> {
      * 设置 ID
      * @param id
      */
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -38,11 +38,11 @@ public class TestEntity extends Entity<TestEntity,Integer> {
         this.a = a;
     }
 
-    public int getC() {
+    public Integer getC() {
         return c;
     }
 
-    public void setC(int c) {
+    public void setC(Integer c) {
         this.c = c;
     }
 }

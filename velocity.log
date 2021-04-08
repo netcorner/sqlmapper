@@ -1,630 +1,97 @@
-2021-04-08 17:51:21,694 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,694 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,695 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,695 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,695 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,695 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,696 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,696 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,696 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,701 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,701 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,701 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,701 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,701 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,702 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,702 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,702 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,702 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,702 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,702 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,702 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:21,702 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:21,706 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
-2021-04-08 17:51:21,706 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,707 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,707 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,707 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,707 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,707 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,707 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,707 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,707 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,708 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,708 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,713 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,718 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,719 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,720 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,720 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:21,720 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:21,728 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:21,728 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:21,728 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:21,728 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:21,728 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:21,728 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:21,728 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,729 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,729 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:21,729 - Do unicode file recognition:  false
-2021-04-08 17:51:21,729 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:21,729 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:21,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:21,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:21,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:21,730 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:21,730 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:21,730 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:21,730 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:21,730 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:21,730 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:21,753 - Created '20' parsers.
-2021-04-08 17:51:21,753 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:21,753 - Velocimacro : Default library not found.
-2021-04-08 17:51:21,753 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:21,753 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:21,753 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:21,753 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:21,763 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:21,763 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:21,763 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:21,763 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:21,763 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:21,764 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:21,764 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,764 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,764 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:21,764 - Do unicode file recognition:  false
-2021-04-08 17:51:21,764 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:21,764 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:21,765 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:21,766 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:21,766 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:21,766 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:21,766 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:21,766 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:21,766 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:21,766 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:21,766 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:21,768 - Created '20' parsers.
-2021-04-08 17:51:21,768 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:21,768 - Velocimacro : Default library not found.
-2021-04-08 17:51:21,768 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:21,768 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:21,769 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:21,769 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:21,776 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:21,776 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:21,777 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:21,777 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:21,777 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:21,777 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:21,777 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,778 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,778 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:21,778 - Do unicode file recognition:  false
-2021-04-08 17:51:21,778 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:21,778 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:21,778 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:21,795 - Created '20' parsers.
-2021-04-08 17:51:21,795 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:21,795 - Velocimacro : Default library not found.
-2021-04-08 17:51:21,795 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:21,795 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:21,795 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:21,796 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-,769 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:21,769 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:21,776 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:21,776 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:21,776 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:21,776 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:21,776 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:21,776 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:21,777 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:21,777 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:21,777 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:21,777 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:21,777 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:21,777 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:21,777 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:21,777 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:21,777 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:21,777 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:21,777 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:21,777 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:21,777 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,777 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,777 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,778 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,778 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,778 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:21,778 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:21,778 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:21,778 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:21,778 - Do unicode file recognition:  false
-2021-04-08 17:51:21,778 - Do unicode file recognition:  false
-2021-04-08 17:51:21,778 - Do unicode file recognition:  false
-2021-04-08 17:51:21,778 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:21,778 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:21,778 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:21,778 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:21,778 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:21,778 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:21,778 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:21,778 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:21,778 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:21,779 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:21,795 - Created '20' parsers.
-2021-04-08 17:51:21,795 - Created '20' parsers.
-2021-04-08 17:51:21,795 - Created '20' parsers.
-2021-04-08 17:51:21,795 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:21,795 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:21,795 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:21,795 - Velocimacro : Default library not found.
-2021-04-08 17:51:21,795 - Velocimacro : Default library not found.
-2021-04-08 17:51:21,795 - Velocimacro : Default library not found.
-2021-04-08 17:51:21,795 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:21,795 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:21,795 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:21,795 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:21,795 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:21,795 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:21,795 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:21,795 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:21,795 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:21,796 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:21,796 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:21,796 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:47,560 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:47,560 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:47,560 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:47,560 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:47,560 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:47,560 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:47,561 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,561 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,565 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:47,566 - Do unicode file recognition:  false
-2021-04-08 17:51:47,566 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:47,579 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:47,581 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:47,582 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:47,582 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:47,583 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:47,584 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:47,585 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:47,586 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:47,587 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:47,588 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:47,627 - Created '20' parsers.
-2021-04-08 17:51:47,632 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:47,632 - Velocimacro : Default library not found.
-2021-04-08 17:51:47,632 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:47,632 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:47,632 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:47,632 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:47,678 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
-2021-04-08 17:51:47,694 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,694 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,694 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,694 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,694 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,694 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,694 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
-2021-04-08 17:51:47,694 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,695 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,695 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,696 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,696 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,696 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,706 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
-2021-04-08 17:51:47,706 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,706 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,706 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,706 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,706 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,707 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,738 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
-2021-04-08 17:51:47,738 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,738 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,738 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,738 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,738 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,738 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,738 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
-2021-04-08 17:51:47,739 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,739 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,739 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,739 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,739 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,739 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,743 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
-2021-04-08 17:51:47,743 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,747 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,747 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,747 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,747 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,747 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,764 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,765 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,766 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
-2021-04-08 17:51:47,767 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,767 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,768 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,768 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,768 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,768 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,769 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,769 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,769 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,769 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,769 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,769 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,769 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,769 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,769 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,770 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,776 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,777 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,777 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,778 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,778 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,778 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,778 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,778 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,778 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,779 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,779 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
-2021-04-08 17:51:47,779 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
-2021-04-08 17:51:47,782 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
-2021-04-08 17:51:47,782 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,783 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,783 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,783 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,783 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,783 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,783 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,783 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,783 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,783 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,783 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,784 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,784 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,784 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,784 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,784 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,784 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,784 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,784 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,784 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,784 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,787 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,787 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,787 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,787 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,788 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,788 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
-2021-04-08 17:51:47,788 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
-2021-04-08 17:51:47,809 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:47,809 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:47,809 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:47,809 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:47,809 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:47,809 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:47,809 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:47,809 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:47,809 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:47,809 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:47,809 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:47,809 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:47,809 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,809 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,809 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,809 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,810 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:47,810 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:47,810 - Do unicode file recognition:  false
-2021-04-08 17:51:47,810 - Do unicode file recognition:  false
-2021-04-08 17:51:47,810 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:47,810 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:47,810 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:47,810 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:47,810 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:47,810 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:47,810 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:47,810 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:47,810 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:47,810 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:47,810 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:47,810 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:47,811 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:47,811 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:47,811 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:47,811 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:47,811 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:47,811 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:47,811 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:47,811 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:47,811 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:47,811 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:47,844 - Created '20' parsers.
-2021-04-08 17:51:47,844 - Created '20' parsers.
-2021-04-08 17:51:47,845 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:47,845 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:47,845 - Velocimacro : Default library not found.
-2021-04-08 17:51:47,845 - Velocimacro : Default library not found.
-2021-04-08 17:51:47,845 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:47,845 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:47,845 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:47,845 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:47,845 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:47,845 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:47,845 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:47,845 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:47,857 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:47,857 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:47,857 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:47,857 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:47,857 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:47,857 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:47,857 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:47,857 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:47,857 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:47,857 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:47,857 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:47,857 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:47,857 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:47,857 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:47,857 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:47,857 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:47,857 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:47,857 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:47,857 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,857 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,857 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,857 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,857 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,857 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,857 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:47,857 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:47,857 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:47,858 - Do unicode file recognition:  false
-2021-04-08 17:51:47,858 - Do unicode file recognition:  false
-2021-04-08 17:51:47,858 - Do unicode file recognition:  false
-2021-04-08 17:51:47,858 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:47,858 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:47,858 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:47,858 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:47,858 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:47,858 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:47,858 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:47,858 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:47,858 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:47,858 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:47,858 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:47,858 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:47,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:47,860 - Created '20' parsers.
-2021-04-08 17:51:47,860 - Created '20' parsers.
-2021-04-08 17:51:47,860 - Created '20' parsers.
-2021-04-08 17:51:47,860 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:47,860 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:47,860 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:47,860 - Velocimacro : Default library not found.
-2021-04-08 17:51:47,860 - Velocimacro : Default library not found.
-2021-04-08 17:51:47,860 - Velocimacro : Default library not found.
-2021-04-08 17:51:47,860 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:47,860 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:47,860 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:47,861 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:47,861 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:47,861 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:47,861 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:47,861 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:47,861 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:47,861 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:47,861 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:47,861 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:47,868 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:47,868 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:47,868 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:47,868 - Log4JLogChute initialized using file 'velocity.log'
-2021-04-08 17:51:47,868 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:47,868 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:47,868 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:47,868 - Initializing Velocity, Calling init()...
-2021-04-08 17:51:47,868 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:47,868 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:47,868 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:47,868 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2021-04-08 17:51:47,868 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:47,868 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:47,868 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:47,868 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2021-04-08 17:51:47,868 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:47,868 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:47,868 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:47,868 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 17:51:47,868 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:47,868 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:47,868 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:47,868 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 17:51:47,869 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,869 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,869 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,869 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,869 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,869 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,869 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,869 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 17:51:47,869 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:47,869 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:47,869 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:47,869 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 17:51:47,869 - Do unicode file recognition:  false
-2021-04-08 17:51:47,869 - Do unicode file recognition:  false
-2021-04-08 17:51:47,869 - Do unicode file recognition:  false
-2021-04-08 17:51:47,869 - Do unicode file recognition:  false
-2021-04-08 17:51:47,869 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:47,869 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:47,869 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:47,869 - FileResourceLoader : adding path '.'
-2021-04-08 17:51:47,869 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:47,869 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:47,869 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:47,869 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:47,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 17:51:47,871 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:47,871 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:47,871 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:47,871 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 17:51:47,872 - Created '20' parsers.
-2021-04-08 17:51:47,872 - Created '20' parsers.
-2021-04-08 17:51:47,872 - Created '20' parsers.
-2021-04-08 17:51:47,872 - Created '20' parsers.
-2021-04-08 17:51:47,872 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:47,872 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:47,872 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:47,872 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 17:51:47,872 - Velocimacro : Default library not found.
-2021-04-08 17:51:47,872 - Velocimacro : Default library not found.
-2021-04-08 17:51:47,872 - Velocimacro : Default library not found.
-2021-04-08 17:51:47,872 - Velocimacro : Default library not found.
-2021-04-08 17:51:47,872 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:47,872 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:47,872 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:47,872 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 17:51:47,872 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:47,872 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:47,872 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:47,872 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 17:51:47,872 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:47,872 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:47,872 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:47,872 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2021-04-08 17:51:47,872 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:47,872 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:47,872 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 17:51:47,872 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-08 18:52:28,739 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,739 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-08 18:52:28,739 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,740 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,740 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,740 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,740 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,741 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,741 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,742 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,742 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,742 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,742 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,742 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,743 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,743 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,743 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,743 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,743 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,743 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,743 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,744 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,744 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,744 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,744 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,744 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,744 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,744 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,744 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-08 18:52:28,745 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-08 18:52:28,748 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-08 18:52:28,748 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,748 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,749 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,751 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,751 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,752 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,752 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,753 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,753 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,753 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,753 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,753 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,753 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,753 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,753 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,753 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,754 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,754 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,754 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,754 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,754 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,754 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,754 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,754 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,754 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,754 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,755 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-08 18:52:28,755 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-08 18:52:28,785 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-08 18:52:28,785 - Initializing Velocity, Calling init()...
+2021-04-08 18:52:28,785 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-08 18:52:28,785 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-08 18:52:28,785 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-08 18:52:28,785 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-08 18:52:28,785 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-08 18:52:28,785 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-08 18:52:28,785 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-08 18:52:28,785 - Do unicode file recognition:  false
+2021-04-08 18:52:28,786 - FileResourceLoader : adding path '.'
+2021-04-08 18:52:28,786 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-08 18:52:28,786 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-08 18:52:28,786 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-08 18:52:28,786 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-08 18:52:28,786 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-08 18:52:28,786 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-08 18:52:28,787 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-08 18:52:28,787 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-08 18:52:28,787 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-08 18:52:28,787 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-08 18:52:28,788 - Created '20' parsers.
+2021-04-08 18:52:28,789 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-08 18:52:28,789 - Velocimacro : Default library not found.
+2021-04-08 18:52:28,789 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-08 18:52:28,789 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-08 18:52:28,789 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2021-04-08 18:52:28,789 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-08 18:52:28,810 - Velocimacro : added VM Test: source=sqlmap
+2021-04-08 18:52:28,812 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-08 18:52:28,812 - Velocimacro : added VM Update: source=sqlmap
+2021-04-08 18:52:28,812 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-08 18:52:28,812 - Velocimacro : added VM Where: source=sqlmap
+2021-04-08 18:52:28,812 - Velocimacro : added VM getMaxID: source=sqlmap
+
+2021-04-08 18:52:28,812 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-08 18:52:28,812 - Velocimacro : added VM Where: source=sqlmap
+2021-04-08 18:52:28,812 - Velocimacro : added VM getMaxID: source=sqlmap

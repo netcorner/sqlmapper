@@ -56,7 +56,7 @@ public class TestMain {
 		//TestExtMore();
 		//TestEntity();
 
-		TestGen();
+		TestEntity();
 	}
 
 	public static void TestGen(){
@@ -84,9 +84,9 @@ public class TestMain {
 //		tee.delete();
 
 
-//		TestEntity tee=new TestEntity();
-//		tee.get(1);
-//		System.out.println(tee.getC());
+		TestEntity tee=new TestEntity();
+		tee.get(1);
+		System.out.println(tee.getC());
 
 
 
@@ -100,15 +100,15 @@ public class TestMain {
 //		tee.setA("kkk");
 //		System.out.println(tee.getList().size());
 
-			TestEntity tee=new TestEntity();
-		tee.setA("kkk");
-
-		QueryPage qp=new QueryPage();
-		int[] showPage = { 15 };
-		qp.setShowPage(showPage);
-		tee.getPageList(qp);
-
-		System.out.println(qp.getTotal());
+//			TestEntity tee=new TestEntity();
+//		tee.setA("kkk");
+//
+//		QueryPage qp=new QueryPage();
+//		int[] showPage = { 15 };
+//		qp.setShowPage(showPage);
+//		tee.getPageList(qp);
+//
+//		System.out.println(qp.getTotal());
 
 
 	}
