@@ -1579,6 +1579,7 @@ public class SQLMap   implements Serializable {
 
 		String path=System.getProperty("user.dir")+"/src/main/java/"+packages.replace(".","/");
 
+		String xmlpath=System.getProperty("user.dir")+"/src/main/resources/mapper/"+dbName;
 
 		SQLMap sqlMap=new SQLMap(dbName);
 
@@ -1593,12 +1594,12 @@ public class SQLMap   implements Serializable {
 				sb.append(s.substring(0,1).toUpperCase());
 				sb.append(s.substring(1));
 			}
-			table=sb.toString();
+			String tableName=sb.toString();
 
 
 			hash.put("package",packages);
 			hash.put("DBName",sqlMap.getDbName());
-			hash.put("Table",table);
+			hash.put("Table",tableName);
 			hash.put("TableComment",tableComment+"");
 			hash.put("Fields",fields);
 
@@ -1614,29 +1615,39 @@ public class SQLMap   implements Serializable {
 
 
 
-			File file = new File(path+"/"+table+".java");
-			if(!file.exists()){
-				file.getParentFile().mkdirs();
-			}else{
-				file.delete();
-			}
-			try {
-				file.createNewFile();
-				// write
-				FileWriter fw = new FileWriter(file, true);
-				BufferedWriter bw = new BufferedWriter(fw);
-				bw.write(w.toString());
-				bw.flush();
-				bw.close();
-				fw.close();
+			createFile(path+"/"+tableName+".java",w.toString(),true);
 
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+
+			String tmp=FileTools.getResFile("/template/base.xml");
+			createFile(xmlpath+"/base.xml",tmp,false);
+			tmp=FileTools.getResFile("/template/table.xml");
+			createFile(xmlpath+"/"+table+".xml",tmp,false);
+
 
 		}
 	}
 
+	private static void createFile(String filepath,String template,boolean isReplace){
+		File file = new File(filepath);
+		if(!file.exists()){
+			file.getParentFile().mkdirs();
+		}else{
+			if(isReplace) file.delete();
+		}
+		try {
+			file.createNewFile();
+			// write
+			FileWriter fw = new FileWriter(file, true);
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(template);
+			bw.flush();
+			bw.close();
+			fw.close();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 
 }

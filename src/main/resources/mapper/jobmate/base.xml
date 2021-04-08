@@ -1,6 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--DOCTYPE sqlMap SYSTEM "http://qiniu.netcorner.cn/sqlMap.dtd"-->
 <sqlMap>
+	<function>
+		##得到最大 id
+		#macro(getMaxID)
+		select max(id) id from $table
+		#end
+	</function>
+	<statement id="_insert">
+		<insert>
+			#Insert()
+		</insert>
+	</statement>
+	<statement id="_update">
+		<update>
+			#Update()
+		</update>
+	</statement>
+	<statement id="_delete">
+		<delete>
+			#Delete()
+		</delete>
+	</statement>
+	<statement id="_list">
+		<select>
+			select*from $table where #Where()
+		</select>
+	</statement>
+	<statement id="_page">
+		<page></page>
+	</statement>
 	<statement id="add">
 		<insert>
 			#Insert()
@@ -24,9 +53,81 @@
 	<statement id="page">
 		<page></page>
 	</statement>
-
-
-
+</sqlMap>﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "http://qiniu.netcorner.cn/sqlMap.dtd"-->
+<sqlMap>
+	<function>
+		##得到最大 id
+		#macro(getMaxID)
+		select max(id) id from $table
+		#end
+	</function>
+	<statement id="_insert">
+		<insert>
+			#Insert()
+		</insert>
+	</statement>
+	<statement id="_update">
+		<update>
+			#Update()
+		</update>
+	</statement>
+	<statement id="_delete">
+		<delete>
+			#Delete()
+		</delete>
+	</statement>
+	<statement id="_list">
+		<select>
+			select*from $table where #Where()
+		</select>
+	</statement>
+	<statement id="_page">
+		<page></page>
+	</statement>
+</sqlMap>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "http://qiniu.netcorner.cn/sqlMap.dtd"-->
+<sqlMap>
+	<function>
+		##得到最大 id
+		#macro(getMaxID)
+		select max(id) id from $table
+		#end
+	</function>
+	<statement id="_insert">
+		<insert>
+			#Insert()
+		</insert>
+	</statement>
+	<statement id="_update">
+		<update>
+			#Update()
+		</update>
+	</statement>
+	<statement id="_delete">
+		<delete>
+			#Delete()
+		</delete>
+	</statement>
+	<statement id="_list">
+		<select>
+			select*from $table where #Where()
+		</select>
+	</statement>
+	<statement id="_page">
+		<page></page>
+	</statement>
+</sqlMap>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "http://qiniu.netcorner.cn/sqlMap.dtd"-->
+<sqlMap>
+	<function>
+		##得到最大 id
+		#macro(getMaxID)
+		select max(id) id from $table
+		#end
+	</function>
 	<statement id="_insert">
 		<insert>
 			#Insert()

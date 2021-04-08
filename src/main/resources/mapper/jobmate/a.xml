@@ -28,4 +28,8 @@
 		<page></page>
 	</statement>
 
+</sqlMap>﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "http://qiniu.netcorner.cn/sqlMap.dtd"-->
+<!--合并xml文档,在sqlmap中的merge属性-->
+<sqlMap  merge="jobmate.base">
 </sqlMap>
