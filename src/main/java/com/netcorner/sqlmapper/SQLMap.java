@@ -1637,7 +1637,7 @@ public class SQLMap   implements Serializable {
 			file.getParentFile().mkdirs();
 		}else{
 			if(isReplace) file.delete();
-			return;
+			else return;
 		}
 		try {
 			file.createNewFile();
