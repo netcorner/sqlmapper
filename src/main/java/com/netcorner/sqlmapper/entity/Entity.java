@@ -107,7 +107,6 @@ public abstract class Entity<T,R>  implements Serializable {
         T t=(T)map2Entity(obj,this.getClass());
         BeanUtils.copyProperties(t, this);
 
-
     }
 
     /**
