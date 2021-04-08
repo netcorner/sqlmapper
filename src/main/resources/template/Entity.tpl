@@ -4,6 +4,7 @@ import com.netcorner.sqlmapper.entity.Entity;
 import com.netcorner.sqlmapper.entity.Table;
 import java.util.Date;
 
+
 /**
  * Created by netcorner.
  * $map.TableComment
