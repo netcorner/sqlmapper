@@ -71,6 +71,7 @@ public class TestMain {
 
 		TestEntity tee=new TestEntity();
 
+
 		B b=tee.insert("111",new HashMap<String,Object>(),B.class);
 		System.out.println(b.getid());
 
