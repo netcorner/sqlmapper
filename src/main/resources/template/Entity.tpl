@@ -8,7 +8,7 @@ import java.util.Date;
  * $map.TableComment
  */
 @Table("${map.DBName}.${map.Table}")
-public class ${map.className} extends Entity<${map.Table},Integer> {
+public class ${map.ClassName} extends Entity<${map.ClassName},Integer> {
 
 
     #foreach($field in $map.Fields)
