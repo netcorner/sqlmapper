@@ -7,7 +7,7 @@ import com.netcorner.sqlmapper.entity.Table;
  * Created by shijiufeng on 2021/4/5.
  */
 @Table("Jobmate.b")
-public class TestEntity extends Entity<TestEntity,Integer> {
+public class TestEntity extends Entity<TestEntity> {
 
     private String a;
     private Integer c;

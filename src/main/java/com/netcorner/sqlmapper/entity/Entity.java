@@ -4,7 +4,6 @@ import com.google.gson.*;
 import com.netcorner.sqlmapper.Field;
 import com.netcorner.sqlmapper.QueryPage;
 import com.netcorner.sqlmapper.SQLMap;
-import com.netcorner.sqlmapper.WebQueryPage;
 import org.springframework.beans.BeanUtils;
 
 import java.io.Serializable;
@@ -15,7 +14,7 @@ import java.util.*;
 /**
  * Created by netcorner on 15/10/20.
  */
-public abstract class Entity<T,R>  implements Serializable {
+public abstract class Entity<T>  implements Serializable {
     private String _mapKey;
     private SQLMap sqlMap;
     public Entity(){
@@ -42,8 +41,8 @@ public abstract class Entity<T,R>  implements Serializable {
      * 插入映射实体到数据库表中
      * @return
      */
-    public R insert(){
-        return (R)insert("_insert", entity2Map(this));
+    public <B> B insert(){
+        return insert("_insert", entity2Map(this),null);
     }
 
     /**
@@ -52,15 +51,23 @@ public abstract class Entity<T,R>  implements Serializable {
      * @param params
      * @return
      */
-    public R insert(String statementid,Map<String,Object> params){
-        Object obj= sqlMap.execute(statementid, params);
-        if(obj instanceof Map){
-            for(Map.Entry<String, Object> entry : ((Map<String,Object>)obj).entrySet()){
-                return (R)entry.getValue();
-            }
-        }
-        return (R)obj;
+    public <B> B  insert(String statementid,Map<String,Object> params){
+        return insert(statementid,params);
     }
+
+    /**
+     * 插入映射实体到数据库表中
+     * @param statementid
+     * @param params
+     * @param clazz
+     * @param <B>
+     * @return
+     */
+    public <B> B  insert(String statementid,Map<String,Object> params,Class<?> clazz){
+        Object obj= sqlMap.execute(statementid, params);
+        return convertResult(obj,clazz);
+    }
+
 
 
 
@@ -68,32 +75,48 @@ public abstract class Entity<T,R>  implements Serializable {
      * 更新映射实体到数据库表中
      * @return
      */
-    public R update(){
-        return (R)update("_update", entity2Map(this));
+    public <B> B update(){
+        return update("_update", entity2Map(this),null);
     }
 
     /**
      * 更新映射实体到数据库表中
      * @param statementid
      * @param params
+     * @param <B>
      * @return
      */
-    public R update(String statementid,Map<String,Object> params){
+    public <B> B  update(String statementid,Map<String,Object> params){
+        return update(statementid,params,null);
+    }
+    /**
+     * 更新映射实体到数据库表中
+     * @param statementid
+     * @param params
+     * @return
+     */
+    public <B> B  update(String statementid,Map<String,Object> params,Class<?> clazz){
         Object obj= sqlMap.execute(statementid, params);
-        if(obj instanceof Map){
-            for(Map.Entry<String, Object> entry : ((Map<String,Object>)obj).entrySet()){
-                return (R)entry.getValue();
-            }
-        }
-        return (R)obj;
+        return convertResult(obj,clazz);
     }
 
     /**
      * 删除映射实体到数据库表中
      * @return
      */
-    public R delete(){
-        return (R)delete("_delete", entity2Map(this));
+    public <B> B  delete(){
+        return delete("_delete", entity2Map(this),null);
+    }
+
+    /**
+     * 删除映射实体到数据库表中
+     * @param statementid
+     * @param params
+     * @param <B>
+     * @return
+     */
+    public <B> B  delete(String statementid,Map<String,Object> params){
+        return delete(statementid, params,null);
     }
 
     /**
@@ -102,14 +125,9 @@ public abstract class Entity<T,R>  implements Serializable {
      * @param params
      * @return
      */
-    public R delete(String statementid,Map<String,Object> params){
+    public <B> B  delete(String statementid,Map<String,Object> params,Class<?> clazz){
         Object obj= sqlMap.execute(statementid, params);
-        if(obj instanceof Map){
-            for(Map.Entry<String, Object> entry : ((Map<String,Object>)obj).entrySet()){
-                return (R)entry.getValue();
-            }
-        }
-        return (R)obj;
+        return convertResult(obj,clazz);
     }
 
     /**
@@ -271,8 +289,33 @@ public abstract class Entity<T,R>  implements Serializable {
      * @param type
      * @return
      */
-    private static <T> T fromJson(String str, Type type) {
+    private static <B> B fromJson(String str, Type type) {
         Gson gson = getGson();
         return gson.fromJson(str, type);
     }
+
+    /**
+     * 记录转换结果
+     * @param obj
+     * @return
+     */
+    private <B> B  convertResult(Object obj,Class<?> clazz){
+        if(obj instanceof Map){
+            Map<String,Object> o=(Map<String,Object>)obj;
+            int size=o.entrySet().size();
+            if(size==1){
+                for(Map.Entry<String, Object> entry : o.entrySet()){
+                    return (B)entry.getValue();
+                }
+            }else{
+                if(clazz!=null){
+                    return (B)map2Entity(o,clazz);
+                }else {
+                    return (B) obj;
+                }
+            }
+        }
+        return (B)obj;
+    }
+
 }

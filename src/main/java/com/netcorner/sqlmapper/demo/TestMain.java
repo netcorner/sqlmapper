@@ -6,6 +6,7 @@ import com.netcorner.sqlmapper.Field;
 import com.netcorner.sqlmapper.QueryPage;
 import com.netcorner.sqlmapper.SQLMap;
 import com.netcorner.sqlmapper.utils.FileTools;
+import com.netcorner.test.model.entity.B;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -67,6 +68,14 @@ public class TestMain {
 
 
 	public static void TestEntity(){
+
+		TestEntity tee=new TestEntity();
+
+		B b=tee.insert("111",new HashMap<String,Object>(),B.class);
+		System.out.println(b.getid());
+
+
+
 //		TestEntity tee=new TestEntity();
 //		tee.setA("xxx1");
 //		tee.setC(1);
@@ -84,10 +93,10 @@ public class TestMain {
 //		tee.delete();
 
 
-		TestEntity tee=new TestEntity();
-		tee.get(1);
-		System.out.println(tee.getC());
-
+//		TestEntity tee=new TestEntity();
+//		tee.get(1);
+//		System.out.println(tee.getC());
+//		tee.insert();
 
 
 //				TestEntity tee=new TestEntity();

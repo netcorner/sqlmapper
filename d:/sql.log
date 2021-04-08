@@ -650,4 +650,52 @@ insert into b(
   [ERROR]_2021-04-08 18:50:18 :配置文件'Users/shijiufeng/Documents/idea/sqlmapper/target/classes/mapper/Jobmate/b.xml'或资源文件mapper/Jobmate/b.xml不存在！
   [INFO ]_2021-04-08 18:51:04 :{dataSource-1} inited
   [INFO ]_2021-04-08 18:52:27 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:00:41 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:00:42 :{dataSource-2} inited
+  [ERROR]_2021-04-08 20:00:43 :dal配置文件有误:Jobmate.b.111,错误为：StatementCallback; SQL [			
+					
+
+			insert into b(id,a,c)
+			values(1,2,3)
+	]; Duplicate entry '1' for key 'b.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'b.PRIMARY'
+  [INFO ]_2021-04-08 20:00:56 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:00:57 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:01:07 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:01:08 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:01:21 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:01:22 :{dataSource-2} inited
+  [ERROR]_2021-04-08 20:01:31 :dal配置文件有误:Jobmate.b.111,错误为：StatementCallback; SQL [			
+					
+
+			insert into b(id,a,c)
+			values(111,2,3)
+	]; Duplicate entry '111' for key 'b.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '111' for key 'b.PRIMARY'
+  [INFO ]_2021-04-08 20:01:34 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:01:36 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:05:11 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:05:12 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:05:16 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:05:17 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:09:39 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:09:40 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:10:05 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:10:06 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:11:03 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:11:04 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:13:13 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:13:14 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:18:30 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:18:31 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:20:08 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:20:10 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:23:56 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:24:35 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:28:30 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:28:31 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:28:57 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:29:01 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:37:21 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:37:22 :{dataSource-2} inited
+  [INFO ]_2021-04-08 20:37:38 :{dataSource-1} inited
+  [INFO ]_2021-04-08 20:37:39 :{dataSource-2} inited
   
