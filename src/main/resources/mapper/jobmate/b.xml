@@ -251,7 +251,7 @@
 		</insert>
 		<select id="result">
 			<query id="user" primary="UserID">
-			select *from b
+			select *from b limit 0,1
 			</query>
 		</select>
 	</statement>
