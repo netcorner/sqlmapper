@@ -313,6 +313,7 @@ public abstract class Entity<T>  implements Serializable {
                     } else {
                         return (B) o;
                     }
+
                 }
             }else{
                 if(clazz!=null){
