@@ -53,13 +53,5 @@
 	<statement id="page">
 		<page></page>
 	</statement>
-	<statement id="111">
-		<insert>
-			insert into b(a,c)
-			values(2,3)
-		</insert>
-		<select>
-			select *from b limit 0,1
-		</select>
-	</statement>
+
 </sqlMap>

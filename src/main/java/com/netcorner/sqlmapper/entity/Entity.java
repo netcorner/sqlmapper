@@ -294,25 +294,44 @@ public abstract class Entity<T>  implements Serializable {
         return gson.fromJson(str, type);
     }
 
-    
+
     /**
      * 记录转换结果
      * @param obj
      * @return
      */
     private <B> B  convertResult(Object obj,Class<?> clazz){
-        if(obj instanceof Map){
-            Map<String,Object> o=(Map<String,Object>)obj;
-            int size=o.entrySet().size();
-            if(size==1){
-                for(Map.Entry<String, Object> entry : o.entrySet()){
-                    return (B)entry.getValue();
+        if(obj instanceof List){
+            List<Map<String,Object>> list=(List<Map<String,Object>>)obj;
+            if(list.size()==1) {
+                Map<String,Object> o=list.get(0);
+                if (o.entrySet().size() == 1 && list.size() == 1) {
+                    return (B) o;
+                } else {
+                    if (clazz != null) {
+                        return (B)map2Entity(o,clazz);
+                    } else {
+                        return (B) o;
+                    }
                 }
             }else{
                 if(clazz!=null){
+                    List<B> l=new ArrayList<B>();
+                    for(Map<String,Object> o:list){
+                        l.add((B)map2Entity(o,clazz));
+                    }
+                    return (B)l;
+                }
+            }
+        }else if(obj instanceof Map){
+            Map<String,Object> o=(Map<String,Object>)obj;
+            if (o.entrySet().size() == 1 ) {
+                return (B) o;
+            } else {
+                if (clazz != null) {
                     return (B)map2Entity(o,clazz);
-                }else {
-                    return (B) obj;
+                } else {
+                    return (B) o;
                 }
             }
         }

@@ -242,4 +242,17 @@
 	</statement>
 
 
+
+
+	<statement id="111">
+		<insert>
+			insert into b(a,c)
+			values(2,3)
+		</insert>
+		<select id="result">
+			<query id="user" primary="UserID">
+			select *from b
+			</query>
+		</select>
+	</statement>
 </sqlMap>

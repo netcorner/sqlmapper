@@ -1,36 +1,960 @@
-2021-04-08 20:37:22,380 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2021-04-08 20:37:22,380 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2021-04-08 20:37:22,380 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 20:37:22,380 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2021-04-08 20:37:22,380 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2021-04-08 20:37:22,381 - Do unicode file recognition:  false
-2021-04-08 20:37:22,381 - FileResourceLoader : adding path '.'
-2021-04-08 20:37:22,381 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2021-04-08 20:37:22,381 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2021-04-08 20:37:22,381 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2021-04-08 20:37:22,381 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2021-04-08 20:37:22,382 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2021-04-08 20:37:22,382 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2021-04-08 20:37:22,382 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2021-04-08 20:37:22,382 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2021-04-08 20:37:22,382 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2021-04-08 20:37:22,382 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2021-04-08 20:37:22,383 - Created '20' parsers.
-2021-04-08 20:37:22,383 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2021-04-08 20:37:22,383 - Velocimacro : Default library not found.
-2021-04-08 20:37:22,384 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2021-04-08 20:37:22,384 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2021-04-08 20:37:22,384 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
-2021-04-08 20:37:22,384 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2021-04-08 20:37:22,392 - Velocimacro : added VM Test: source=sqlmap
-2021-04-08 20:37:22,393 - Velocimacro : added VM Insert: source=sqlmap
-2021-04-08 20:37:22,394 - Velocimacro : added VM Update: source=sqlmap
-2021-04-08 20:37:22,394 - Velocimacro : added VM Delete: source=sqlmap
-2021-04-08 20:37:22,394 - Velocimacro : added VM Where: source=sqlmap
-2021-04-08 20:37:22,394 - Velocimacro : added VM getMaxID: source=sqlmap
-2021-04-08 20:37:22,402 - Velocimacro : added VM Test: source=sqlmap
-2021-04-08 20:37:22,403 - Velocimacro : added VM Insert: source=sqlmap
-2021-04-08 20:37:22,403 - Velocimacro : added VM Update: source=sqlmap
-2021-04-08 20:37:22,403 - Velocimacro : added VM Delete: source=sqlmap
-2021-04-08 20:37:22,404 - Velocimacro : added VM Where: source=sqlmap
-2021-04-08 20:37:22,404 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:34:00,931 - Initializing Velocity, Calling init()...
+2021-04-09 10:34:00,931 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:34:00,931 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:34:00,931 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:34:00,931 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:34:00,931 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:34:00,931 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:34:00,936 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:34:00,937 - Do unicode file recognition:  false
+2021-04-09 10:34:00,937 - FileResourceLoader : adding path '.'
+2021-04-09 10:34:00,948 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:34:00,949 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:34:00,950 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:34:00,951 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:34:00,952 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:34:00,952 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:34:00,953 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:34:00,954 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:34:00,955 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:34:00,956 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:34:00,992 - Created '20' parsers.
+2021-04-09 10:34:00,996 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:34:00,996 - Velocimacro : Default library not found.
+2021-04-09 10:34:00,996 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:34:00,996 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:34:00,996 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-04-09 10:34:00,996 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:34:01,035 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:01,040 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,040 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,040 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,040 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,040 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,041 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,041 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:01,041 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,042 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,042 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,043 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,043 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,043 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,055 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:34:01,055 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,055 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,055 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,056 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,056 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,056 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,078 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:01,078 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,078 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,078 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,079 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,079 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,079 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,079 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:01,079 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,079 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,079 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,079 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,079 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,079 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,082 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:34:01,083 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,083 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,083 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,083 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,083 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,083 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,095 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,096 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,098 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,098 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:01,098 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,098 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,098 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,099 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,099 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,099 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,099 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,099 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,099 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,102 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,102 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,102 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,103 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,103 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,103 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,103 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,103 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,103 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,103 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,104 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,105 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,105 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,105 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,105 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,105 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,105 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,105 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:01,105 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:01,108 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:34:01,108 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,108 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,109 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,109 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,109 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,109 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,109 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,109 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,109 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,109 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,109 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,110 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,111 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,111 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,111 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:01,111 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:01,198 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:34:01,198 - Initializing Velocity, Calling init()...
+2021-04-09 10:34:01,198 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:34:01,198 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:34:01,198 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:34:01,198 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:34:01,198 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:34:01,198 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:34:01,199 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:34:01,199 - Do unicode file recognition:  false
+2021-04-09 10:34:01,199 - FileResourceLoader : adding path '.'
+2021-04-09 10:34:01,199 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:34:01,199 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:34:01,199 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:34:01,199 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:34:01,199 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:34:01,199 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:34:01,199 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:34:01,199 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:34:01,200 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:34:01,200 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:34:01,201 - Created '20' parsers.
+2021-04-09 10:34:01,201 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:34:01,201 - Velocimacro : Default library not found.
+2021-04-09 10:34:01,201 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:34:01,201 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:34:01,201 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2021-04-09 10:34:01,201 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:34:01,208 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:34:01,209 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:34:01,210 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:34:01,210 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:34:01,210 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:34:01,210 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:34:01,220 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:34:01,221 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:34:01,221 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:34:01,221 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:34:01,221 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:34:01,222 - Velocimacro : added VM getMaxID: source=sqlmap
+
+2021-04-09 10:34:01,221 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:34:01,221 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:34:01,222 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:34:19,458 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:34:19,458 - Initializing Velocity, Calling init()...
+2021-04-09 10:34:19,458 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:34:19,458 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:34:19,459 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:34:19,459 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:34:19,459 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:34:19,459 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:34:19,463 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:34:19,464 - Do unicode file recognition:  false
+2021-04-09 10:34:19,465 - FileResourceLoader : adding path '.'
+2021-04-09 10:34:19,478 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:34:19,479 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:34:19,480 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:34:19,481 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:34:19,482 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:34:19,482 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:34:19,483 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:34:19,484 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:34:19,486 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:34:19,486 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:34:19,530 - Created '20' parsers.
+2021-04-09 10:34:19,535 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:34:19,535 - Velocimacro : Default library not found.
+2021-04-09 10:34:19,535 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:34:19,536 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:34:19,536 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-04-09 10:34:19,536 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:34:19,561 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:19,566 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,567 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,567 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,567 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,567 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,567 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,567 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:19,567 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,568 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,568 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,569 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,569 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,569 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,578 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:34:19,578 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,578 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,578 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,578 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,579 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,579 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,592 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:19,592 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,592 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,593 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,593 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,593 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,593 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,593 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:19,593 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,593 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,593 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,593 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,593 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,594 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,598 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:34:19,598 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,598 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,598 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,598 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,599 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,599 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,608 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,609 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,610 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:34:19,610 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,610 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,610 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,610 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,610 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,610 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,610 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,611 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,611 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,611 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,611 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,611 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,611 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,611 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,611 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,612 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,612 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,612 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,612 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,612 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,612 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,612 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,612 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,612 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,612 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,613 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,613 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:34:19,613 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:34:19,618 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:34:19,618 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,618 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,618 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,618 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,618 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,619 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,619 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,619 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,619 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,619 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,619 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,619 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,619 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,619 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,619 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,620 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,621 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:34:19,621 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:34:19,692 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:34:19,692 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:34:19,692 - Initializing Velocity, Calling init()...
+2021-04-09 10:34:19,692 - Initializing Velocity, Calling init()...
+2021-04-09 10:34:19,692 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:34:19,692 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:34:19,692 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:34:19,692 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:34:19,692 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:34:19,692 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:34:19,692 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:34:19,692 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:34:19,692 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:34:19,692 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:34:19,692 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:34:19,692 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:34:19,692 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:34:19,692 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:34:19,692 - Do unicode file recognition:  false
+2021-04-09 10:34:19,692 - Do unicode file recognition:  false
+2021-04-09 10:34:19,692 - FileResourceLoader : adding path '.'
+2021-04-09 10:34:19,692 - FileResourceLoader : adding path '.'
+2021-04-09 10:34:19,693 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:34:19,693 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:34:19,693 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:34:19,694 - Created '20' parsers.
+2021-04-09 10:34:19,694 - Created '20' parsers.
+2021-04-09 10:34:19,694 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:34:19,694 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:34:19,695 - Velocimacro : Default library not found.
+2021-04-09 10:34:19,695 - Velocimacro : Default library not found.
+2021-04-09 10:34:19,695 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:34:19,695 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:34:19,695 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:34:19,695 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:34:19,695 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2021-04-09 10:34:19,695 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2021-04-09 10:34:19,695 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:34:19,695 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:34:19,705 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:34:19,705 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:34:19,707 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:34:19,707 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:34:19,708 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:34:19,708 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:34:19,708 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:34:19,708 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:34:19,708 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:34:19,708 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:34:19,708 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:34:19,708 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:34:19,715 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:34:19,715 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:34:19,717 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:34:19,717 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:34:19,717 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:34:19,717 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:34:19,718 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:34:19,718 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:34:19,718 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:34:19,718 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:34:19,718 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:34:19,718 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:35:36,491 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:35:36,491 - Initializing Velocity, Calling init()...
+2021-04-09 10:35:36,492 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:35:36,492 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:35:36,492 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:35:36,492 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:35:36,492 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:36,492 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:36,497 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:35:36,499 - Do unicode file recognition:  false
+2021-04-09 10:35:36,499 - FileResourceLoader : adding path '.'
+2021-04-09 10:35:36,565 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:35:36,567 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:35:36,568 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:35:36,569 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:35:36,570 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:35:36,570 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:35:36,571 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:35:36,573 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:35:36,574 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:35:36,575 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:35:36,636 - Created '20' parsers.
+2021-04-09 10:35:36,641 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:35:36,641 - Velocimacro : Default library not found.
+2021-04-09 10:35:36,641 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:35:36,641 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:35:36,641 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-04-09 10:35:36,641 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:35:36,687 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:36,699 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,699 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,699 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,700 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,700 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,700 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,700 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:36,700 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,701 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,701 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,703 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,703 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,703 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,712 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:35:36,712 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,712 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,712 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,712 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,712 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,712 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,746 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:36,749 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,750 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,750 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,750 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,750 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,750 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,750 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:36,754 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,754 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,754 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,754 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,754 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,755 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,759 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:35:36,762 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,764 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,764 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,764 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,764 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,764 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,777 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:36,777 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,777 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,777 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,778 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:36,779 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,780 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,780 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,780 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,780 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,780 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,780 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,780 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,780 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,781 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,781 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,782 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,782 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,782 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,782 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,782 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,782 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,782 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,782 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,782 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,783 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,783 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,783 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,783 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,783 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,783 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,783 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:36,783 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:36,786 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:35:36,787 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,787 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,787 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,787 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,787 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,787 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,787 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,788 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,788 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,788 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,788 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,788 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,788 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,788 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,788 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,788 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,789 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,789 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,789 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,789 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,792 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,792 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,792 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,792 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,792 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,792 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,792 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:36,792 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:36,889 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:35:36,889 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:35:36,889 - Initializing Velocity, Calling init()...
+2021-04-09 10:35:36,889 - Initializing Velocity, Calling init()...
+2021-04-09 10:35:36,889 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:35:36,889 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:35:36,889 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:35:36,889 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:35:36,889 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:35:36,889 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:35:36,890 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:35:36,890 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:35:36,890 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:36,890 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:36,890 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:36,890 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:36,890 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:35:36,890 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:35:36,890 - Do unicode file recognition:  false
+2021-04-09 10:35:36,890 - Do unicode file recognition:  false
+2021-04-09 10:35:36,890 - FileResourceLoader : adding path '.'
+2021-04-09 10:35:36,890 - FileResourceLoader : adding path '.'
+2021-04-09 10:35:36,890 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:35:36,890 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:35:36,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:35:36,892 - Created '20' parsers.
+2021-04-09 10:35:36,892 - Created '20' parsers.
+2021-04-09 10:35:36,892 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:35:36,892 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:35:36,893 - Velocimacro : Default library not found.
+2021-04-09 10:35:36,893 - Velocimacro : Default library not found.
+2021-04-09 10:35:36,893 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:35:36,893 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:35:36,893 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:35:36,893 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:35:36,893 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2021-04-09 10:35:36,893 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2021-04-09 10:35:36,893 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:35:36,893 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:35:36,909 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:35:36,909 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:35:36,914 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:35:36,914 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:35:36,915 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:35:36,915 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:35:36,915 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:35:36,915 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:35:36,915 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:35:36,915 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:35:36,915 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:35:36,915 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:35:36,919 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:35:36,919 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:35:36,920 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:35:36,920 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:35:36,920 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:35:36,920 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:35:36,920 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:35:36,920 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:35:36,920 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:35:36,920 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:35:36,920 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:35:36,920 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:35:51,889 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:35:51,890 - Initializing Velocity, Calling init()...
+2021-04-09 10:35:51,890 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:35:51,890 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:35:51,890 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:35:51,890 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:35:51,890 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:51,890 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:51,894 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:35:51,895 - Do unicode file recognition:  false
+2021-04-09 10:35:51,895 - FileResourceLoader : adding path '.'
+2021-04-09 10:35:51,907 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:35:51,908 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:35:51,909 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:35:51,909 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:35:51,910 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:35:51,911 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:35:51,912 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:35:51,913 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:35:51,914 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:35:51,915 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:35:51,945 - Created '20' parsers.
+2021-04-09 10:35:51,949 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:35:51,949 - Velocimacro : Default library not found.
+2021-04-09 10:35:51,949 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:35:51,949 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:35:51,949 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-04-09 10:35:51,949 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:35:51,978 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:51,984 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:51,984 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:51,984 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:51,984 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:51,984 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:51,984 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:51,984 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:51,984 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:51,985 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:51,985 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:51,987 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:51,987 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:51,988 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,000 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:35:52,000 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,001 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,001 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,001 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,001 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,001 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,023 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:52,023 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,023 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,023 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,023 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,023 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,023 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,023 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:52,023 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,024 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,026 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,026 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,026 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,026 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,030 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:35:52,030 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,030 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,030 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,030 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,031 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,031 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,044 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:52,044 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,044 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,044 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,044 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,045 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:35:52,046 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,047 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,047 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,047 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,047 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,047 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,047 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,047 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,047 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,048 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,048 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,048 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,048 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,048 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,048 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,048 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,048 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,048 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,049 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,049 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,049 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,049 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,049 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,049 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,049 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,049 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,049 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:35:52,050 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:35:52,055 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:35:52,055 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,056 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,056 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,056 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,056 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,056 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,057 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,057 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,057 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,057 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,057 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,058 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,059 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,059 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,059 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,059 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,059 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:35:52,059 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:35:52,155 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:35:52,155 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:35:52,156 - Initializing Velocity, Calling init()...
+2021-04-09 10:35:52,156 - Initializing Velocity, Calling init()...
+2021-04-09 10:35:52,156 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:35:52,156 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:35:52,156 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:35:52,156 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:35:52,156 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:35:52,156 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:35:52,156 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:35:52,156 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:35:52,156 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:52,156 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:52,156 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:52,156 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:35:52,156 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:35:52,156 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:35:52,157 - Do unicode file recognition:  false
+2021-04-09 10:35:52,157 - Do unicode file recognition:  false
+2021-04-09 10:35:52,157 - FileResourceLoader : adding path '.'
+2021-04-09 10:35:52,157 - FileResourceLoader : adding path '.'
+2021-04-09 10:35:52,157 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:35:52,157 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:35:52,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:35:52,158 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:35:52,158 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:35:52,158 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:35:52,158 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:35:52,158 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:35:52,158 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:35:52,159 - Created '20' parsers.
+2021-04-09 10:35:52,159 - Created '20' parsers.
+2021-04-09 10:35:52,159 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:35:52,159 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:35:52,159 - Velocimacro : Default library not found.
+2021-04-09 10:35:52,159 - Velocimacro : Default library not found.
+2021-04-09 10:35:52,159 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:35:52,159 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:35:52,159 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:35:52,159 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:35:52,159 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2021-04-09 10:35:52,159 - Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+2021-04-09 10:35:52,159 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:35:52,159 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:35:52,169 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:35:52,169 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:35:52,170 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:35:52,170 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:35:52,171 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:35:52,171 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:35:52,171 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:35:52,171 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:35:52,171 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:35:52,171 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:35:52,171 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:35:52,171 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:35:52,176 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:35:52,176 - Velocimacro : added VM Test: source=sqlmap
+2021-04-09 10:35:52,177 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:35:52,177 - Velocimacro : added VM Insert: source=sqlmap
+2021-04-09 10:35:52,177 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:35:52,177 - Velocimacro : added VM Update: source=sqlmap
+2021-04-09 10:35:52,177 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:35:52,177 - Velocimacro : added VM Delete: source=sqlmap
+2021-04-09 10:35:52,178 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:35:52,178 - Velocimacro : added VM Where: source=sqlmap
+2021-04-09 10:35:52,178 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:35:52,178 - Velocimacro : added VM getMaxID: source=sqlmap
+2021-04-09 10:38:15,618 - Log4JLogChute initialized using file 'velocity.log'
+2021-04-09 10:38:15,618 - Initializing Velocity, Calling init()...
+2021-04-09 10:38:15,618 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2021-04-09 10:38:15,618 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2021-04-09 10:38:15,618 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-04-09 10:38:15,619 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2021-04-09 10:38:15,619 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:38:15,619 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-04-09 10:38:15,623 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2021-04-09 10:38:15,624 - Do unicode file recognition:  false
+2021-04-09 10:38:15,624 - FileResourceLoader : adding path '.'
+2021-04-09 10:38:15,636 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2021-04-09 10:38:15,638 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2021-04-09 10:38:15,639 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2021-04-09 10:38:15,640 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2021-04-09 10:38:15,642 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2021-04-09 10:38:15,643 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-04-09 10:38:15,644 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-04-09 10:38:15,645 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-04-09 10:38:15,647 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-04-09 10:38:15,648 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-04-09 10:38:15,688 - Created '20' parsers.
+2021-04-09 10:38:15,701 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-04-09 10:38:15,701 - Velocimacro : Default library not found.
+2021-04-09 10:38:15,701 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-04-09 10:38:15,701 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-04-09 10:38:15,701 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-04-09 10:38:15,701 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-04-09 10:38:15,753 - Null reference [template 'structure', line 5, column 15] : $flag cannot be resolved.
+2021-04-09 10:38:15,763 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:38:15,763 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:38:15,763 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:38:15,763 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:38:15,763 - Null reference [template 'structure', line 8, column 30] : $flag cannot be resolved.
+2021-04-09 10:38:15,763 - Null reference [template 'structure', line 10, column 31] : $flag cannot be resolved.
+2021-04-09 10:38:15,763 - Null reference [template 'structure', line 14, column 15] : $flag cannot be resolved.
+2021-04-09 10:38:15,763 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:38:15,765 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:38:15,765 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:38:15,766 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:38:15,766 - Null reference [template 'structure', line 17, column 30] : $flag cannot be resolved.
+2021-04-09 10:38:15,766 - Null reference [template 'structure', line 31, column 31] : $flag cannot be resolved.
+2021-04-09 10:38:15,783 - Null reference [template 'structure', line 3, column 7] : $flag cannot be resolved.
+2021-04-09 10:38:15,783 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:38:15,783 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:38:15,783 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:38:15,784 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
+2021-04-09 10:38:15,784 - Null reference [template 'structure', line 7, column 22] : $flag cannot be resolved.
+2021-04-09 10:38:15,784 - Null reference [template 'structure', line 14, column 23] : $flag cannot be resolved.
