@@ -17,4 +17,10 @@ public @interface Table {
      */
     String value() default "";
 
+    /**
+     * 是否调试模式
+     * @return
+     */
+    boolean debugger() default false;
+
 }

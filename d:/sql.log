@@ -720,4 +720,174 @@ insert into b(
   [INFO ]_2021-04-09 10:38:35 :{dataSource-2} inited
   [INFO ]_2021-04-09 10:39:00 :{dataSource-1} inited
   [INFO ]_2021-04-09 10:39:01 :{dataSource-2} inited
+  [INFO ]_2021-04-09 10:44:12 :{dataSource-1} inited
+  [INFO ]_2021-04-09 10:44:13 :{dataSource-2} inited
+  [INFO ]_2021-04-11 10:00:30 :{dataSource-1} inited
+  [ERROR]_2021-04-11 10:00:31 :dal配置文件有误:Jobmate.b._page_children不存在
+  [INFO ]_2021-04-11 10:01:47 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:01:57 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:02:25 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:03:15 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:03:24 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:03:44 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:05:34 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:05:42 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:06:57 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:07:18 :{dataSource-1} inited
+  [ERROR]_2021-04-11 10:07:19 :dal配置文件有误:Jobmate.b._page_children,错误为：StatementCallback; bad SQL grammar [
+			
+					
+
+			select *,c as FK from a where
+			a in (
+			0
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						)
+		]; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'c' in 'field list'
+  [INFO ]_2021-04-11 10:08:14 :{dataSource-1} inited
+  [ERROR]_2021-04-11 10:08:15 :dal配置文件有误:Jobmate.b._page_children,错误为：StatementCallback; bad SQL grammar [
+			
+					
+
+			select *,c as FK from a where
+			a in (
+			0
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						,'2'
+						)
+		]; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'c' in 'field list'
+  [INFO ]_2021-04-11 10:08:51 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:08:59 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:09:48 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:17:14 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:17:30 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:18:51 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:19:37 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:20:16 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:22:27 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:24:29 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:24:43 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:27:48 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:44:49 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:48:11 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:50:01 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:50:54 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:51:13 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:51:20 :{dataSource-1} inited
+  [INFO ]_2021-04-11 10:52:01 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:08:55 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:09:02 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:17:55 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:19:02 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:22:23 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:22:33 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:23:00 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:24:42 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:24:43 :generation sql : 
+			
+					
+
+				select *from b limit 0,1
+			
+  [INFO ]_2021-04-11 11:24:43 :generation sql : 
+			
+					
+
+				select*from b where 1=1
+				and
+		id
+									= 1111
+						
+								
+  [INFO ]_2021-04-11 11:28:36 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:29:16 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:32:05 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:33:35 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:33:36 :generation sql : 
+			
+					
+
+				select *from b limit 0,1
+			
+  [INFO ]_2021-04-11 11:33:36 :generation sql : 
+			
+					
+
+				select*from b where 1=1
+				and
+		id
+									= 1111
+						
+								
+  [INFO ]_2021-04-11 11:34:27 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:34:28 :generation sql : 
+			
+					
+
+				select *from a limit 0,1
+			
+  [INFO ]_2021-04-11 11:34:28 :generation sql : 
+			
+					
+
+				select*from b where 1=1
+				and
+		id
+									= 1111
+						
+								
+  [INFO ]_2021-04-11 11:35:30 :{dataSource-1} inited
+  [INFO ]_2021-04-11 11:35:31 :generation sql : 
+			
+					
+
+				select *from a limit 0,1
+			
+  [INFO ]_2021-04-11 11:35:31 :generation sql : 
+			
+					
+
+				select*from b where 1=1
+				and
+		id
+									= 1111
+						
+								
   

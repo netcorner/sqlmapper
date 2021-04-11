@@ -71,7 +71,7 @@ public class QueryPage  {
 	}
 	/**
 	 * 设置当前页码
-	 * @param way
+	 * @param current
 	 */
 	public void setCurrent(int current) {
 		this.current = current;
@@ -85,7 +85,7 @@ public class QueryPage  {
 	}
     /**
      * 设置页尺寸
-     * @param way
+     * @param size
      */
 	public void setSize(int size) {
 		this.size = size;

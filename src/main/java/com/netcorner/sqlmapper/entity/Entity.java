@@ -1,9 +1,11 @@
 package com.netcorner.sqlmapper.entity;
 
 import com.google.gson.*;
+import com.netcorner.sqlmapper.DBTools;
 import com.netcorner.sqlmapper.Field;
 import com.netcorner.sqlmapper.QueryPage;
 import com.netcorner.sqlmapper.SQLMap;
+import com.netcorner.sqlmapper.utils.StringTools;
 import org.springframework.beans.BeanUtils;
 
 import java.io.Serializable;
@@ -24,6 +26,7 @@ public abstract class Entity<T>  implements Serializable {
                 Table table=(Table) annotation;
                 _mapKey=table.value();
                 sqlMap=SQLMap.getMap(_mapKey);
+                sqlMap.setDebugger(table.debugger());
                 break;
             }
         }
@@ -175,6 +178,28 @@ public abstract class Entity<T>  implements Serializable {
     }
 
     /**
+     * 根据对象参数 获取对象
+     * @param clazz
+     * @param <B>
+     */
+    public <B> void get(Class<?> clazz) {
+        get("_list",entity2Map(this),clazz);
+    }
+
+    /**
+     * 根据对象参数 获取对象
+     * @param statementid
+     * @param params
+     * @param clazz
+     * @param <B>
+     */
+    public <B> void get(String statementid,Map<String,Object> params,Class<?> clazz) {
+        Map<String, Object> obj= sqlMap.executeForMap(statementid, params);
+        B t= (B)map2Entity(obj,clazz);
+        BeanUtils.copyProperties(t, this);
+    }
+
+    /**
      * 根据对象参数 获取对象列表
      * @return
      */
@@ -190,10 +215,36 @@ public abstract class Entity<T>  implements Serializable {
      */
     public List<T> find(String statementid,Map<String,Object> params){
         List<Map<String, Object>> list= sqlMap.executeForList(statementid, params);
-
         List<T> list1=new ArrayList<T>();
         for(Map<String,Object> obj:list){
             list1.add((T)map2Entity(obj,this.getClass()));
+        }
+        return list1;
+    }
+
+    /**
+     * 根据hash参数 获取对象列表
+     * @param clazz
+     * @param <B>
+     * @return
+     */
+    public <B> List<B> find(Class<?> clazz){
+        return find("_list",entity2Map(this),clazz);
+    }
+
+    /**
+     * 根据hash参数 获取对象列表
+     * @param statementid
+     * @param params
+     * @param clazz
+     * @param <B>
+     * @return
+     */
+    public <B> List<B> find(String statementid,Map<String,Object> params,Class<?> clazz){
+        List<Map<String, Object>> list= sqlMap.executeForList(statementid, params);
+        List<B> list1=new ArrayList<B>();
+        for(Map<String,Object> obj:list){
+            list1.add((B)map2Entity(obj,clazz));
         }
         return list1;
     }
@@ -204,26 +255,91 @@ public abstract class Entity<T>  implements Serializable {
      * @return
      */
     public List<T> page(QueryPage qp){
-        return page("_page",qp,entity2Map(this));
+        return page("_page",qp,null,entity2Map(this),this.getClass());
     }
 
-    /**获取分页信息
-     * @param statementid
+    /**
+     * 获取分页信息
      * @param qp
-     * @param params
+     * @param childrenKey
      * @return
      */
-    public List<T> page(String statementid,QueryPage qp,Map<String,Object> params){
+    public List<T> page(QueryPage qp,String childrenKey){
+        return page("_page",qp,childrenKey,entity2Map(this),this.getClass());
+    }
+
+    /**
+     * 获取分页信息
+     * @param qp
+     * @param clazz
+     * @return
+     */
+    public <B> List<B> page(QueryPage qp,Class<?> clazz){
+        return page("_page",qp,null,entity2Map(this),clazz);
+    }
+
+    /**
+     * 获取分页信息
+     * @param qp
+     * @param childrenKey
+     * @param clazz
+     * @return
+     */
+    public <B> List<B> page(QueryPage qp,String childrenKey,Class<?> clazz){
+        return page("_page",qp,childrenKey,entity2Map(this),clazz);
+    }
 
 
+    /**
+     * 获取分页信息
+     * @param statementid
+     * @param qp
+     * @param childrenKey
+     * @param params
+     * @param clazz
+     * @param <B>
+     * @return
+     */
+    public <B> List<B> page(String statementid,QueryPage qp,String childrenKey,Map<String,Object> params,Class<?> clazz){
+
+        if(params!=null) qp.setForm(params);
         List<Map<String, Object>> list= sqlMap.executeForList(statementid,qp );
-        List<T> list1=new ArrayList<T>();
+
+        if(!StringTools.isNullOrEmpty(childrenKey)){
+            if(list.size()>0){
+                if(params==null) params=new HashMap<String,Object>();
+                params.put("list",list);
+                List<Map<String, Object>> list2 =DBTools.selectData(_mapKey+"._page_children",params);
+                if(list2.size()>0){
+                    for(Map<String, Object> obj:list) {
+                        for (Map<String, Object> hash : list2) {
+                            String fk = hash.get("FK") + "";
+
+                            if (fk.equals(obj.get(childrenKey) + "")){
+                                List<Map<String, Object>> children;
+                                if (!obj.containsKey("children")) {
+                                    children = new ArrayList<Map<String, Object>>();
+                                    obj.put("children", children);
+                                } else {
+                                    children = (List<Map<String, Object>>) obj.get("children");
+                                }
+                                children.add(hash);
+
+                            }
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+        List<B> list1=new ArrayList<B>();
         for(Map<String,Object> obj:list){
-            list1.add((T)map2Entity(obj,this.getClass()));
+            list1.add((B)map2Entity(obj,clazz));
         }
         return list1;
     }
-
 
 
 
@@ -239,7 +355,7 @@ public abstract class Entity<T>  implements Serializable {
 
     private static Gson getGson(){
         //此为要过滤掉的属性数组
-        final String[] gl = {"_mapKey","sqlMap"};
+        final String[] gl = {"_mapKey","sqlMap","_debugger"};
         //创建临时实例,并编写过滤规则
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss")
                 .registerTypeAdapter(Map.class, new JsonDeserializer<Map>() {

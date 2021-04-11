@@ -1,12 +1,10 @@
 package com.netcorner.sqlmapper.demo;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.netcorner.sqlmapper.DBDictionary;
-import com.netcorner.sqlmapper.Field;
-import com.netcorner.sqlmapper.QueryPage;
-import com.netcorner.sqlmapper.SQLMap;
+import com.netcorner.sqlmapper.*;
 import com.netcorner.sqlmapper.utils.FileTools;
 import com.netcorner.test.model.entity.B;
+import com.netcorner.test.model.entity.BExt;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -60,6 +58,9 @@ public class TestMain {
 		TestEntity();
 	}
 
+	/**
+	 * 生成实体
+	 */
 	public static void TestGen(){
 
 		SQLMap.genEntities("Jobmate","com.netcorner.test.model.entity");
@@ -69,11 +70,47 @@ public class TestMain {
 
 	public static void TestEntity(){
 
-		TestEntity tee=new TestEntity();
+
+		BExt tee=new BExt();
+		tee.setid(1111);
+		tee.get(BExt.class);
+		System.out.println(tee.getChildren().size());
 
 
-		List<B> b=tee.insert("111",new HashMap<String,Object>(),B.class);
-		System.out.println(b.size());
+
+//		List list=DBTools.pageData("Jobmate.b._page",new QueryPage(),"a");
+//		System.out.println(list.size());
+
+
+
+//		BExt tee=new BExt();
+//
+//		QueryPage qp=new QueryPage();
+//		qp.setSize(10);
+//		List<BExt> list=tee.page(qp,"a",BExt.class);
+//
+//		System.out.println(list.size());
+
+
+
+//		TestEntity tee=new TestEntity();
+//
+//		QueryPage qp=new QueryPage();
+//		int[] showPage = { 15 };
+//		qp.setShowPage(showPage);
+//		tee.page(qp);
+//
+//		System.out.println(qp.getTotal());
+
+
+
+
+
+//		List<B> b=tee.insert("111",new HashMap<String,Object>(),B.class);
+//		System.out.println(b.size());
+
+
+
 
 
 

@@ -255,4 +255,29 @@
 			</query>
 		</select>
 	</statement>
+
+	<statement id="_page_children">
+
+		<select id="result">
+			select *,a as FK from a where
+			a in (
+			0
+			#foreach($obj in $map.list)
+			,'$obj.a'
+			#end
+			)
+		</select>
+	</statement>
+
+
+	<statement id="_list">
+		<select id="result">
+			<query id="user" primary="a">
+				select*from $table where #Where()
+			</query>
+			<query id="children" parent="user" foreign="a">
+				select *from a limit 0,1
+			</query>
+		</select>
+	</statement>
 </sqlMap>

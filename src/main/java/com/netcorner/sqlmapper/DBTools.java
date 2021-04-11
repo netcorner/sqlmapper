@@ -1,5 +1,9 @@
 package com.netcorner.sqlmapper;
 
+import com.netcorner.sqlmapper.utils.StringTools;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -138,5 +142,114 @@ public class DBTools {
 			}
 		}
 		return obj;
+	}
+
+	/**
+	 * 分页显示数据，只限于 WEB
+	 * @param key
+	 * @param properties
+	 * @return
+	 */
+	public static  List<Map<String, Object>> pageData(String key,Map<String,Object> properties){
+		return pageData(key,properties,null);
+	}
+
+	/**
+	 * 分页显示数据, 只限于 WEB
+	 * @param key
+	 * @param properties
+	 * @param childrenKey
+	 * @return
+	 */
+	public static  List<Map<String, Object>> pageData(String key,Map<String,Object> properties,String childrenKey){
+		WebQueryPage webQueryPage=new WebQueryPage();
+		webQueryPage.setShowPage(new int[]{ 15,30,50 });
+		return pageData(key,webQueryPage,properties,childrenKey);
+	}
+
+	/**
+	 * 分页显示数据, 只限于 WEB
+	 * @param key
+	 * @param webQueryPage
+	 * @return
+	 */
+	public static  List<Map<String, Object>> pageData(String key,WebQueryPage webQueryPage){
+		return pageData(key,webQueryPage,null,null);
+	}
+
+	/**
+	 * 分页显示数据, 只限于 WEB
+	 * @param key
+	 * @param webQueryPage
+	 * @param childrenKey
+	 * @return
+	 */
+	public static  List<Map<String, Object>> pageData(String key,WebQueryPage webQueryPage,String childrenKey){
+		return pageData(key,webQueryPage,null,childrenKey);
+	}
+
+	/**
+	 * 分页显示数据
+	 * @param key
+	 * @param queryPage
+	 * @param childrenKey
+	 * @return
+	 */
+	public static  List<Map<String, Object>> pageData(String key,QueryPage queryPage,String childrenKey){
+		return pageData(key,queryPage,null,childrenKey);
+	}
+
+	/**
+	 * 分页显示数据
+	 * @param key
+	 * @param queryPage
+	 * @return
+	 */
+	public static  List<Map<String, Object>> pageData(String key,QueryPage queryPage){
+		return pageData(key,queryPage,null,null);
+	}
+
+	/**
+	 * 分页显示数据
+	 * @param key
+	 * @param queryPage
+	 * @param params
+	 * @param childrenKey
+	 * @return
+	 */
+	public static  List<Map<String, Object>> pageData(String key,QueryPage queryPage,Map<String,Object> params,String childrenKey){
+		String[] arr=getMapKeyArray(key);
+		String mapkey=getMapKey(arr);
+		SQLMap map=SQLMap.getMap(mapkey);
+		String sid=getMapStatementID(arr);
+		if(params!=null)queryPage.setForm(params);
+		List<Map<String, Object>> list= map.executeForList(sid, queryPage);
+		if(!StringTools.isNullOrEmpty(childrenKey)) {
+			if (list.size() > 0) {
+				if(params==null) params=new HashMap<String,Object>();
+				params.put("list", list);
+				List<Map<String, Object>> list2 = DBTools.selectData(mapkey + "." + sid + "_children", params);
+				if (list2.size() > 0) {
+					for (Map<String, Object> obj : list) {
+						for (Map<String, Object> hash : list2) {
+							String fk = hash.get("FK") + "";
+							if (fk.equals(obj.get(childrenKey) + "")) {
+								List<Map<String, Object>> children;
+								if (!obj.containsKey("children")) {
+									children = new ArrayList<Map<String, Object>>();
+									obj.put("children", children);
+								} else {
+									children = (List<Map<String, Object>>) obj.get("children");
+								}
+								hash.remove("FK");
+								children.add(hash);
+							}
+						}
+
+					}
+				}
+			}
+		}
+		return list;
 	}
 }

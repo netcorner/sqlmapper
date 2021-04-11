@@ -1185,13 +1185,18 @@ public class SQLMap   implements Serializable {
 //        	logger.info("Executing SQL Query[ " + w+" ]");
 //        }
         
-        //logger.info("generation sql : " + w);
+        if(debugger) logger.info("generation sql : " + w);
         //System.out.println( );
         return w.toString();
     }
-    
+    private boolean debugger=false;
 
-    /**
+
+	public void setDebugger(boolean debugger) {
+		this.debugger = debugger;
+	}
+
+	/**
      * 得到共享模板
      * @return
      */
