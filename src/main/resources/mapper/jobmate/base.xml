@@ -7,7 +7,7 @@
 		select max(id) id from $table
 		#end
 	</function>
-	<statement id="_insert">
+	<statement id="_insert" filter="true">
 		<insert>
 			#Insert()
 		</insert>

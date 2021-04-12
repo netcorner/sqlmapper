@@ -343,17 +343,17 @@ public abstract class Entity<T>  implements Serializable {
 
 
 
-    private static Object map2Entity(Map<String,Object> obj,Class<?> clazz) {
+    public static Object map2Entity(Map<String,Object> obj,Class<?> clazz) {
         return new Gson().fromJson(toJson(obj), clazz);
     }
 
-    private static Map<String,Object> entity2Map(Entity obj) {
+    public static Map<String,Object> entity2Map(Entity obj) {
         return fromJson(toJson(obj),Map.class);
     }
 
 
 
-    private static Gson getGson(){
+    public static Gson getGson(){
         //此为要过滤掉的属性数组
         final String[] gl = {"_mapKey","sqlMap","_debugger"};
         //创建临时实例,并编写过滤规则
@@ -394,7 +394,7 @@ public abstract class Entity<T>  implements Serializable {
      * @param obj
      * @return
      */
-    private static String toJson(Object obj) {
+    public static String toJson(Object obj) {
         Gson gson = getGson();
         return gson.toJson(obj);
     }
@@ -405,7 +405,7 @@ public abstract class Entity<T>  implements Serializable {
      * @param type
      * @return
      */
-    private static <B> B fromJson(String str, Type type) {
+    public static <B> B fromJson(String str, Type type) {
         Gson gson = getGson();
         return gson.fromJson(str, type);
     }
@@ -416,7 +416,7 @@ public abstract class Entity<T>  implements Serializable {
      * @param obj
      * @return
      */
-    private <B> B  convertResult(Object obj,Class<?> clazz){
+    public static  <B> B  convertResult(Object obj,Class<?> clazz){
         if(obj instanceof List){
             List<Map<String,Object>> list=(List<Map<String,Object>>)obj;
             if(list.size()==1) {
