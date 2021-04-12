@@ -21,6 +21,8 @@ public class WebQueryPage  extends QueryPage {
 	}
 	public WebQueryPage(HttpServletRequest request){
 		this.request=request;
+        this.setCurrent(-1);
+        this.setSize(-1);
 	}
 	/**
      * 排序字段

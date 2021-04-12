@@ -890,4 +890,21 @@ insert into b(
 									= 1111
 						
 								
+  [INFO ]_2021-04-12 11:24:40 :{dataSource-1} inited
+  [INFO ]_2021-04-12 11:24:42 :generation sql : 
+			
+					
+
+				select *from a limit 0,1
+			
+  [INFO ]_2021-04-12 11:24:42 :generation sql : 
+			
+					
+
+				select*from b where 1=1
+						and
+		id
+									= 1111
+						
+						
   
