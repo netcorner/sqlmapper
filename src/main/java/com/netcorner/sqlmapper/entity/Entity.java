@@ -411,6 +411,7 @@ public abstract class Entity<T>  implements Serializable {
     }
 
 
+
     /**
      * 记录转换结果
      * @param obj
