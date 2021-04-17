@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!--DOCTYPE sqlMap SYSTEM "http://qiniu.netcorner.cn/sqlMap.dtd"-->
+<!--DOCTYPE sqlMap SYSTEM "https://raw.githubusercontent.com/netcorner/sqlmapper/master/files/sqlMap.dtd"-->
 <sqlMap>
 	<statement id="add">
 		<config>
