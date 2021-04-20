@@ -12,7 +12,6 @@ import java.util.Date;
 public class ${map.ClassName} extends Entity<${map.ClassName}> {
 
 
-
     #foreach($field in $map.Fields)
 
         #if($field.type=='smallmoney'||$field.type=='numeric'||$field.type=='float'||$field.type=='real'||$field.type=='numeric')
