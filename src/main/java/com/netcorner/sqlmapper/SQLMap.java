@@ -218,12 +218,15 @@ public class SQLMap   implements Serializable {
         String path = getPath(getConfigPath(),key);
         CacheManager manager = CacheManager.create(); 
         Cache cache = manager.getCache(DBCache);
-        logger.debug("get SQLMap========>"+cache);
+
         if(cache==null){
         	manager.addCache(DBCache);
         	cache = manager.getCache(DBCache);
         }
-        net.sf.ehcache.Element element = cache.get(path); 
+        net.sf.ehcache.Element element = cache.get(path);
+
+		logger.debug("get SQLMap========>"+element);
+
         SQLMap map= (SQLMap)(element == null ? null : element.getObjectValue());
 
         

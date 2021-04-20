@@ -20,7 +20,7 @@ public class ${map.ClassName} extends Entity<${map.ClassName}> {
             #set($dbType='Long')
         #elseif($field.type=='int'||$field.type=='smallint'||$field.type=='smallint')
             #set($dbType='Integer')
-        #elseif($field.Type=='date')
+        #elseif($field.Type=='date'||$field.Type=='datetime')
             #set($dbType='Date')
         #else
             #set($dbType='String')

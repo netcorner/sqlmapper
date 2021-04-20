@@ -907,4 +907,45 @@ insert into b(
 									= 1111
 						
 						
+  [DEBUG]_2021-04-20 13:43:50 :get SQLMap========>null
+  [INFO ]_2021-04-20 13:43:50 :{dataSource-1} inited
+  [INFO ]_2021-04-20 13:43:52 :{dataSource-2} inited
+  [ERROR]_2021-04-20 13:43:52 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+					
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [DEBUG]_2021-04-20 13:44:55 :get SQLMap========>null
+  [INFO ]_2021-04-20 13:44:56 :{dataSource-1} inited
+  [INFO ]_2021-04-20 13:44:57 :{dataSource-2} inited
+  [ERROR]_2021-04-20 13:44:58 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+					
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [DEBUG]_2021-04-20 13:45:50 :get SQLMap========>null
+  [INFO ]_2021-04-20 13:45:50 :{dataSource-1} inited
+  [INFO ]_2021-04-20 13:45:51 :{dataSource-2} inited
+  [ERROR]_2021-04-20 13:45:52 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+					
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [DEBUG]_2021-04-20 13:45:52 :get SQLMap========>[ name = DBCache status = STATUS_ALIVE eternal = false overflowToDisk = true maxEntriesLocalHeap = 10000 maxEntriesLocalDisk = 10000000 memoryStoreEvictionPolicy = LRU timeToLiveSeconds = 10 timeToIdleSeconds = 10 persistence = none diskExpiryThreadIntervalSeconds = 120 cacheEventListeners: ; orderedCacheEventListeners:  maxBytesLocalHeap = 0 overflowToOffHeap = false maxBytesLocalOffHeap = 0 maxBytesLocalDisk = 0 pinned = false ]
+  [ERROR]_2021-04-20 13:45:52 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+					
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [DEBUG]_2021-04-20 13:45:52 :get SQLMap========>[ name = DBCache status = STATUS_ALIVE eternal = false overflowToDisk = true maxEntriesLocalHeap = 10000 maxEntriesLocalDisk = 10000000 memoryStoreEvictionPolicy = LRU timeToLiveSeconds = 10 timeToIdleSeconds = 10 persistence = none diskExpiryThreadIntervalSeconds = 120 cacheEventListeners: ; orderedCacheEventListeners:  maxBytesLocalHeap = 0 overflowToOffHeap = false maxBytesLocalOffHeap = 0 maxBytesLocalDisk = 0 pinned = false ]
+  [ERROR]_2021-04-20 13:45:52 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+					
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
   
