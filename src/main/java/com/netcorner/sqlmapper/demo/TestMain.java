@@ -38,7 +38,21 @@ public class TestMain {
     }
 
     public void testAll(){
-		//TestMutilSql();
+
+		try {
+			TestMutilSql();
+			Thread.sleep(11000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		try {
+			TestMutilSql();
+			Thread.sleep(11000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		TestMutilSql();
 		//TestInsert();
 //		TestMulti();
 //		TestFun();
@@ -55,7 +69,7 @@ public class TestMain {
 		//TestExtMore();
 		//TestEntity();
 
-		TestEntity();
+		//TestEntity();
 	}
 
 	/**

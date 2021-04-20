@@ -218,6 +218,7 @@ public class SQLMap   implements Serializable {
         String path = getPath(getConfigPath(),key);
         CacheManager manager = CacheManager.create(); 
         Cache cache = manager.getCache(DBCache);
+        logger.debug("get SQLMap========>"+cache);
         if(cache==null){
         	manager.addCache(DBCache);
         	cache = manager.getCache(DBCache);
