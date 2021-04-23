@@ -48,7 +48,11 @@ public class MySqlStructure extends DBStructure  {
 			if (str.equals("")) {
 				field.setLen(0);
 			} else {
-				field.setLen(Integer.parseInt(str));
+				try {
+					field.setLen(Integer.parseInt(str));
+				}catch(Exception e) {
+					field.setLen(0);
+				}
 			}
 			field.setIsPrimary((m.get("Key") + "").equals("PRI"));
 			if (field.getIsPrimary()) {

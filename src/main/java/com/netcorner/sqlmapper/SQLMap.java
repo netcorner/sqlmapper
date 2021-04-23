@@ -225,7 +225,7 @@ public class SQLMap   implements Serializable {
         }
         net.sf.ehcache.Element element = cache.get(path);
 
-		logger.debug("get SQLMap========>"+element);
+		//logger.debug("get SQLMap========>"+element);
 
         SQLMap map= (SQLMap)(element == null ? null : element.getObjectValue());
 
