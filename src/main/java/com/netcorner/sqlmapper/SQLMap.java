@@ -1580,15 +1580,28 @@ public class SQLMap   implements Serializable {
 //		} 
 //	}
 
+	/**
+	 * 自动产生实体
+	 * @param dbName
+	 * @param packages
+	 */
+	public static void genEntities(String dbName,String packages) {
+		genEntities(dbName,packages,System.getProperty("user.dir"));
+	}
 
-
-	public static void genEntities(String dbName,String packages){
+	/**
+	 * 自动产生实体
+	 * @param dbName
+	 * @param packages
+	 * @param userPath
+	 */
+	public static void genEntities(String dbName,String packages,String userPath){
 //		String dbName="Jobmate";
 //		String packages="com.netcorner.test.model.entity";
 
-		String path=System.getProperty("user.dir")+"/src/main/java/"+packages.replace(".","/");
+		String path=userPath+"/src/main/java/"+packages.replace(".","/");
 
-		String xmlpath=System.getProperty("user.dir")+"/src/main/resources/mapper/"+dbName;
+		String xmlpath=userPath+"/src/main/resources/mapper/"+dbName;
 
 		SQLMap sqlMap=new SQLMap(dbName);
 
