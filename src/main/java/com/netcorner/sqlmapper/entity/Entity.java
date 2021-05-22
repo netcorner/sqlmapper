@@ -173,8 +173,10 @@ public abstract class Entity<T>  implements Serializable {
      */
     public void get(String statementid,Map<String,Object> params) {
         Map<String, Object> obj= sqlMap.executeForMap(statementid, params);
-        T t= (T)map2Entity(obj,this.getClass());
-        BeanUtils.copyProperties(t, this);
+        if(obj!=null) {
+            T t = (T) map2Entity(obj, this.getClass());
+            BeanUtils.copyProperties(t, this);
+        }
     }
 
     /**
