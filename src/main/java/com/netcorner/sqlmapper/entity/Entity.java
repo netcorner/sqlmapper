@@ -346,7 +346,7 @@ public abstract class Entity<T>  implements Serializable {
 
 
     public static Object map2Entity(Map<String,Object> obj,Class<?> clazz) {
-        return new Gson().fromJson(toJson(obj), clazz);
+        return getGson().fromJson(toJson(obj), clazz);
     }
 
     public static Map<String,Object> entity2Map(Entity obj) {
