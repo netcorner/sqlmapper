@@ -71,6 +71,15 @@ public abstract class Entity<T>  implements Serializable {
         return convertResult(obj,clazz);
     }
 
+    /**
+     * 插入映射实体到数据库表中
+     * @param statementid
+     * @param <B>
+     * @return
+     */
+    public <B> B  insert(String statementid){
+        return insert(statementid,entity2Map(this),null);
+    }
 
 
 
@@ -103,6 +112,11 @@ public abstract class Entity<T>  implements Serializable {
         return convertResult(obj,clazz);
     }
 
+    public <B> B  update(String statementid){
+        return update(statementid,entity2Map(this),null);
+    }
+
+
     /**
      * 删除映射实体到数据库表中
      * @return
@@ -131,6 +145,16 @@ public abstract class Entity<T>  implements Serializable {
     public <B> B  delete(String statementid,Map<String,Object> params,Class<?> clazz){
         Object obj= sqlMap.execute(statementid, params);
         return convertResult(obj,clazz);
+    }
+
+    /**
+     * 删除映射实体到数据库表中
+     * @param statementid
+     * @param <B>
+     * @return
+     */
+    public <B> B  delete(String statementid){
+        return delete(statementid, entity2Map(this),null);
     }
 
     /**
@@ -181,6 +205,14 @@ public abstract class Entity<T>  implements Serializable {
 
     /**
      * 根据对象参数 获取对象
+     * @param statementid
+     */
+    public void get(String statementid) {
+        get(statementid,entity2Map(this));
+    }
+
+    /**
+     * 根据对象参数 获取对象
      * @param clazz
      * @param <B>
      */
@@ -224,6 +256,7 @@ public abstract class Entity<T>  implements Serializable {
         return list1;
     }
 
+
     /**
      * 根据hash参数 获取对象列表
      * @param clazz
@@ -234,6 +267,14 @@ public abstract class Entity<T>  implements Serializable {
         return find("_list",entity2Map(this),clazz);
     }
 
+    /**
+     * 根据对象参数 获取对象列表
+     * @param statementid
+     * @return
+     */
+    public List<T> find(String statementid){
+        return find(statementid,entity2Map(this));
+    }
     /**
      * 根据hash参数 获取对象列表
      * @param statementid
@@ -354,40 +395,43 @@ public abstract class Entity<T>  implements Serializable {
     }
 
 
-
+    private static Gson gson=null;
     public static Gson getGson(){
-        //此为要过滤掉的属性数组
-        final String[] gl = {"_mapKey","sqlMap","_debugger"};
-        //创建临时实例,并编写过滤规则
-        Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss")
-                .registerTypeAdapter(Map.class, new JsonDeserializer<Map>() {
-                    public Map deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-                        JsonObject jsonObject = json.getAsJsonObject();
-                        Map p = new HashMap();
-                        for (Map.Entry<String, JsonElement> e : jsonObject.entrySet()) {
-                            if (e.getValue().isJsonPrimitive()) {
-                                p.put(e.getKey(), e.getValue());
+        if(gson==null) {
+            //此为要过滤掉的属性数组
+            final String[] gl = {"_mapKey", "sqlMap", "_debugger"};
+            //创建临时实例,并编写过滤规则
+            gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss")
+                    .registerTypeAdapter(Map.class, new JsonDeserializer<Map>() {
+                        public Map deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+                            JsonObject jsonObject = json.getAsJsonObject();
+                            Map p = new HashMap();
+                            for (Map.Entry<String, JsonElement> e : jsonObject.entrySet()) {
+                                if (e.getValue().isJsonPrimitive()) {
+                                    p.put(e.getKey(), e.getValue());
+                                }
+                                p.put(e.getKey(), e.getValue().getAsString());
                             }
-                            p.put(e.getKey(), e.getValue().getAsString());
+                            return p;
                         }
-                        return p;
-                    }
-                })
-                .addSerializationExclusionStrategy(new ExclusionStrategy() {
-            //此为转json的字段,当字段名与数组中的某个值一致时,不进行转json
-            public boolean shouldSkipField(FieldAttributes fa) {
-                for (String s : gl) {
-                    if(s.equals(fa.getName())){
-                        return true;
-                    }
-                }
-                return false;
-            }
-            public boolean shouldSkipClass(Class<?> arg0) {
-                // TODO Auto-generated method stub
-                return false;
-            }
-        }).create();
+                    })
+                    .addSerializationExclusionStrategy(new ExclusionStrategy() {
+                        //此为转json的字段,当字段名与数组中的某个值一致时,不进行转json
+                        public boolean shouldSkipField(FieldAttributes fa) {
+                            for (String s : gl) {
+                                if (s.equals(fa.getName())) {
+                                    return true;
+                                }
+                            }
+                            return false;
+                        }
+
+                        public boolean shouldSkipClass(Class<?> arg0) {
+                            // TODO Auto-generated method stub
+                            return false;
+                        }
+                    }).create();
+        }
         return gson;
     }
 

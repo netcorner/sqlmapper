@@ -948,4 +948,24 @@ insert into b(
 			insert into a(a,b)
 			values('1233333333333333333333333333333333','1')
 	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [INFO ]_2021-05-28 11:24:46 :{dataSource-1} inited
+  [INFO ]_2021-05-28 11:24:47 :{dataSource-2} inited
+  [ERROR]_2021-05-28 11:24:47 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+					
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [ERROR]_2021-05-28 11:24:47 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+					
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
+  [ERROR]_2021-05-28 11:24:47 :dal配置文件有误:Jobmate.b.mutile1,错误为：StatementCallback; SQL [			
+					
+
+			insert into a(a,b)
+			values('1233333333333333333333333333333333','1')
+	]; Data truncation: Data too long for column 'a' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'a' at row 1
   
