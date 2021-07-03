@@ -85,7 +85,7 @@ public abstract class Entity<T>  implements Serializable {
 
 
     /**
-     * 更新映射实体到数据库表
+     * 更新映射实体到数据库表中
      * @return
      */
     public <B> B update(){
