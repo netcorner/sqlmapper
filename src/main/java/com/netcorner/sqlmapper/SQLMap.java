@@ -574,6 +574,7 @@ public class SQLMap   implements Serializable {
 //        		filterSqlString(qpage.getForm(), issearch);
 //        	}
 //        }
+
         
         if(issearch){
 	        for(CRUDBase crud : statement.getSqlList()){
