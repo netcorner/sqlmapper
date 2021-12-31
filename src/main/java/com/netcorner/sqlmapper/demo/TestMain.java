@@ -39,20 +39,32 @@ public class TestMain {
 
     public void testAll(){
 
-		try {
-			TestMutilSql();
-			Thread.sleep(11000);
-		} catch (Exception e) {
-			e.printStackTrace();
+    	for(int i=0;i<100;i++) {
+			try {
+
+				TestFun2();
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 
-		try {
-			TestMutilSql();
-			Thread.sleep(11000);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		TestMutilSql();
+
+
+//		try {
+//			TestMutilSql();
+//			Thread.sleep(11000);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//
+//		try {
+//			TestMutilSql();
+//			Thread.sleep(11000);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		TestMutilSql();
 		//TestInsert();
 //		TestMulti();
 //		TestFun();
@@ -70,6 +82,15 @@ public class TestMain {
 		//TestEntity();
 
 		//TestEntity();
+	}
+
+
+	public static void TestFun2(){
+
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("Jobmate.a");
+		System.out.println(map.execute("fun2", properties));
+
 	}
 
 	/**
