@@ -577,6 +577,7 @@ public class SQLMap   implements Serializable {
 
 
 
+
         if(issearch){
 	        for(CRUDBase crud : statement.getSqlList()){
 	        	tmp=execStatementSQL(jdbc,crud,properties,qpage,statementid);
