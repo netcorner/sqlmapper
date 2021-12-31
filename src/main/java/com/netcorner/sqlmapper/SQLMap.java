@@ -575,7 +575,6 @@ public class SQLMap   implements Serializable {
 //        	}
 //        }
 
-        
 
         if(issearch){
 	        for(CRUDBase crud : statement.getSqlList()){
