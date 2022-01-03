@@ -782,7 +782,7 @@ public class SQLMap   implements Serializable {
     				try{
     					result.put(entry.getKey(),jdbc.queryForList(csql));
     				}catch(Exception e){
-    					properties.put(JDBC_ERROR_KEY,e.getMessage()+"\r\n template sql:"+select.getSql());
+    					properties.put(JDBC_ERROR_KEY,e.getMessage());
     					return null;
     				}
             }
@@ -796,7 +796,7 @@ public class SQLMap   implements Serializable {
 				try{
 					lst=jdbc.queryForList(csql);
 				}catch(Exception e){
-					properties.put(JDBC_ERROR_KEY,e.getMessage()+"\r\n template sql:"+select.getSql());
+					properties.put(JDBC_ERROR_KEY,e.getMessage());
 					return null;
 				}
         		
@@ -836,7 +836,7 @@ public class SQLMap   implements Serializable {
 	    				try{
 	    					properties.put(crud.getId(),jdbc.update(s.substring(1,s.length()-1)));
 	    				}catch(Exception e){
-	    					properties.put(JDBC_ERROR_KEY,e.getMessage()+"\r\n template sql:"+crud.getSql());
+	    					properties.put(JDBC_ERROR_KEY,e.getMessage());
 							return null;
 							//throw new DALException("dal配置文件有误:"+this.key+"."+statementid+",错误为："+properties.get(JDBC_ERROR_KEY));
 	    				}
