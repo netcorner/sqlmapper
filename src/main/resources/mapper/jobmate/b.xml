@@ -28,6 +28,21 @@
 	<!--</statement>-->
 
 
+
+
+	<sql id="aa">
+		,2 b
+	</sql>
+
+
+	<statement id="test">
+		<select>
+			select 1 as b
+
+			#aa()
+		</select>
+	</statement>
+
 	<statement id="mutile1">
 		<insert>
 			insert into a(a,b)

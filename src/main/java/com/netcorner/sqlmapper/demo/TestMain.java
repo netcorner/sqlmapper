@@ -9,8 +9,10 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import javax.xml.ws.handler.Handler;
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.*;
 
 public class TestMain {
     public static void main(String[] args)  {
@@ -34,54 +36,64 @@ public class TestMain {
 
 
 
+
+
+
+
 		testMain.testAll();
     }
 
+
+
     public void testAll(){
 
-    	for(int i=0;i<100;i++) {
-			try {
+//
+//    	for(int i=0;i<100;i++) {
+//			try {
+//
+//
+//				Thread.sleep(1000);
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//		}
 
-				TestFun2();
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+
+
+
+
+
+		try {
+			TestMutilSql();
+			Thread.sleep(11000);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 
+		try {
+			TestMutilSql();
+			Thread.sleep(11000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		TestMutilSql();
+		TestInsert();
+		TestMulti();
+		TestFun();
+		TestUseStatementID();
+		TestSelect();
+		TestPage1();
+		TestPage2();
+		TestPage3();
+		TestPage4();
+		TestPage5();
+		TestMerge();
+		TestExt();
 
+		TestExtMore();
+		TestEntity();
 
-//		try {
-//			TestMutilSql();
-//			Thread.sleep(11000);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//		try {
-//			TestMutilSql();
-//			Thread.sleep(11000);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		TestMutilSql();
-		//TestInsert();
-//		TestMulti();
-//		TestFun();
-//		TestUseStatementID();
-//		TestSelect();
-		//TestPage1();
-//		TestPage2();
-//		TestPage3();
-//		TestPage4();
-//		TestPage5();
-//		TestMerge();
-//		TestExt();
-
-		//TestExtMore();
-		//TestEntity();
-
-		//TestEntity();
+		TestEntity();
 	}
 
 

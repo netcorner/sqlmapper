@@ -7,6 +7,12 @@
 		select max(id) id from $table
 		#end
 	</function>
+	<method>
+		<sql id="a">
+			insert a
+			#Insert()
+		</sql>
+	</method>
 	<statement id="_insert" filter="true">
 		<insert>
 			#Insert()
