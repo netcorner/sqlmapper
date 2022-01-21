@@ -230,8 +230,10 @@ public abstract class Entity<T>  implements Serializable {
      */
     public <B> void get(String statementid,Map<String,Object> params,Class<?> clazz) {
         Map<String, Object> obj= sqlMap.executeForMap(statementid, params);
-        B t= (B)map2Entity(obj,clazz);
-        BeanUtils.copyProperties(t, this);
+        if(obj!=null) {
+            B t = (B) map2Entity(obj, clazz);
+            BeanUtils.copyProperties(t, this);
+        }
     }
 
     /**
@@ -392,7 +394,7 @@ public abstract class Entity<T>  implements Serializable {
     }
 
     public static Map<String,Object> entity2Map(Entity obj) {
-        return fromJson(toJson(obj).replace("'","''"),Map.class);
+        return fromJson(toJson(obj).replaceAll("\\\\u0027","''"),Map.class);
     }
 
 
