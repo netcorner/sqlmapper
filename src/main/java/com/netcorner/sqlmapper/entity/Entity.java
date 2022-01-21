@@ -392,7 +392,7 @@ public abstract class Entity<T>  implements Serializable {
     }
 
     public static Map<String,Object> entity2Map(Entity obj) {
-        return fromJson(toJson(obj),Map.class);
+        return fromJson(toJson(obj).replace("'","''"),Map.class);
     }
 
 
