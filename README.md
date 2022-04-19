@@ -103,15 +103,15 @@
     通过以上方式实现跨页面级的代码利用
 
 
- ### 2.为了更简单些，默认是去掉了数据表的映射自建实体，以HashMap为加载对象。
+ ### 9.为了更简单些，默认是去掉了数据表的映射自建实体，以HashMap为加载对象。
     小项目直接去了实体层可能开发会快速简单一点。
     
- ### 3.支持自建或自动生成表格映射实体。
+
+ ### 10.支持自建或自动生成表格映射实体。
     用以下语句自动生成实体
-    SQLMap.genEntities("datasource","com.netcorner.ssx.model.entity",System.getProperty("user.dir")+"/api");
+    SQLMap.enEntities("datasource","com.netcorner.ssx.model.entity",System.getProperty("user.dir")+"/api");
     自建实体请继承：com.netcorner.sqlmapper.entity.Entity
     @Table注解表示映射哪个库的哪个表如：@Table("datasource.user") 会映射于datasource中的user表
-    
 
 
 
