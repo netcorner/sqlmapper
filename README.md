@@ -8,8 +8,7 @@
     我想用一种我自己习惯的模板语句（我在视图端用的velocity，所以我想着用这个语言直接编写模版）。
     
  ### 2.使用xml方式配置，定义标签处理crud操作及共享函数的xml标签
-    通行标签
-    <sqlMap>标签， root标签
+    <sqlMap>标签， root标签,一个 xml配置文件开始节点
     <statement>标签，每个声明体开始的标签，需定义id属性，该属性必填且不能在一个页面中重复出现；
     statement里面可以多个 crud 操作(事务级)，自顶向下执行statement中的语句集，每个crud的语句集id用来返回执行结果，其中insert，update，delete会返回执行影响的条数
     select返回结果集，默认 select 是一条记录集，如要返回多条记录集在 select标签中加入 tolist="true"
