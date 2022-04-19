@@ -47,7 +47,8 @@
         </select>
     </statement>
     返回结果集是一个树结构的结果级
-    如：{userid:1,username:'sjf',nickname:'netcorner',message:[{messageid:1,title:'完善信息',userid:1},{messageid:2,title:'更新信息',userid:1} ...]}
+    如：{userid:1,username:'sjf',nickname:'netcorner',message:[{messageid:1,title:'完善信息',userid:1},
+    {messageid:2,title:'更新信息',userid:1} ...]}
 
 
  ### 5.function标签，实现页面级代码共享调用
