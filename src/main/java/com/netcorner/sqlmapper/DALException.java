@@ -1,11 +1,10 @@
 package com.netcorner.sqlmapper;
 
 import com.netcorner.sqlmapper.utils.ClientTools;
-import org.apache.log4j.Logger;
-import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.Properties;
 
@@ -16,7 +15,7 @@ public  class DALException extends RuntimeException {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private static Logger logger = Logger.getLogger(DALException.class);
+	private static Logger logger =  LoggerFactory.getLogger(SQLMap.class);
 	
 	
 	public DALException(String message){

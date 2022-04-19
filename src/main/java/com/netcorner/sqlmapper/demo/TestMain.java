@@ -38,9 +38,9 @@ public class TestMain {
 
 
 
+		TestEntity();
 
-
-		testMain.testAll();
+		//testMain.testAll();
     }
 
 
@@ -92,8 +92,6 @@ public class TestMain {
 
 		TestExtMore();
 		TestEntity();
-
-		TestEntity();
 	}
 
 
@@ -120,10 +118,12 @@ public class TestMain {
 	public static void TestEntity(){
 
 
-		BExt tee=new BExt();
-		tee.setid(1111);
-		tee.get(BExt.class);
-		System.out.println(tee.getChildren().size());
+		B tee=new B();
+		//tee.setid(1111);
+		tee.seta("'asdf'sdaf");
+		tee.insert();
+		//tee.get(BExt.class);
+		//System.out.println(tee.getChildren().size());
 
 
 

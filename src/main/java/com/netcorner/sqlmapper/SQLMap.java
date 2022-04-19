@@ -1,29 +1,23 @@
 package com.netcorner.sqlmapper;
 
 import java.io.*;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Map.Entry;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
-import com.netcorner.sqlmapper.entity.Entity;
 import com.netcorner.sqlmapper.utils.FileTools;
 import com.netcorner.sqlmapper.utils.SpringTools;
 import com.netcorner.sqlmapper.utils.StringTools;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
-
-import org.springframework.beans.factory.annotation.Value;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.*;
-import org.apache.log4j.Logger;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.w3c.dom.Document;
@@ -33,7 +27,7 @@ import org.w3c.dom.NodeList;
 
 
 public class SQLMap   implements Serializable {
-	private static Logger logger = Logger.getLogger(SQLMap.class); 
+	private static Logger logger =  LoggerFactory.getLogger(SQLMap.class);
 	public static final String JDBC_ERROR_KEY="JdbcErrorKey";
 	private static final long serialVersionUID = 1L;
 	private static final String DBCache = "DBCache";
