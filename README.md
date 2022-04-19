@@ -20,7 +20,7 @@
     <select>标签的innerText需代表select sql语句
     <page>标签里面有<select>筛选字段，<from>来自哪个表格，<where>条件筛选，<order>字段排序，处理需要有分页的读取操作
     
- ### 3.对于分页数据使用了特定标签<page>实现，免去插件或写复杂的分页的sql语句
+ ### 3.对于分页数据使用了特定标签page实现，免去插件或写复杂的分页的sql语句
     直接只有一个<page>标签，会自动产生分页
     也可以在 page 标签下面有以下标签，但这些标签也不是必须的，不写会自动生成
     <select>筛选字段
@@ -29,7 +29,7 @@
     <order>字段排序
     具体分页的一些参数可通过com.netcorner.sqlmapper.QueryPage或com.netcorner.sqlmapper.WebQueryPage 传入
     
- ### 4.<select>中可支持多集合查询数据实现一次性返回，且返回结果已经生成好树型结构
+ ### 4.select标签中可支持多集合查询数据实现一次性返回，且返回结果已经生成好树型结构
  
     <select>标签中的 innerText中可写sql语句返回一个集合的记录集，同时可使用<query>标签方式支持多个结果集的返回。
     以下方式可以获取多集录集
@@ -47,7 +47,7 @@
     如：{userid:1,username:'sjf',nickname:'netcorner',message:[{messageid:1,title:'完善信息',userid:1},{messageid:2,title:'更新信息',userid:1} ...]}
 
 
- ### 5.<function>标签，实现页面级代码共享调用
+ ### 5.function标签，实现页面级代码共享调用
     函数形式是velocity  macro（宏）实现页面级共享调用
     <function>
         ##得到最大 id
