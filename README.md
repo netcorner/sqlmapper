@@ -31,6 +31,7 @@
     具体分页的一些参数可通过com.netcorner.sqlmapper.QueryPage或com.netcorner.sqlmapper.WebQueryPage 传入
     
  ### 4.<select>中可支持多集合查询数据实现一次性返回，且返回结果已经生成好树型结构
+ 
     <select>标签中的 innerText中可写sql语句返回一个集合的记录集，同时可使用<query>标签方式支持多个结果集的返回。
     以下方式可以获取多集录集
     <statement id="select">
