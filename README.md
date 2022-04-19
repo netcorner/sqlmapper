@@ -76,6 +76,7 @@
      $table 是表格名
      
      
+     
  ### 7.在一个statement中可有多个 insert,update,delete,select 标签，并可实现事务级crud操作（出错时会回滚）
     <statement id="mutile1">
         <insert>
