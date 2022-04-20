@@ -1,1 +1,4 @@
-[INFO] 2022-04-20 14:24:25,006  logback [main]  com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] - {dataSource-1} inited
+[INFO ]_2022-04-20 17:43:46 :{dataSource-1} inited
+  [INFO ]_2022-04-20 17:43:48 :{dataSource-2} inited
+  [INFO ] 2022-04-20 17:44:05,684  com.alibaba.druid.pool.DruidDataSourceontextName [mainhread] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:998)] - {dataSource-1} inited
+[INFO ] 2022-04-20 17:44:07,646  com.alibaba.druid.pool.DruidDataSourceontextName [mainhread] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:998)] - {dataSource-2} inited

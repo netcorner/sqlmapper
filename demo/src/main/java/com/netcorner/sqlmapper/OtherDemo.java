@@ -13,10 +13,11 @@ public class OtherDemo  extends HelloDemo {
     public static void main(String[] args) {
         initDatasource();
 
-//        testOtherMutile1();
-//        testOtherMutile2();
+        testOtherMutile1();
+        testOtherMutile2();
 
         testOtherMutileDataSource();
+        testOtherGenEntity();
     }
 
     /**
@@ -54,6 +55,13 @@ public class OtherDemo  extends HelloDemo {
 
         HashMap<String,Object> params=new HashMap<String,Object>();
         System.out.println(DBTools.getData("datasource2.info.hello",params));
+    }
+
+    /**
+     * 自动创建实体
+     */
+    private static void testOtherGenEntity() {
+        SQLMap.genEntities("datasource","com.netcorner.ssx.model.entity",System.getProperty("user.dir")+"/demo");
     }
 
 }
