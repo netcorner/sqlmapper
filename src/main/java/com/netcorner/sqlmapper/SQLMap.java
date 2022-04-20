@@ -744,7 +744,11 @@ public class SQLMap   implements Serializable {
 		if(selectDictionary!=null){
 			List<String> children=new ArrayList<String>();
 			Map<String,List<Map<String,Object>>> result=new HashMap<String,List<Map<String,Object>>>();
-			Set<Entry<String, Query>> set = selectDictionary.entrySet(); 
+			Set<Entry<String, Query>> set = selectDictionary.entrySet();
+
+
+
+
             for (Entry<String, Query> entry : set) {
             	csql = getTemplateValue(entry.getValue().getSql(), qpage.getForm());
             	result.put(entry.getKey(),jdbc.queryForList(csql));

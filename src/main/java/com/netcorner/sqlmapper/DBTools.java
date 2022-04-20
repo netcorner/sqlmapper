@@ -160,10 +160,10 @@ public class DBTools {
 	 * 分页显示数据
 	 * @param key
 	 * @param properties
-	 * @param childrenKey
+	 * @param primaryKey
 	 * @return
 	 */
-	public static  PageInfo pageData(String key,Map<String,Object> properties,String childrenKey){
+	public static  PageInfo pageData(String key,Map<String,Object> properties,String primaryKey){
 		RequestAttributes requestAttributes=RequestContextHolder.getRequestAttributes();
 		if(requestAttributes==null){
 			QueryPage queryPage = new QueryPage();
@@ -185,11 +185,11 @@ public class DBTools {
 				queryPage.setRigor(Integer.parseInt(properties.get("rigor")+""));
 			}
 
-			return pageData(key, queryPage, properties, childrenKey);
+			return pageData(key, queryPage, properties, primaryKey);
 		}else {
 			WebQueryPage webQueryPage = new WebQueryPage();
 			webQueryPage.setShowPage(new int[]{15, 30, 50});
-			return pageData(key, webQueryPage, properties, childrenKey);
+			return pageData(key, webQueryPage, properties, primaryKey);
 		}
 	}
 
@@ -207,22 +207,22 @@ public class DBTools {
 	 * 分页显示数据, 只限于 WEB
 	 * @param key
 	 * @param webQueryPage
-	 * @param childrenKey
+	 * @param primaryKey
 	 * @return
 	 */
-	public static  PageInfo pageData(String key,WebQueryPage webQueryPage,String childrenKey){
-		return pageData(key,webQueryPage,null,childrenKey);
+	public static  PageInfo pageData(String key,WebQueryPage webQueryPage,String primaryKey){
+		return pageData(key,webQueryPage,null,primaryKey);
 	}
 
 	/**
 	 * 分页显示数据
 	 * @param key
 	 * @param queryPage
-	 * @param childrenKey
+	 * @param primaryKey
 	 * @return
 	 */
-	public static  PageInfo pageData(String key,QueryPage queryPage,String childrenKey){
-		return pageData(key,queryPage,null,childrenKey);
+	public static  PageInfo pageData(String key,QueryPage queryPage,String primaryKey){
+		return pageData(key,queryPage,null,primaryKey);
 	}
 
 	/**
@@ -240,17 +240,17 @@ public class DBTools {
 	 * @param key
 	 * @param queryPage
 	 * @param params
-	 * @param childrenKey
+	 * @param primaryKey
 	 * @return
 	 */
-	public static  PageInfo pageData(String key,QueryPage queryPage,Map<String,Object> params,String childrenKey){
+	public static  PageInfo pageData(String key,QueryPage queryPage,Map<String,Object> params,String primaryKey){
 		String[] arr=getMapKeyArray(key);
 		String mapkey=getMapKey(arr);
 		SQLMap map=SQLMap.getMap(mapkey);
 		String sid=getMapStatementID(arr);
 		if(params!=null)queryPage.setForm(params);
 		List<Map<String, Object>> list= map.executeForList(sid, queryPage);
-		if(!StringTools.isNullOrEmpty(childrenKey)) {
+		if(!StringTools.isNullOrEmpty(primaryKey)) {
 			if (list.size() > 0) {
 				if(params==null) params=new HashMap<String,Object>();
 				params.put("list", list);
@@ -259,7 +259,7 @@ public class DBTools {
 					for (Map<String, Object> obj : list) {
 						for (Map<String, Object> hash : list2) {
 							String fk = hash.get("FK") + "";
-							if (fk.equals(obj.get(childrenKey) + "")) {
+							if (fk.equals(obj.get(primaryKey) + "")) {
 								List<Map<String, Object>> children;
 								if (!obj.containsKey("children")) {
 									children = new ArrayList<Map<String, Object>>();
