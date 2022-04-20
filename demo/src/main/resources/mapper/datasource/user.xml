@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "https://raw.githubusercontent.com/netcorner/sqlmapper/master/files/sqlMap.dtd"-->
+<sqlMap merge="datasource.base">
+	<statement id="hello">
+		<select>select id,username,lastlogintime from user where id='$map.userid'</select>
+	</statement>
+	<statement id="insert_base">
+		<insert>
+			insert into user(UserName,RealName,Pwd,LastLoginTime,LastLoginIP)
+			values('$!map.UserName','$!map.RealName','$!map.Pwd',now(),'$!map.LastLoginIP')
+		</insert>
+	</statement>
+	<statement id="insert_table">
+		<insert>
+			insert into $table(UserName,RealName,Pwd,LastLoginTime,LastLoginIP)
+			values('$!map.UserName','$!map.RealName','$!map.Pwd',now(),'$!map.LastLoginIP')
+		</insert>
+	</statement>
+	<statement id="insert_fun">
+		<insert>
+			#Insert()
+		</insert>
+	</statement>
+	<statement id="insert_mutile">
+		<insert>
+			#foreach($obj in $map.list)
+			{insert into user(UserName,RealName,Pwd,LastLoginTime,LastLoginIP)
+			values('$!obj.UserName','$!obj.RealName','$!obj.Pwd',now(),'$!obj.LastLoginIP')}
+			#end
+		</insert>
+	</statement>
+	<statement id="insert_entity">
+		<insert>
+			insert into user(UserName,RealName,Pwd,LastLoginTime,LastLoginIP)
+			values('$!map.UserName','$!map.RealName','$!map.Pwd',now(),'$!map.LastLoginIP')
+		</insert>
+	</statement>
+	<statement id="update_base">
+		<update>
+			update user
+			set RealName='$!map.RealName'
+			where id='$map.ID'
+		</update>
+	</statement>
+	<statement id="update_table">
+		<update>
+			update $table
+			set RealName='$!map.RealName'
+			where id='$map.ID'
+		</update>
+	</statement>
+	<statement id="update_fun">
+		<update>
+			#Update()
+		</update>
+	</statement>
+	<statement id="update_mutile">
+		<update>
+			#foreach($obj in $map.list)
+			{
+			update user
+			set RealName='$!obj.RealName'
+			where id='$obj.ID'
+			}
+			#end
+		</update>
+	</statement>
+	<statement id="update_entity">
+		<update>
+			update user
+			set UserName='$!map.UserName'
+			where id='$map.ID'
+		</update>
+	</statement>
+
+	<statement id="delete_base">
+		<update>
+			delete from user where id='$map.ID'
+		</update>
+	</statement>
+	<statement id="delete_table">
+		<update>
+			delete from $table where id='$map.ID'
+		</update>
+	</statement>
+	<statement id="delete_fun">
+		<update>
+			#Delete()
+		</update>
+	</statement>
+	<statement id="delete_mutile">
+		<update>
+			#foreach($obj in $map.list)
+			{
+			delete from $table
+			where id='$obj.ID'
+			}
+			#end
+		</update>
+	</statement>
+	<statement id="delete_entity">
+		<update>
+			delete from user
+			where id='$map.ID' and 1=1
+		</update>
+	</statement>
+	<statement id="select_base">
+		<select>
+			select *from user where UserName='$map.UserName'
+		</select>
+	</statement>
+	<statement id="select_table">
+		<select>
+			select *from $table where UserName='$map.UserName'
+		</select>
+	</statement>
+	<statement id="select_fun">
+		<select>
+			select *from $table where #Where()
+		</select>
+	</statement>
+	<statement id="select_mutile">
+		<select>
+			<query id="user" primary="ID">
+				select * from $table where id='$map.ID'
+			</query>
+			<query id="message" parent="user" foreign="UserID">
+				select * from message where userid=$map.ID
+			</query>
+		</select>
+	</statement>
+	<statement id="page_base">
+		<page></page>
+	</statement>
+</sqlMap>

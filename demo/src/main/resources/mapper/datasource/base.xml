@@ -1,29 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!--DOCTYPE sqlMap SYSTEM "https://raw.githubusercontent.com/netcorner/sqlmapper/master/files/sqlMap.dtd"-->
 <sqlMap>
 	<function>
 		##得到最大 id
 		#macro(getMaxID)
-		select max(id) id from $table
+			select max(id) id from $table
 		#end
 	</function>
-	<method>
-		<sql id="a">
-			#Insert()
-		</sql>
-	</method>
-	<statement id="_insert" filter="true">
-		<insert>
+	<statement id="_insert">
+		<insert  filter="true">
 			#Insert()
 		</insert>
 	</statement>
 	<statement id="_update">
-		<update>
+		<update filter="true">
 			#Update()
 		</update>
 	</statement>
 	<statement id="_delete">
-		<delete>
+		<delete filter="true">
 			#Delete()
 		</delete>
 	</statement>
@@ -35,28 +29,48 @@
 	<statement id="_page">
 		<page></page>
 	</statement>
+
+
+
 	<statement id="add">
 		<insert>
 			#Insert()
 		</insert>
 	</statement>
 	<statement id="edit">
-		<update>
-			#Update()
+		<update id="status">
+			#if($map.ProcessType==2)
+				#Update()
+				#getLimitSql()
+			#end
 		</update>
+		<select>
+			#if($map.ProcessType==1)
+				select * from $table
+				where #Where()
+				#getLimitSql()
+			#end
+		</select>
 	</statement>
 	<statement id="del">
 		<delete>
-			#Delete()
+			#Delete() #getLimitSql()
 		</delete>
 	</statement>
 	<statement id="finder">
 		<select>
 			select*from $table where #Where()
+			#getLimitSql()
+			order by 
+			#set($flag=false)
+			#foreach($p in $primarys)
+				#if($p.getIsPrimary())
+					#if($flag),#end
+					$p.getName() desc
+					#set($flag=true)
+				#end
+			#end
 		</select>
-	</statement>
-	<statement id="page">
-		<page></page>
 	</statement>
 
 </sqlMap>

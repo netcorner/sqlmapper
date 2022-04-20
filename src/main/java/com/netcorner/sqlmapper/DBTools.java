@@ -1,6 +1,8 @@
 package com.netcorner.sqlmapper;
 
 import com.netcorner.sqlmapper.utils.StringTools;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -145,26 +147,56 @@ public class DBTools {
 	}
 
 	/**
-	 * 分页显示数据，只限于 WEB
+	 * 分页显示数据
 	 * @param key
 	 * @param properties
 	 * @return
 	 */
-	public static  List<Map<String, Object>> pageData(String key,Map<String,Object> properties){
+	public static  PageInfo pageData(String key,Map<String,Object> properties){
 		return pageData(key,properties,null);
 	}
 
 	/**
-	 * 分页显示数据, 只限于 WEB
+	 * 分页显示数据
 	 * @param key
 	 * @param properties
 	 * @param childrenKey
 	 * @return
 	 */
-	public static  List<Map<String, Object>> pageData(String key,Map<String,Object> properties,String childrenKey){
-		WebQueryPage webQueryPage=new WebQueryPage();
-		webQueryPage.setShowPage(new int[]{ 15,30,50 });
-		return pageData(key,webQueryPage,properties,childrenKey);
+	public static  PageInfo pageData(String key,Map<String,Object> properties,String childrenKey){
+		RequestAttributes requestAttributes=RequestContextHolder.getRequestAttributes();
+		PageInfo pageInfo=new PageInfo();
+		if(requestAttributes==null){
+			QueryPage queryPage = new QueryPage();
+			queryPage.setShowPage(new int[]{15, 30, 50});
+
+			if(properties.containsKey("order")){
+				queryPage.setOrder(properties.get("order")+"");
+			}
+			if(properties.containsKey("way")){
+				queryPage.setWay(Integer.parseInt(properties.get("way")+""));
+			}
+			if(properties.containsKey("page")){
+				queryPage.setCurrent(Integer.parseInt(properties.get("page")+""));
+			}
+			if(properties.containsKey("size")){
+				queryPage.setSize(Integer.parseInt(properties.get("size")+""));
+			}
+			if(properties.containsKey("rigor")){
+				queryPage.setRigor(Integer.parseInt(properties.get("rigor")+""));
+			}
+
+			List<Map<String, Object>> list= pageData(key, queryPage, properties, childrenKey);
+			pageInfo.setList(list);
+			pageInfo.setQueryPage(queryPage);
+		}else {
+			WebQueryPage webQueryPage = new WebQueryPage();
+			webQueryPage.setShowPage(new int[]{15, 30, 50});
+			List<Map<String, Object>> list=  pageData(key, webQueryPage, properties, childrenKey);
+			pageInfo.setList(list);
+			pageInfo.setQueryPage(webQueryPage);
+		}
+		return pageInfo;
 	}
 
 	/**

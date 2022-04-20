@@ -107,12 +107,26 @@
     merge属性用于继承datasource 下面的 base.xml 所有 statement,function
     通过以上方式实现跨页面级的代码利用
 
+### 9.一个insert,update,delete 进行数据更改操作中可以包含多条操作语句。
+    通过{}形式进行拆分，以下执行了两次 insert 语句
+    
+     <statement id="mutile1">
+            <insert>
+                {insert into a(a,b)
+                values('777','1')}
+                {insert into a(a,b)
+                                values('777','1')}
+            </insert>
+        </statement>
 
- ### 9.为了更简单些，默认是去掉了数据表的映射自建实体，以HashMap为加载对象。
+### 11.传入的参入在模板中以$map开头输出
+    如：$map.username map是参数对象 username 对象属性
+
+### 10.为了更简单些，默认是去掉了数据表的映射自建实体，以HashMap为加载对象。
     小项目直接去了实体层可能开发会快速简单一点。
     
 
- ### 10.支持自建或自动生成表格映射实体。
+ ### 11.支持自建或自动生成表格映射实体。
     用以下语句自动生成实体
     SQLMap.enEntities("datasource","com.netcorner.ssx.model.entity",System.getProperty("user.dir")+"/api");
     自建实体请继承：com.netcorner.sqlmapper.entity.Entity
