@@ -165,7 +165,6 @@ public class DBTools {
 	 */
 	public static  PageInfo pageData(String key,Map<String,Object> properties,String childrenKey){
 		RequestAttributes requestAttributes=RequestContextHolder.getRequestAttributes();
-		PageInfo pageInfo=new PageInfo();
 		if(requestAttributes==null){
 			QueryPage queryPage = new QueryPage();
 			queryPage.setShowPage(new int[]{15, 30, 50});
@@ -186,17 +185,12 @@ public class DBTools {
 				queryPage.setRigor(Integer.parseInt(properties.get("rigor")+""));
 			}
 
-			List<Map<String, Object>> list= pageData(key, queryPage, properties, childrenKey);
-			pageInfo.setList(list);
-			pageInfo.setQueryPage(queryPage);
+			return pageData(key, queryPage, properties, childrenKey);
 		}else {
 			WebQueryPage webQueryPage = new WebQueryPage();
 			webQueryPage.setShowPage(new int[]{15, 30, 50});
-			List<Map<String, Object>> list=  pageData(key, webQueryPage, properties, childrenKey);
-			pageInfo.setList(list);
-			pageInfo.setQueryPage(webQueryPage);
+			return pageData(key, webQueryPage, properties, childrenKey);
 		}
-		return pageInfo;
 	}
 
 	/**
@@ -205,7 +199,7 @@ public class DBTools {
 	 * @param webQueryPage
 	 * @return
 	 */
-	public static  List<Map<String, Object>> pageData(String key,WebQueryPage webQueryPage){
+	public static  PageInfo pageData(String key,WebQueryPage webQueryPage){
 		return pageData(key,webQueryPage,null,null);
 	}
 
@@ -216,7 +210,7 @@ public class DBTools {
 	 * @param childrenKey
 	 * @return
 	 */
-	public static  List<Map<String, Object>> pageData(String key,WebQueryPage webQueryPage,String childrenKey){
+	public static  PageInfo pageData(String key,WebQueryPage webQueryPage,String childrenKey){
 		return pageData(key,webQueryPage,null,childrenKey);
 	}
 
@@ -227,7 +221,7 @@ public class DBTools {
 	 * @param childrenKey
 	 * @return
 	 */
-	public static  List<Map<String, Object>> pageData(String key,QueryPage queryPage,String childrenKey){
+	public static  PageInfo pageData(String key,QueryPage queryPage,String childrenKey){
 		return pageData(key,queryPage,null,childrenKey);
 	}
 
@@ -237,7 +231,7 @@ public class DBTools {
 	 * @param queryPage
 	 * @return
 	 */
-	public static  List<Map<String, Object>> pageData(String key,QueryPage queryPage){
+	public static PageInfo pageData(String key,QueryPage queryPage){
 		return pageData(key,queryPage,null,null);
 	}
 
@@ -249,7 +243,7 @@ public class DBTools {
 	 * @param childrenKey
 	 * @return
 	 */
-	public static  List<Map<String, Object>> pageData(String key,QueryPage queryPage,Map<String,Object> params,String childrenKey){
+	public static  PageInfo pageData(String key,QueryPage queryPage,Map<String,Object> params,String childrenKey){
 		String[] arr=getMapKeyArray(key);
 		String mapkey=getMapKey(arr);
 		SQLMap map=SQLMap.getMap(mapkey);
@@ -282,6 +276,10 @@ public class DBTools {
 				}
 			}
 		}
-		return list;
+
+		PageInfo pageInfo=new PageInfo();
+		pageInfo.setList(list);
+		pageInfo.setQueryPage(queryPage);
+		return pageInfo;
 	}
 }
