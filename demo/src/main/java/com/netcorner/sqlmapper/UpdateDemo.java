@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * Created by shijiufeng on 2022/4/20.
  */
-public class UpdateDemo extends Demo{
+public class UpdateDemo extends HelloDemo {
     public static void main(String[] args) {
         initDatasource();
 

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "https://raw.githubusercontent.com/netcorner/sqlmapper/master/files/sqlMap.dtd"-->
+<sqlMap >
+	<statement id="hello">
+		<select>
+			select*from $table
+		</select>
+	</statement>
+</sqlMap>

@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by shijiufeng on 2022/4/20.
  */
-public class DeleteDemo extends Demo{
+public class DeleteDemo extends HelloDemo {
     public static void main(String[] args) {
         initDatasource();
 

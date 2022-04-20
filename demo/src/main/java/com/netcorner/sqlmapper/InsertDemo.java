@@ -1,15 +1,13 @@
 package com.netcorner.sqlmapper;
 
-import com.alibaba.druid.pool.DruidDataSource;
 import com.netcorner.sqlmapper.entity.User;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.*;
 
 /**
  * Created by shijiufeng on 2022/4/20.
  */
-public class InsertDemo extends Demo{
+public class InsertDemo extends HelloDemo {
     public static void main(String[] args) {
         initDatasource();
 

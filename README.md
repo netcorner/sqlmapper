@@ -119,14 +119,25 @@
             </insert>
         </statement>
 
+### 10.封装了DBTools工具用于操作CRUD
+    包含的key是一个字符串，如 datasource.user.add 表示 datasource 数据源的 user 表的 add 声明块
+   DBTools.getData 获取单条记录，多个声明体中包含insert、update、delete 不是事务级的、不会回滚
+   DBTools.selectData 获取多条记录，多个声明体中包含insert、update、delete 不是事务级的、不会回滚
+   DBTools.pageData 获取多条记录，多个声明体中包含insert、update、delete 不是事务级的、不会回滚
+   DBTools.insertData 插入记录，多个声明体中包含insert、update、delete 是事务级的、会回滚
+   DBTools.updateData 插入记录，多个声明体中包含insert、update、delete 是事务级的、会回滚
+   DBTools.deleteData 插入记录，多个声明体中包含insert、update、delete 是事务级的、会回滚
+   DBTools.execute 执行数据操作，返回声明体的最后一个执行体的状态、记录集或记录，多个声明体中包含insert、update、delete 是事务级的、会回滚
+   DBTools.executeByMap 执行数据操作，返回声明体的最后一个执行体记录，多个声明体中包含insert、update、delete 是事务级的、会回滚
+
 ### 11.传入的参入在模板中以$map开头输出
     如：$map.username map是参数对象 username 对象属性
 
-### 10.为了更简单些，默认是去掉了数据表的映射自建实体，以HashMap为加载对象。
+### 12.为了更简单些，默认是去掉了数据表的映射自建实体，以HashMap为加载对象。
     小项目直接去了实体层可能开发会快速简单一点。
     
 
- ### 11.支持自建或自动生成表格映射实体。
+ ### 13.支持自建或自动生成表格映射实体。
     用以下语句自动生成实体
     SQLMap.enEntities("datasource","com.netcorner.ssx.model.entity",System.getProperty("user.dir")+"/api");
     自建实体请继承：com.netcorner.sqlmapper.entity.Entity

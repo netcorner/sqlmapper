@@ -53,6 +53,13 @@ public class DBTools {
 		properties.put(sid, obj);
 		return obj;
 	}
+
+	/**
+	 * 执行方法体并返回一条记录
+	 * @param key
+	 * @param properties
+	 * @return
+	 */
 	public static Map<String, Object> executeByMap(String key,Map<String,Object> properties){
 		String[] arr=getMapKeyArray(key);
 		SQLMap map=SQLMap.getMap(getMapKey(arr));
