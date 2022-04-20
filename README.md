@@ -139,7 +139,7 @@
 
  ### 13.支持自建或自动生成表格映射实体。
     用以下语句自动生成实体
-    SQLMap.enEntities("datasource","com.netcorner.ssx.model.entity",System.getProperty("user.dir")+"/api");
+    SQLMap.genEntities("datasource","com.netcorner.ssx.model.entity",System.getProperty("user.dir")+"/api");
     自建实体请继承：com.netcorner.sqlmapper.entity.Entity
     @Table注解表示映射哪个库的哪个表如：@Table("datasource.user") 会映射于datasource中的user表
 
