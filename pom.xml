@@ -6,7 +6,7 @@
 
     <groupId>com.netcorner</groupId>
     <artifactId>sqlmapper</artifactId>
-    <version>2.3.0</version>
+    <version>2.4.0</version>
 
     <dependencies>
         <!-- Connection Pool 只做测试用-->
@@ -38,32 +38,32 @@
             <scope>compile</scope>
         </dependency>
         <!-- json转换工具 end -->
-        <!--&lt;!&ndash; logback日志配置开始 &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>ch.qos.logback</groupId>-->
-            <!--<artifactId>logback-classic</artifactId>-->
-            <!--<version>1.2.3</version>-->
-            <!--<scope>compile</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.logging.log4j</groupId>-->
-            <!--<artifactId>log4j-to-slf4j</artifactId>-->
-            <!--<version>2.11.2</version>-->
-            <!--<scope>compile</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>jul-to-slf4j</artifactId>-->
-            <!--<version>1.7.25</version>-->
-            <!--<scope>compile</scope>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash; logback日志配置结束 &ndash;&gt;-->
-
+        <!-- logback日志配置开始 -->
         <dependency>
-        <groupId>log4j</groupId>
-        <artifactId>log4j</artifactId>
-        <version>1.2.17</version>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+            <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-to-slf4j</artifactId>
+            <version>2.11.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>1.7.25</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- logback日志配置结束 -->
+
+        <!--<dependency>-->
+        <!--<groupId>log4j</groupId>-->
+        <!--<artifactId>log4j</artifactId>-->
+        <!--<version>1.2.17</version>-->
+        <!--</dependency>-->
 
 
         <!-- jdbc 必须依赖-->
