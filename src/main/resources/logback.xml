@@ -5,12 +5,6 @@
     <property name="sql.log.path" value="logs"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-        <!-- 过滤器，只记录DEBUG级别的日志 -->
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>DEBUG</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
         <encoder>
             <pattern>[%level] %date  %contextName [%thread]  %logger [%file : %line] - %msg%n</pattern>
         </encoder>
@@ -19,7 +13,7 @@
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 过滤器，只记录INFO级别的日志 -->
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>INFO</level>
+            <level>ERROR</level>
             <onMatch>ACCEPT</onMatch>
             <onMismatch>DENY</onMismatch>
         </filter>
