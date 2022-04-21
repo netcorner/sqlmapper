@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "https://raw.githubusercontent.com/netcorner/sqlmapper/master/files/sqlMap.dtd"-->
+<!--合并xml文档,在sqlmap中的merge属性-->
+<sqlMap  merge="datasource.base">
+</sqlMap>

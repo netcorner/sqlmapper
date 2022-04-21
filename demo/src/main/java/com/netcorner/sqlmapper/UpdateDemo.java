@@ -1,6 +1,6 @@
 package com.netcorner.sqlmapper;
 
-import com.netcorner.sqlmapper.entity.User;
+import com.netcorner.demo.entity.User;
 
 import java.util.*;
 

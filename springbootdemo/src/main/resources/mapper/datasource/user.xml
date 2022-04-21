@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "https://raw.githubusercontent.com/netcorner/sqlmapper/master/files/sqlMap.dtd"-->
+<sqlMap merge="datasource.base">
+	<function>
+		#macro(getAdminUser $userid)
+			select * from $table where id='$userid'
+		#end
+	</function>
+	<statement id="hello">
+		<select>select id,username,lastlogintime from user where id='$map.userid'</select>
+	</statement>
+	<statement id="insert_base">
+		<insert>
+			insert into user(UserName,RealName,Pwd,LastLoginTime,LastLoginIP)
+			values('$!map.UserName','$!map.RealName','$!map.Pwd',now(),'$!map.LastLoginIP')
+		</insert>
+	</statement>
+	<statement id="insert_table">
+		<insert>
+			insert into $table(UserName,RealName,Pwd,LastLoginTime,LastLoginIP)
+			values('$!map.UserName','$!map.RealName','$!map.Pwd',now(),'$!map.LastLoginIP')
+		</insert>
+	</statement>
+	<statement id="insert_fun">
+		<insert>
+			#Insert()
+		</insert>
+	</statement>
+	<statement id="insert_mutile">
+		<insert>
+			#foreach($obj in $map.list)
+			{insert into user(UserName,RealName,Pwd,LastLoginTime,LastLoginIP)
+			values('$!obj.UserName','$!obj.RealName','$!obj.Pwd',now(),'$!obj.LastLoginIP')}
+			#end
+		</insert>
+	</statement>
+	<statement id="insert_entity">
+		<insert>
+			insert into user(UserName,RealName,Pwd,LastLoginTime,LastLoginIP)
+			values('$!map.UserName','$!map.RealName','$!map.Pwd',now(),'$!map.LastLoginIP')
+		</insert>
+	</statement>
+	<statement id="update_base">
+		<update>
+			update user
+			set RealName='$!map.RealName'
+			where id='$map.ID'
+		</update>
+	</statement>
+	<statement id="update_table">
+		<update>
+			update $table
+			set RealName='$!map.RealName'
+			where id='$map.ID'
+		</update>
+	</statement>
+	<statement id="update_fun">
+		<update>
+			#Update()
+		</update>
+	</statement>
+	<statement id="update_mutile">
+		<update>
+			#foreach($obj in $map.list)
+			{
+			update user
+			set RealName='$!obj.RealName'
+			where id='$obj.ID'
+			}
+			#end
+		</update>
+	</statement>
+	<statement id="update_entity">
+		<update>
+			update user
+			set UserName='$!map.UserName'
+			where id='$map.ID'
+		</update>
+	</statement>
+
+	<statement id="delete_base">
+		<update>
+			delete from user where id='$map.ID'
+		</update>
+	</statement>
+	<statement id="delete_table">
+		<update>
+			delete from $table where id='$map.ID'
+		</update>
+	</statement>
+	<statement id="delete_fun">
+		<update>
+			#Delete()
+		</update>
+	</statement>
+	<statement id="delete_mutile">
+		<update>
+			#foreach($obj in $map.list)
+			{
+			delete from $table
+			where id='$obj.ID'
+			}
+			#end
+		</update>
+	</statement>
+	<statement id="delete_entity">
+		<update>
+			delete from user
+			where id='$map.ID' and 1=1
+		</update>
+	</statement>
+
+	<!--select中的子节点应用,取得多个结果集并且生成一个有关系的hashtable-->
+	<!--select中的id是为了后面标签取得执行结果集用的-->
+	<!--select下面只能有一个主标签(必须指定primary,id属性，该primary肯定是唯一的)-->
+	<!--select下面可以有无限级的子标签(必须指定id子节点名,foreign上级对应primary指定字段值和子表对应的字段名,parent上级id名)，若该子节点下还有他的子节点者必须再指定primary-->
+	<statement id="select_base">
+		<select>
+			select *from user where UserName='$map.UserName'
+		</select>
+	</statement>
+	<statement id="select_table">
+		<select>
+			select *from $table where UserName='$map.UserName'
+		</select>
+	</statement>
+	<statement id="select_fun">
+		<select>
+			select *from $table where #Where()
+		</select>
+	</statement>
+	<statement id="select_mutile">
+		<select>
+			<query id="user" primary="ID">
+				select * from $table where id='$map.ID'
+			</query>
+			<query id="message" parent="user" foreign="UserID">
+				select * from message where userid=$map.ID
+			</query>
+		</select>
+	</statement>
+
+	<!--分页page标签的简单应用,列出当前页的记录集和记录数量统计-->
+	<!--page中的primary是分页表的主键，若不写会得到对应表的主键名，但要是表有复合主键或者没有主键不指定primary会报错-->
+	<!--page下的select标签是筛选显示的字段，不写该标签就是列出所有字段，可写传递参数-->
+	<!--page下的from标签是选取哪个表格，不写该标签就是列出当前xml所对应的表，可写传递的参数-->
+	<!--page下的order标签是排序方式，不写该标签就是表的默认排序，可写传递的参数-->
+	<statement id="page_base">
+		<page></page>
+	</statement>
+	<statement id="page_var">
+		<page>
+			<from>$table</from>
+		</page>
+	</statement>
+	<statement id="page_fun">
+		<page>
+			<from>$table</from>
+			<where>
+				#Where()
+			</where>
+		</page>
+	</statement>
+	<statement id="page_mutile1">
+		<!--分页page标签的子结点应用-->
+		<!--page下的children标签,用于列出page下面的子结点，方式可参考select的query标签-->
+		<!--返回数据只支持二级树型-->
+		<page  id="page" primary="ID">
+			<select>*</select>
+			<from>$table</from>
+			<where>
+				#Where()
+			</where>
+			<children id="messages" parent="page" foreign="UserID">
+				select * from message
+				where userid in(0
+				#foreach($obj in $map.page)
+					,$obj.ID
+				#end
+				)
+			</children>
+			<children id="others" parent="page" foreign="UserID">
+				select 1 id,1 UserID
+			</children>
+		</page>
+	</statement>
+	<statement id="page_mutile2">
+		<!--可扩展获取另外一个声明体子记录集-->
+		<page  id="page" primary="ID">
+			<order>username desc</order>
+		</page>
+	</statement>
+	<!--声明体后面跟_children可做为分页声明体获取子集合-->
+	<statement id="page_mutile2_children">
+		<select id="result">
+			<!--可扩展获取另外一个声明体子记录集-->
+			<query id="info" primary="FK">
+				select 'test' msg,1 FK
+			</query>
+			<query id="children" parent="info" foreign="indexID">
+				select 'children' msg,1 indexID
+			</query>
+		</select>
+	</statement>
+	<statement id="page_entity">
+		<!--分页page标签的子结点应用-->
+		<!--page下的children标签,用于列出page下面的子结点，方式可参考select的query标签-->
+		<!--返回数据只支持二级树型-->
+		<page  id="page" primary="ID">
+
+			<children id="childrenData" parent="page" foreign="UserID">
+				select * from message
+				where userid in(0
+				#foreach($obj in $map.page)
+				,$obj.ID
+				#end
+				)
+			</children>
+		</page>
+	</statement>
+	<statement id="fun_base1">
+		<select>
+			#getMaxID()
+		</select>
+	</statement>
+	<statement id="fun_base2">
+		<select>
+			#getAdminUser(1)
+		</select>
+	</statement>
+
+	<!--多标签处理事件某个标签执行完将返回值存于标签id名的hashtable,标签中id目的是为后面标签取值用到的,该处理是事务级的,从上往下执行-->
+	<!--当某个条件不成立这里如果没有可执行的语句时，这个标签就是不执行的-->
+	<!--最后一个标签是最终的返回值，insert,update,delete是返回状态值（1成功，0失败）select,page是返回结果集的-->
+	<statement id="other1">
+		<!--调用其它表相关操作,区分大小写 事务级-->
+		<update id="update">
+			update $table set realname='admin' where id='$map.ID'
+		</update>
+		<update id="update2">
+			#if($map.update>0)
+				update $table set realname='admin2' where id=2
+			#end
+		</update>
+		<select>
+			select '$map.update' as updateResult1,'$map.update2' as updateResult2
+		</select>
+	</statement>
+	<statement id="other2">
+		<select id="list">
+			select *from user where id in (1,2)
+		</select>
+		<update >
+			<!--循环用法,该处理是事务级的-->
+			#foreach($obj in $map.list)
+				{update $table set realname='admin_${obj.ID}' where id='$obj.ID'}
+			#end
+		</update>
+	</statement>
+</sqlMap>

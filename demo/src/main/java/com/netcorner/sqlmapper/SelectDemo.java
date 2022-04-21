@@ -1,6 +1,6 @@
 package com.netcorner.sqlmapper;
 
-import com.netcorner.sqlmapper.entity.User;
+import com.netcorner.demo.entity.User;
 
 import java.util.*;
 
@@ -20,7 +20,7 @@ public class SelectDemo extends HelloDemo {
     }
 
     /**
-     * 基本的 insert 语句示例
+     * 基本的 select 语句示例
      */
     private static void testSelectBase(){
         SQLMap map=SQLMap.getMap("datasource.user");
@@ -30,7 +30,7 @@ public class SelectDemo extends HelloDemo {
     }
 
     /**
-     * insert标签 中使用 table 变量替代表格名
+     * select标签 中使用 table 变量替代表格名
      */
     private static void testSelectVar(){
         SQLMap map=SQLMap.getMap("datasource.user");
@@ -41,7 +41,7 @@ public class SelectDemo extends HelloDemo {
     }
 
     /**
-     * insert标签 中使用宏函数语句，传递参数名必须和数据库表格字段名字一致才有效。
+     * select标签 中使用宏函数语句，传递参数名必须和数据库表格字段名字一致才有效。
      */
     private static void testSelectFun(){
         SQLMap map=SQLMap.getMap("datasource.user");
@@ -68,7 +68,7 @@ public class SelectDemo extends HelloDemo {
      * 通过实体方式插入数据,默认statement声明体
      */
     private static void testSelectBaseEntity(){
-        //实体 insert 的 statement是id=_insert，配置文件可合并datasource 下的base.xml，
+        //实体 select 的 statement是id=_select，配置文件可合并datasource 下的base.xml，
         User user=new User();
         user.setID(1);
         user.get();//不填为默认的 id=_select中，也可以指定 id，传入的参数是实体，也可以指定其他参数
