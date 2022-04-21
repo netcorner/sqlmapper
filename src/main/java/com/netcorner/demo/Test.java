@@ -1,41 +1,50 @@
 package com.netcorner.demo;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.netcorner.demo.entity.User;
 import com.netcorner.sqlmapper.*;
+import com.netcorner.sqlmapper.entity.Entity;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class Test {
     public static void main(String[] args)  {
-		Test testMain=new Test();
-		DruidDataSource db=new DruidDataSource();
-		db.setDriverClassName("com.mysql.jdbc.Driver");
-		db.setUsername("root");
-		db.setPassword("sjf2008");
-		db.setUrl("jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
-		JdbcTemplate jdbcTemplate=new JdbcTemplate(db);
-		SQLMap.setJdbcTemplates("Jobmate",jdbcTemplate);
-
-		db=new DruidDataSource();
-		db.setDriverClassName("com.mysql.jdbc.Driver");
-		db.setUsername("root");
-		db.setPassword("sjf2008");
-		db.setUrl("jdbc:mysql://localhost:3306/test1?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
-		jdbcTemplate=new JdbcTemplate(db);
-		SQLMap.setJdbcTemplates("Jobmate1",jdbcTemplate);
-
-
-
-
-
-
-		TestEntity();
+//		Test testMain=new Test();
+//		DruidDataSource db=new DruidDataSource();
+//		db.setDriverClassName("com.mysql.jdbc.Driver");
+//		db.setUsername("root");
+//		db.setPassword("sjf2008");
+//		db.setUrl("jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
+//		JdbcTemplate jdbcTemplate=new JdbcTemplate(db);
+//		SQLMap.setJdbcTemplates("Jobmate",jdbcTemplate);
+//
+//		db=new DruidDataSource();
+//		db.setDriverClassName("com.mysql.jdbc.Driver");
+//		db.setUsername("root");
+//		db.setPassword("sjf2008");
+//		db.setUrl("jdbc:mysql://localhost:3306/test1?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
+//		jdbcTemplate=new JdbcTemplate(db);
+//		SQLMap.setJdbcTemplates("Jobmate1",jdbcTemplate);
+//
+//
+//
+//
+//
+//
+//		TestEntity();
 
 		//testMain.testAll();
+
+
+
+		Map<String,Object> hash=new HashMap<String,Object>();
+		hash.put("time",LocalDateTime.now());
+		System.out.print(Entity.toJson(hash));
     }
 
 

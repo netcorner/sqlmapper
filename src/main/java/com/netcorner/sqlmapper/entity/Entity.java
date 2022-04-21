@@ -1,16 +1,14 @@
 package com.netcorner.sqlmapper.entity;
 
 import com.google.gson.*;
-import com.netcorner.sqlmapper.DBTools;
-import com.netcorner.sqlmapper.Field;
-import com.netcorner.sqlmapper.QueryPage;
-import com.netcorner.sqlmapper.SQLMap;
+import com.netcorner.sqlmapper.*;
 import com.netcorner.sqlmapper.utils.StringTools;
 import org.springframework.beans.BeanUtils;
 
 import java.io.Serializable;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
+import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -417,7 +415,7 @@ public abstract class Entity<T>  implements Serializable {
                             }
                             return p;
                         }
-                    })
+                    }).registerTypeAdapter(LocalDateTime.class,new LocalDateAdapter())
                     .addSerializationExclusionStrategy(new ExclusionStrategy() {
                         //此为转json的字段,当字段名与数组中的某个值一致时,不进行转json
                         public boolean shouldSkipField(FieldAttributes fa) {
