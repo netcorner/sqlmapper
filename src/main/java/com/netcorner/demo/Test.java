@@ -1,22 +1,17 @@
-package com.netcorner.sqlmapper.demo;
+package com.netcorner.demo;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.netcorner.sqlmapper.*;
-import com.netcorner.sqlmapper.utils.FileTools;
-import com.netcorner.test.model.entity.B;
-import com.netcorner.test.model.entity.BExt;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import javax.xml.ws.handler.Handler;
 import java.io.*;
 import java.util.*;
-import java.util.concurrent.*;
 
-public class TestMain {
+public class Test {
     public static void main(String[] args)  {
-		TestMain testMain=new TestMain();
+		Test testMain=new Test();
 		DruidDataSource db=new DruidDataSource();
 		db.setDriverClassName("com.mysql.jdbc.Driver");
 		db.setUsername("root");
@@ -118,10 +113,11 @@ public class TestMain {
 	public static void TestEntity(){
 
 
-		B tee=new B();
-		//tee.setid(1111);
-		tee.seta("'asdf'sdaf");
-		tee.insert();
+
+//		B tee=new B();
+//		//tee.setid(1111);
+//		tee.seta("'asdf'sdaf");
+//		tee.insert();
 		//tee.get(BExt.class);
 		//System.out.println(tee.getChildren().size());
 
@@ -141,15 +137,15 @@ public class TestMain {
 //		System.out.println(list.size());
 
 
-
+//
 //		TestEntity tee=new TestEntity();
 //
 //		QueryPage qp=new QueryPage();
 //		int[] showPage = { 15 };
 //		qp.setShowPage(showPage);
-//		tee.page(qp);
 //
-//		System.out.println(qp.getTotal());
+//
+//		System.out.println(tee.page(qp));
 
 
 
