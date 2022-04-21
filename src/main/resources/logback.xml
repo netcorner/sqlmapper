@@ -2,7 +2,7 @@
 <configuration debug="false" scan="true" scanPeriod="1 seconds">
 
     <contextName>logback</contextName>
-    <property name="log.path" value="logs"/>
+    <property name="sql.log.path" value="logs"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <!-- 过滤器，只记录DEBUG级别的日志 -->
@@ -23,9 +23,9 @@
             <onMatch>ACCEPT</onMatch>
             <onMismatch>DENY</onMismatch>
         </filter>
-        <file>${log.path}/sql.log</file>
+        <file>${sql.log.path}/sql.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.path}/sql_%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${sql.log.path}/sql_%d{yyyy-MM-dd}.log</fileNamePattern>
         </rollingPolicy>
         <encoder>
             <pattern>[%level] %date  %contextName [%thread]  %logger [%file : %line] - %msg%n</pattern>
