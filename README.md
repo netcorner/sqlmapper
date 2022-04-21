@@ -161,7 +161,7 @@
       <dependency>
           <groupId>com.github.netcorner</groupId>
           <artifactId>sqlmapper</artifactId>
-          <version>2.3.2</version>
+          <version>2.4.1</version>
       </dependency>
 
 ## Step 3. Hello World!
