@@ -1,9 +1,9 @@
 package com.netcorner.sqlmapper;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+import com.netcorner.sqlmapper.utils.FileTools;
+import com.netcorner.sqlmapper.utils.StringTools;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class MySqlStructure extends DBStructure  {
@@ -42,6 +42,11 @@ public class MySqlStructure extends DBStructure  {
 			Field field = new Field();
 			field.setId(i++);
 			field.setName(m.get("Field") + "");
+
+			field.setDefaultValue(m.get("Default"));
+			field.setAuto(m.get("Extra")+"");
+
+
 			String type = (m.get("Type") + "").toLowerCase();
 			field.setType(type.replaceAll("[(]\\d+[)]", ""));
 			String str = type.replace(field.getType(), "").replace("(", "").replace(")", "");
@@ -68,6 +73,33 @@ public class MySqlStructure extends DBStructure  {
 		setScript();
 
 	}
+
+	/**
+	 * 导出结构体
+	 */
+	@Override
+	public String exportStructure(){
+		String s=FileTools.getResFile("/template/MySqlStructureTable.sql");
+		StringBuilder sb=new StringBuilder();
+		for(String table:getTables()){
+			Map<String,Object> hash=new HashMap<String,Object>();
+			hash.put("table",table);
+			hash.put("commend",getTableComments().get(table));
+			hash.put("fields",getFields().get(table));
+			hash.put("primarys",getPrimarys().get(table));
+			String tmp=StringTools.evaluate(s,hash);
+			sb.append(tmp);
+		}
+		Map<String,Object> hash=new HashMap<String,Object>();
+		hash.put("tables",sb);
+		hash.put("time",new Date());
+		s=FileTools.getResFile("/template/MySqlStructureTableList.sql");
+		String tmp=StringTools.evaluate(s,hash);
+		return tmp;
+	}
+
+
+
 
 
 

@@ -58,4 +58,8 @@ public class OracleStructure extends DBStructure {
         }
         setScript();
 	}
+    @Override
+    public String exportStructure(){
+        return null;
+    }
 }

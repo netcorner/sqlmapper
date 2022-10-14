@@ -64,4 +64,8 @@ public class SqliteStructure extends DBStructure {
         }
         setScript();
 	}
+	@Override
+	public String exportStructure(){
+		return null;
+	}
 }

@@ -1589,6 +1589,52 @@ public class SQLMap   implements Serializable {
 	}
 
 	/**
+	 * 导出数据库结构
+	 * @param dbName
+	 */
+	public static String exportDBStructure(String dbName) {
+		SQLMap sqlMap=new SQLMap(dbName);
+		return sqlMap.getDbStructure().exportStructure();
+	}
+
+    /**
+     * 导出数据库所有数据
+     * @param dbName
+     * @return
+     */
+    public static String exportDBData(String dbName) {
+        SQLMap sqlMap=new SQLMap(dbName);
+        StringBuffer sqlList = new StringBuffer();
+        for(String table:sqlMap.getDbStructure().getTables()){
+            List<Map<String,Object>> list=sqlMap.getJdbcTemplate().queryForList("select * from "+table);
+            if(list.size()>0) sqlList.append("##插入表"+table+"数据\r\n");
+            for(Map<String,Object> obj:list){
+                StringBuffer sql = new StringBuffer("insert into " + table + " (");
+                boolean flag=false;
+                for(Entry<String, Object> entry : ((Map<String,Object>)obj).entrySet()){
+                    if(flag) sql.append(",");
+                    sql.append(entry.getKey());
+                    flag=true;
+                }
+                sql.append(") VALUES (");
+                flag=false;
+                for(Entry<String, Object> entry : ((Map<String,Object>)obj).entrySet()){
+                    if(flag) sql.append(",");
+                    sql.append("'");
+                    sql.append(entry.getKey());
+                    sql.append("'");
+                    flag=true;
+                }
+                sql.append(");\r\n");
+                sqlList.append(sql);
+            }
+        }
+        return sqlList.toString();
+    }
+
+
+
+	/**
 	 * 自动产生实体
 	 * @param dbName
 	 * @param packages

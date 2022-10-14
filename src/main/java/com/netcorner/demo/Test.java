@@ -14,14 +14,23 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args)  {
-//		Test testMain=new Test();
-//		DruidDataSource db=new DruidDataSource();
-//		db.setDriverClassName("com.mysql.jdbc.Driver");
-//		db.setUsername("root");
-//		db.setPassword("sjf2008");
-//		db.setUrl("jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
-//		JdbcTemplate jdbcTemplate=new JdbcTemplate(db);
-//		SQLMap.setJdbcTemplates("Jobmate",jdbcTemplate);
+		Test testMain=new Test();
+		DruidDataSource db=new DruidDataSource();
+		db.setDriverClassName("com.mysql.jdbc.Driver");
+		db.setUsername("root");
+		db.setPassword("sjf2008");
+		db.setUrl("jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
+		JdbcTemplate jdbcTemplate=new JdbcTemplate(db);
+		SQLMap.setJdbcTemplates("Jobmate",jdbcTemplate);
+
+
+		//System.out.println(SQLMap.exportDBStructure("Jobmate"));
+
+
+        System.out.println(SQLMap.exportDBData("Jobmate"));
+
+
+
 //
 //		db=new DruidDataSource();
 //		db.setDriverClassName("com.mysql.jdbc.Driver");
@@ -42,9 +51,16 @@ public class Test {
 
 
 
-		Map<String,Object> hash=new HashMap<String,Object>();
-		hash.put("time",LocalDateTime.now());
-		System.out.print(Entity.toJson(hash));
+//		Map<String,Object> hash=new HashMap<String,Object>();
+//		hash.put("time",LocalDateTime.now());
+//		System.out.print(Entity.toJson(hash));
+
+
+
+
+
+
+
     }
 
 

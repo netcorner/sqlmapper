@@ -22,6 +22,8 @@ public class Field implements Serializable {
     private boolean isIdentity;
     private boolean isForiegn;
     private boolean isClusterKey;
+    private Object defaultValue;
+    private String auto;
     /**
      * ID
      * @return
@@ -163,5 +165,22 @@ public class Field implements Serializable {
 	 */
 	public void setComment(String comment) {
 		this.comment = comment;
+	}
+
+
+	public Object getDefaultValue() {
+		return defaultValue;
+	}
+
+	public void setDefaultValue(Object defaultValue) {
+		this.defaultValue = defaultValue;
+	}
+
+	public String getAuto() {
+		return auto;
+	}
+
+	public void setAuto(String auto) {
+		this.auto = auto;
 	}
 }

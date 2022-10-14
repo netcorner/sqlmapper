@@ -80,4 +80,11 @@ public abstract  class DBStructure  implements Serializable{
         	whereScript.put(tbl, getTemplateValue(readFile(whereName),hash));
         }
 	}
+
+	/**
+	 * 导出结构体
+	 * @return
+	 */
+	public abstract String exportStructure();
+
 }
