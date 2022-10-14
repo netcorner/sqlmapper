@@ -106,6 +106,7 @@
     <sqlMap  merge="datasource.base">
     merge属性用于继承datasource 下面的 base.xml 所有 statement,function
     通过以上方式实现跨页面级的代码利用
+    
 
 ### 9.一个insert,update,delete 进行数据更改操作中可以包含多条操作语句。
     通过{}形式进行拆分，以下执行了两次 insert 语句
