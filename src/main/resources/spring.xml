@@ -14,7 +14,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springfr
 	<bean id="Jobmate" name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close"> 
 		<property name="url" value="jdbc:sqlserver://localhost:1433;DatabaseName=Jobmate" />
 		<property name="username" value="sa" />
-		<property name="password" value="sjf@2008" />
+		<property name="password" value="123456" />
 	 
 		<!--初始化连接:连接池启动时创建的初始化连接数量,1.2版本后支持-->
 		<property name="initialSize" value="10"/>
