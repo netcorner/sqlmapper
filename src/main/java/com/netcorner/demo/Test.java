@@ -27,9 +27,9 @@ public class Test {
 		//System.out.println(SQLMap.exportDBStructure("Jobmate"));
 
 
-        System.out.println(SQLMap.exportDBData("Jobmate"));
+        //System.out.println(SQLMap.exportDBData("Jobmate"));
 
-
+		TestExecAppendSql();
 
 //
 //		db=new DruidDataSource();
@@ -56,8 +56,8 @@ public class Test {
 //		System.out.print(Entity.toJson(hash));
 
 
-
-
+		//TestAfterExecId();
+		//TestBeforeExecId();
 
 
 
@@ -112,6 +112,31 @@ public class Test {
 
 		TestExtMore();
 		TestEntity();
+	}
+
+
+	public static void TestExecAppendSql(){
+
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("Jobmate.a");
+		System.out.println(map.execute("ExecAppendSql", properties));
+
+	}
+
+	public static void TestBeforeExecId(){
+
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("Jobmate.a");
+		System.out.println(map.execute("BeforeExecId", properties));
+
+	}
+
+	public static void TestAfterExecId(){
+
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("Jobmate.a");
+		System.out.println(map.execute("AfterExecId", properties));
+
 	}
 
 

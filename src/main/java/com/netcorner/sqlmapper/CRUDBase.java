@@ -8,6 +8,9 @@ public class CRUDBase implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private String id;
+	private String afterExecId;
+	private String beforExecId;
+	private String execAppendSql;
 	private boolean filter;
 	/**
 	 * 得到id
@@ -64,5 +67,41 @@ public class CRUDBase implements Serializable {
 
 	public void setFilter(boolean filter) {
 		this.filter = filter;
+	}
+
+	/**
+	 * 得到语句体执行后跳到对应的 statmentid 执行体中去执行
+	 * @return
+	 */
+	public String getAfterExecId() {
+		return afterExecId;
+	}
+
+	public void setAfterExecId(String afterExecId) {
+		this.afterExecId = afterExecId;
+	}
+
+	/**
+	 * 得到语句体执行前跳到对应的 statmentid 执行体中去执行
+	 * @return
+	 */
+	public String getBeforExecId() {
+		return beforExecId;
+	}
+
+	public void setBeforExecId(String beforExecId) {
+		this.beforExecId = beforExecId;
+	}
+
+	/**
+	 * 得到语句体执行时拦截 对sql 进行拼接生成新的 sql
+	 * @return
+	 */
+	public String getExecAppendSql() {
+		return execAppendSql;
+	}
+
+	public void setExecAppendSql(String execAppendSql) {
+		this.execAppendSql = execAppendSql;
 	}
 }

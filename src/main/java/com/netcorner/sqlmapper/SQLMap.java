@@ -1258,14 +1258,30 @@ public class SQLMap   implements Serializable {
         		id=statement.getId()+idIndex;
         	}
         }
+
+		String afterExecId = getAttributesValue(node, "afterExecId");
+		String beforExecId = getAttributesValue(node, "beforExecId");
+		String execAppendSql = getAttributesValue(node, "execAppendSql");
+
     	String sql=getInnerText(node);
+		if(!StringTools.isNullOrEmpty(execAppendSql)) sql+=execAppendSql;
 		Ext ext=new Ext();
 		ext.setTagName(node.getTagName());
 		ext.setSql(sql,this.commonTemplate);
 		ext.setId(id);
+
+
+
+		ext.setAfterExecId(afterExecId);
+		ext.setBeforExecId(beforExecId);
+		ext.setExecAppendSql(execAppendSql);
+
 		String key = getAttributesValue(node, "key");
 		ext.setKey(key);
+
+		addStatementAppendCrudList(statement,beforExecId);
 		statement.getSqlList().add(ext);
+		addStatementAppendCrudList(statement,afterExecId);
 	}
 	/**
      * 分页标签语句
@@ -1284,6 +1300,12 @@ public class SQLMap   implements Serializable {
         	}
         }
         page.setId(id);
+		String afterExecId = getAttributesValue(node, "afterExecId");
+		String beforExecId = getAttributesValue(node, "beforExecId");
+		String execAppendSql = getAttributesValue(node, "execAppendSql");
+		page.setAfterExecId(afterExecId);
+		page.setBeforExecId(beforExecId);
+		page.setExecAppendSql(execAppendSql);
         String primary = getAttributesValue(node, "primary");
         if(StringTools.isNullOrEmpty(primary)){
         	if(!this.getDbStructure().getPrimarys().containsKey(this.table)){
@@ -1316,6 +1338,11 @@ public class SQLMap   implements Serializable {
         }else{
         	page.setWhere(this.commonTemplate+page.getWhere());
         }
+		if(!StringTools.isNullOrEmpty(execAppendSql)) {
+			page.setWhere(page.getWhere()+execAppendSql);
+		}
+
+
         page.setOrder(getInnerText(node.getElementsByTagName("order")));
         page.setCount(getInnerText(node.getElementsByTagName("count")));
         
@@ -1348,7 +1375,12 @@ public class SQLMap   implements Serializable {
             }
             page.setChildren(selectDictionary);
         }
-        statement.getSqlList().add(page);
+
+		addStatementAppendCrudList(statement,beforExecId);
+		statement.getSqlList().add(page);
+		addStatementAppendCrudList(statement,afterExecId);
+
+
 	}
 
     /**
@@ -1366,17 +1398,45 @@ public class SQLMap   implements Serializable {
         	}
         }
 
+		String afterExecId = getAttributesValue(node, "afterExecId");
+		String beforExecId = getAttributesValue(node, "beforExecId");
+		String execAppendSql = getAttributesValue(node, "execAppendSql");
+
+
+
+
     	String sql=getInnerText(node);
+    	if(!StringTools.isNullOrEmpty(execAppendSql)) sql+=execAppendSql;
 		CRUDBase crud=new CRUDBase();
 		crud.setTagName(node.getTagName());
 		crud.setSql(sql,this.commonTemplate);
 		crud.setId(id);
+		crud.setAfterExecId(afterExecId);
+		crud.setBeforExecId(beforExecId);
+		crud.setExecAppendSql(execAppendSql);
 		String filter = getAttributesValue(node, "filter");
 		if(filter.equals("true")){
 			crud.setFilter(true);
 		}
+
+		addStatementAppendCrudList(statement,beforExecId);
 		statement.getSqlList().add(crud);
+		addStatementAppendCrudList(statement,afterExecId);
     }
+
+
+    private void addStatementAppendCrudList(Statement statement,String execId){
+		if(!StringTools.isNullOrEmpty(execId)) {
+			if(getStatementList().containsKey(execId)){
+				Statement s=getStatementList().get(execId);
+				for(CRUDBase crudBase:s.getSqlList()){
+					statement.getSqlList().add(crudBase);
+				}
+			}
+		}
+	}
+
+
     private int idIndex=1;
     /**
      * 存放声明列表
@@ -1443,6 +1503,12 @@ public class SQLMap   implements Serializable {
         	}
         }
         get.setId(id);
+		String afterExecId = getAttributesValue(xmlNode, "afterExecId");
+		String beforExecId = getAttributesValue(xmlNode, "beforExecId");
+		String execAppendSql = getAttributesValue(xmlNode, "execAppendSql");
+		get.setAfterExecId(afterExecId);
+		get.setBeforExecId(beforExecId);
+		get.setExecAppendSql(execAppendSql);
         //单条记录也是列表形式出现
         String tolist = getAttributesValue(xmlNode, "tolist");
         get.setToList(tolist.equals("true"));
@@ -1452,7 +1518,9 @@ public class SQLMap   implements Serializable {
         NodeList xmlNodeList = xmlNode.getElementsByTagName("query");
         if (xmlNodeList.getLength() == 0)
         {
-            get.setSql(getInnerText(xmlNode),this.commonTemplate);
+        	String sql=getInnerText(xmlNode);
+			if(!StringTools.isNullOrEmpty(execAppendSql)) sql+=execAppendSql;
+            get.setSql(sql,this.commonTemplate);
         }
         else
         {
@@ -1470,8 +1538,15 @@ public class SQLMap   implements Serializable {
                 selectDictionary.put(id, select);
                 select.setPrimary(getAttributesValue(node, "primary"));
                 select.setForeign( getAttributesValue(node, "foreign"));
-                select.setSql(node.getTextContent(),this.commonTemplate);
+
                 select.setParent( getAttributesValue(node, "parent"));
+
+
+                String sql=node.getTextContent();
+                if(StringTools.isNullOrEmpty(select.getParent())){
+					if(!StringTools.isNullOrEmpty(execAppendSql)) sql+=execAppendSql;
+				}
+				select.setSql(sql,this.commonTemplate);
             }
 
        	 	Set<Entry<String, Query>> set = selectDictionary.entrySet();  
@@ -1495,7 +1570,11 @@ public class SQLMap   implements Serializable {
             }
             get.setSelectDirctionary(selectDictionary);
         }
-        statement.getSqlList().add(get);
+
+
+		addStatementAppendCrudList(statement,beforExecId);
+		statement.getSqlList().add(get);
+		addStatementAppendCrudList(statement,afterExecId);
    }
     
     /**

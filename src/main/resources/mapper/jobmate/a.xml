@@ -13,6 +13,11 @@
 		select *from $t
 
 		#end
+		#macro(appendFun)
+
+		 and 1=2
+
+		#end
 	</function>
 
 
@@ -49,5 +54,19 @@
 			#getTable2('a')
 		</select>
 	</statement>
-
+	<statement id="AfterExecId">
+		<select afterExecId="fun2">
+			select*from $table where 1=1
+		</select>
+	</statement>
+	<statement id="BeforeExecId">
+		<select beforeExecId="fun2">
+			select*from $table where 1=1
+		</select>
+	</statement>
+	<statement id="ExecAppendSql">
+		<select execAppendSql="#appendFun()">
+			select*from $table where 1=1
+		</select>
+	</statement>
 </sqlMap>
