@@ -29,7 +29,7 @@ public class Test {
 
         //System.out.println(SQLMap.exportDBData("Jobmate"));
 
-		TestExecAppendSql();
+		//TestExecAppendSql();
 
 //
 //		db=new DruidDataSource();
@@ -56,7 +56,7 @@ public class Test {
 //		System.out.print(Entity.toJson(hash));
 
 
-		//TestAfterExecId();
+		TestAfterExecId();
 		//TestBeforeExecId();
 
 

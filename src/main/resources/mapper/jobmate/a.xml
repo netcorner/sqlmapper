@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--DOCTYPE sqlMap SYSTEM "https://raw.githubusercontent.com/netcorner/sqlmapper/master/files/sqlMap.dtd"-->
-<sqlMap>
+<sqlMap merge="jobmate.base">
 	<function>
 		#macro(getTable $t)
 
@@ -55,8 +55,8 @@
 		</select>
 	</statement>
 	<statement id="AfterExecId">
-		<select afterExecId="fun2">
-			select*from $table where 1=1
+		<select afterExecId="AfterExecId1">
+			select*from $table where 1=1 and 2=2
 		</select>
 	</statement>
 	<statement id="BeforeExecId">

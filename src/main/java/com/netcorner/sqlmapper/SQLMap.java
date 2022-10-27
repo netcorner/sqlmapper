@@ -1240,8 +1240,74 @@ public class SQLMap   implements Serializable {
         			}
         		}
         	}
+
+
+			setExecIds(afterExecIds);
+			setExecIds(beforeExecIds);
+
+
         }
     }
+
+    private void setExecIds(List<String> exes){
+		for(String key:exes){
+			Statement statement=getStatement(key);
+			int index=0;
+			for (CRUDBase crudBase : statement.getSqlList()) {
+				boolean flag=false;
+
+
+
+				if(!StringTools.isNullOrEmpty(crudBase.getBeforeExecId())) {
+					String[] arr = crudBase.getBeforeExecId().split("\\.");
+					Statement exeStatement;
+					if (arr.length == 1) {
+						exeStatement = getStatement(crudBase.getBeforeExecId());
+					} else {
+						SQLMap sqlMap = SQLMap.getMap(crudBase.getBeforeExecId());
+						exeStatement = sqlMap.getStatement(arr[2]);
+					}
+
+					if (exeStatement != null) {
+						for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
+							statement.getSqlList().add(index, crudBaseAdd);
+							flag = true;
+							break;
+						}
+					}
+				}
+				if(!StringTools.isNullOrEmpty(crudBase.getAfterExecId())) {
+					String[] arr = crudBase.getAfterExecId().split("\\.");
+					Statement exeStatement;
+					if (arr.length == 1) {
+						exeStatement = getStatement(crudBase.getAfterExecId());
+					} else {
+						SQLMap sqlMap = SQLMap.getMap(crudBase.getAfterExecId());
+						exeStatement = sqlMap.getStatement(arr[2]);
+					}
+
+					if (exeStatement != null) {
+						for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
+							statement.getSqlList().add(index+1, crudBaseAdd);
+							flag = true;
+							break;
+						}
+					}
+				}
+
+
+
+
+
+
+
+				if(flag) break;
+				index++;
+			}
+		}
+	}
+
+
 
     /**
      * 设置扩展标签
@@ -1260,7 +1326,7 @@ public class SQLMap   implements Serializable {
         }
 
 		String afterExecId = getAttributesValue(node, "afterExecId");
-		String beforExecId = getAttributesValue(node, "beforExecId");
+		String beforeExecId = getAttributesValue(node, "beforeExecId");
 		String execAppendSql = getAttributesValue(node, "execAppendSql");
 
     	String sql=getInnerText(node);
@@ -1273,16 +1339,26 @@ public class SQLMap   implements Serializable {
 
 
 		ext.setAfterExecId(afterExecId);
-		ext.setBeforExecId(beforExecId);
+		ext.setBeforeExecId(beforeExecId);
 		ext.setExecAppendSql(execAppendSql);
+
+		setExecIds(statement,ext);
 
 		String key = getAttributesValue(node, "key");
 		ext.setKey(key);
 
-		addStatementAppendCrudList(statement,beforExecId);
 		statement.getSqlList().add(ext);
-		addStatementAppendCrudList(statement,afterExecId);
 	}
+	private void setExecIds(Statement statement,CRUDBase crudBase){
+		if(!StringTools.isNullOrEmpty(crudBase.getAfterExecId())) {
+			if(!afterExecIds.contains(statement.getId()))afterExecIds.add(statement.getId());
+		}
+		if(!StringTools.isNullOrEmpty(crudBase.getBeforeExecId())) {
+			if(!beforeExecIds.contains(statement.getId())) beforeExecIds.add(statement.getId());
+		}
+	}
+	private List<String> afterExecIds=new ArrayList<String>();
+	private List<String> beforeExecIds=new ArrayList<String>();
 	/**
      * 分页标签语句
      * @param statement
@@ -1301,11 +1377,14 @@ public class SQLMap   implements Serializable {
         }
         page.setId(id);
 		String afterExecId = getAttributesValue(node, "afterExecId");
-		String beforExecId = getAttributesValue(node, "beforExecId");
+		String beforeExecId = getAttributesValue(node, "beforeExecId");
 		String execAppendSql = getAttributesValue(node, "execAppendSql");
 		page.setAfterExecId(afterExecId);
-		page.setBeforExecId(beforExecId);
+		page.setBeforeExecId(beforeExecId);
 		page.setExecAppendSql(execAppendSql);
+
+		setExecIds(statement,page);
+
         String primary = getAttributesValue(node, "primary");
         if(StringTools.isNullOrEmpty(primary)){
         	if(!this.getDbStructure().getPrimarys().containsKey(this.table)){
@@ -1375,10 +1454,8 @@ public class SQLMap   implements Serializable {
             }
             page.setChildren(selectDictionary);
         }
-
-		addStatementAppendCrudList(statement,beforExecId);
 		statement.getSqlList().add(page);
-		addStatementAppendCrudList(statement,afterExecId);
+
 
 
 	}
@@ -1399,7 +1476,7 @@ public class SQLMap   implements Serializable {
         }
 
 		String afterExecId = getAttributesValue(node, "afterExecId");
-		String beforExecId = getAttributesValue(node, "beforExecId");
+		String beforeExecId = getAttributesValue(node, "beforeExecId");
 		String execAppendSql = getAttributesValue(node, "execAppendSql");
 
 
@@ -1412,29 +1489,19 @@ public class SQLMap   implements Serializable {
 		crud.setSql(sql,this.commonTemplate);
 		crud.setId(id);
 		crud.setAfterExecId(afterExecId);
-		crud.setBeforExecId(beforExecId);
+		crud.setBeforeExecId(beforeExecId);
 		crud.setExecAppendSql(execAppendSql);
+		setExecIds(statement,crud);
 		String filter = getAttributesValue(node, "filter");
 		if(filter.equals("true")){
 			crud.setFilter(true);
 		}
 
-		addStatementAppendCrudList(statement,beforExecId);
 		statement.getSqlList().add(crud);
-		addStatementAppendCrudList(statement,afterExecId);
     }
 
 
-    private void addStatementAppendCrudList(Statement statement,String execId){
-		if(!StringTools.isNullOrEmpty(execId)) {
-			if(getStatementList().containsKey(execId)){
-				Statement s=getStatementList().get(execId);
-				for(CRUDBase crudBase:s.getSqlList()){
-					statement.getSqlList().add(crudBase);
-				}
-			}
-		}
-	}
+
 
 
     private int idIndex=1;
@@ -1504,11 +1571,12 @@ public class SQLMap   implements Serializable {
         }
         get.setId(id);
 		String afterExecId = getAttributesValue(xmlNode, "afterExecId");
-		String beforExecId = getAttributesValue(xmlNode, "beforExecId");
+		String beforeExecId = getAttributesValue(xmlNode, "beforeExecId");
 		String execAppendSql = getAttributesValue(xmlNode, "execAppendSql");
 		get.setAfterExecId(afterExecId);
-		get.setBeforExecId(beforExecId);
+		get.setBeforeExecId(beforeExecId);
 		get.setExecAppendSql(execAppendSql);
+		setExecIds(statement,get);
         //单条记录也是列表形式出现
         String tolist = getAttributesValue(xmlNode, "tolist");
         get.setToList(tolist.equals("true"));
@@ -1575,10 +1643,8 @@ public class SQLMap   implements Serializable {
             get.setSelectDirctionary(selectDictionary);
         }
 
-
-		addStatementAppendCrudList(statement,beforExecId);
 		statement.getSqlList().add(get);
-		addStatementAppendCrudList(statement,afterExecId);
+
    }
     
     /**

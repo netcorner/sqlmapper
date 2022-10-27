@@ -58,5 +58,9 @@
 	<statement id="page">
 		<page></page>
 	</statement>
-
+	<statement id="AfterExecId1">
+		<select afterExecId="fun2">
+			select*from $table where 1=2
+		</select>
+	</statement>
 </sqlMap>

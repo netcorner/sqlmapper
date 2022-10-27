@@ -9,7 +9,7 @@ public class CRUDBase implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String id;
 	private String afterExecId;
-	private String beforExecId;
+	private String beforeExecId;
 	private String execAppendSql;
 	private boolean filter;
 	/**
@@ -85,12 +85,12 @@ public class CRUDBase implements Serializable {
 	 * 得到语句体执行前跳到对应的 statmentid 执行体中去执行
 	 * @return
 	 */
-	public String getBeforExecId() {
-		return beforExecId;
+	public String getBeforeExecId() {
+		return beforeExecId;
 	}
 
-	public void setBeforExecId(String beforExecId) {
-		this.beforExecId = beforExecId;
+	public void setBeforeExecId(String beforeExecId) {
+		this.beforeExecId = beforeExecId;
 	}
 
 	/**
