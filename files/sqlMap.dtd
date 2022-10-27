@@ -5,7 +5,7 @@
 	merge CDATA #REQUIRED
 	>
 	<!ELEMENT function      (#PCDATA)>
-	<!ELEMENT statement    (insert | update | delete | page | select | ext)*>
+	<!ELEMENT statement    (insert | update | delete | page | select | ext | config)*>
 	<!ATTLIST statement
 	id CDATA #REQUIRED
 	>
@@ -17,6 +17,10 @@
 	<!ATTLIST update
 	id CDATA #IMPLIED
 	>
+	<!ELEMENT config      (#PCDATA)>
+	<!ATTLIST config
+			id CDATA #IMPLIED
+			>
 	<!ELEMENT delete      (#PCDATA)>
 	<!ATTLIST delete
 	id CDATA #IMPLIED

@@ -1560,9 +1560,13 @@ public class SQLMap   implements Serializable {
                 	get.setRootID(entry.getKey());
                 	i++;
                 }else{
-	                if (selectDictionary.get(entry.getValue().getParent()).getChildren() == null) 
-	                	selectDictionary.get(entry.getValue().getParent()).setChildren (new ArrayList<String>());
-	                selectDictionary.get(entry.getValue().getParent()).getChildren().add(entry.getKey());
+                	try {
+						if (selectDictionary.get(entry.getValue().getParent()).getChildren() == null)
+							selectDictionary.get(entry.getValue().getParent()).setChildren(new ArrayList<String>());
+						selectDictionary.get(entry.getValue().getParent()).getChildren().add(entry.getKey());
+					}catch (Exception e){
+						throw new DALException("dal配置文件有误:"+this.key+"."+statement.getId()+"<select>-><query>父级节点不存在=="+entry.getValue().getParent());
+					}
                 }
             }
             if(i>1){
