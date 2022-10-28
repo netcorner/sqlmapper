@@ -1267,32 +1267,31 @@ public class SQLMap   implements Serializable {
 				list.add(crudBase);
 			}
 			for (CRUDBase crudBase : statement.getSqlList()) {
+				int index1=0;
 				if(!StringTools.isNullOrEmpty(crudBase.getBeforeExecId())) {
 					String[] slist=crudBase.getBeforeExecId().split(",");
-					int index1=0;
 					for(String s:slist) {
 						Statement exeStatement=getExeStatement(s);
 						if (exeStatement != null) {
 							for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
 								list.add(index+index1, crudBaseAdd);
-								break;
+								index1++;
 							}
 						}
-						index1++;
+
 					}
 				}
 				if(!StringTools.isNullOrEmpty(crudBase.getAfterExecId())) {
 					String[] slist=crudBase.getAfterExecId().split(",");
-					int index1=0;
 					for(String s:slist) {
 						Statement exeStatement=getExeStatement(s);
 						if (exeStatement != null) {
 							for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
 								list.add(index + 1+index1, crudBaseAdd);
-								break;
+								index1++;
 							}
 						}
-						index1++;
+
 					}
 				}
 				index=list.size()-1;

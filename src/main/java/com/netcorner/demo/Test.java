@@ -119,6 +119,16 @@ public class Test {
 
 		Map<String,Object> properties=new HashMap<String,Object>();
 		SQLMap map=SQLMap.getMap("jobmate.a");
+		System.out.println(map.execute("AfterExecId4", properties));
+
+	}
+
+
+
+	public static void TestAfterExecId4(){
+
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("jobmate.a");
 		System.out.println(map.execute("AfterExecId3", properties));
 
 	}
