@@ -114,6 +114,16 @@ public class Test {
 		TestEntity();
 	}
 
+
+	public static void TestAfterExecId(){
+
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("jobmate.a");
+		System.out.println(map.execute("AfterExecId3", properties));
+
+	}
+
+
 	public static void TestExecAppendSql(){
 
 		Map<String,Object> properties=new HashMap<String,Object>();
@@ -122,7 +132,7 @@ public class Test {
 
 	}
 
-	public static void TestAfterExecId(){
+	public static void TestAfterExecId3(){
 
 		Map<String,Object> properties=new HashMap<String,Object>();
 		SQLMap map=SQLMap.getMap("jobmate.a");

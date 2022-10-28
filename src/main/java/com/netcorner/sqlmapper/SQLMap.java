@@ -497,8 +497,8 @@ public class SQLMap   implements Serializable {
      * @return
      */
     @SuppressWarnings("unchecked")
-	public Map<String,Object> executeForMap(String statementid, Map<String,Object> properties){
-    	Object obj=execute(statementid,properties,true,null);
+	public Map<String,Object> executeForMap(String statementid, Map<String,Object> properties,boolean tran){
+    	Object obj=execute(statementid,properties,!tran,null);
     	if(obj instanceof Map){
     		return (Map<String,Object>)obj;
     	}else{

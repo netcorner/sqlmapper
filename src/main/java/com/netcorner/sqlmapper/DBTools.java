@@ -64,7 +64,7 @@ public class DBTools {
 		String[] arr=getMapKeyArray(key);
 		SQLMap map=SQLMap.getMap(getMapKey(arr));
 		String sid=getMapStatementID(arr);
-		Map<String, Object> obj= map.executeForMap(sid, properties);
+		Map<String, Object> obj= map.executeForMap(sid, properties,true);
 		properties.put(sid, obj);
 		return obj;
 	}
@@ -79,7 +79,7 @@ public class DBTools {
 		String[] arr=getMapKeyArray(key);
 		SQLMap map=SQLMap.getMap(getMapKey(arr));
 		String sid=getMapStatementID(arr);
-		Map<String, Object> obj= map.executeForMap(sid, properties);
+		Map<String, Object> obj= map.executeForMap(sid, properties,false);
 		properties.put(sid, obj);
 		return obj;
 	}

@@ -63,4 +63,15 @@
 			select*from $table where 1=2
 		</select>
 	</statement>
+
+
+	<statement id="returnResult">
+		<select>
+			#if($map.status)
+			select $map.status as  result
+			#else
+			select -2 as  result,'操作失败！' msg
+			#end
+		</select>
+	</statement>
 </sqlMap>
