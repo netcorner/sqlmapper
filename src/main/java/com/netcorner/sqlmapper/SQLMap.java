@@ -1259,39 +1259,50 @@ public class SQLMap   implements Serializable {
 
 
 				if(!StringTools.isNullOrEmpty(crudBase.getBeforeExecId())) {
-					String[] arr = crudBase.getBeforeExecId().split("\\.");
-					Statement exeStatement;
-					if (arr.length == 1) {
-						exeStatement = getStatement(crudBase.getBeforeExecId());
-					} else {
-						SQLMap sqlMap = SQLMap.getMap(crudBase.getBeforeExecId());
-						exeStatement = sqlMap.getStatement(arr[2]);
-					}
+					String[] slist=crudBase.getBeforeExecId().split(",");
+					int index1=0;
+					for(String s:slist) {
 
-					if (exeStatement != null) {
-						for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
-							statement.getSqlList().add(index, crudBaseAdd);
-							flag = true;
-							break;
+						String[] arr = s.split("\\.");
+						Statement exeStatement;
+						if (arr.length == 1) {
+							exeStatement = getStatement(s);
+						} else {
+							SQLMap sqlMap = SQLMap.getMap(s);
+							exeStatement = sqlMap.getStatement(arr[2]);
 						}
+
+						if (exeStatement != null) {
+							for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
+								statement.getSqlList().add(index+index1, crudBaseAdd);
+								flag = true;
+								break;
+							}
+						}
+						index1++;
 					}
 				}
 				if(!StringTools.isNullOrEmpty(crudBase.getAfterExecId())) {
-					String[] arr = crudBase.getAfterExecId().split("\\.");
-					Statement exeStatement;
-					if (arr.length == 1) {
-						exeStatement = getStatement(crudBase.getAfterExecId());
-					} else {
-						SQLMap sqlMap = SQLMap.getMap(crudBase.getAfterExecId());
-						exeStatement = sqlMap.getStatement(arr[2]);
-					}
-
-					if (exeStatement != null) {
-						for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
-							statement.getSqlList().add(index+1, crudBaseAdd);
-							flag = true;
-							break;
+					String[] slist=crudBase.getAfterExecId().split(",");
+					int index1=0;
+					for(String s:slist) {
+						String[] arr = s.split("\\.");
+						Statement exeStatement;
+						if (arr.length == 1) {
+							exeStatement = getStatement(s);
+						} else {
+							SQLMap sqlMap = SQLMap.getMap(s);
+							exeStatement = sqlMap.getStatement(arr[2]);
 						}
+
+						if (exeStatement != null) {
+							for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
+								statement.getSqlList().add(index + 1+index1, crudBaseAdd);
+								flag = true;
+								break;
+							}
+						}
+						index1++;
 					}
 				}
 

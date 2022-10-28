@@ -21,6 +21,7 @@
     <update>标签的innerText代表update sql语句
     <delete>标签的innerText代表delete sql语句
     <select>标签的innerText代表select sql语句
+    <config>标签的innerText代表config sql语句 执行一下没返回值的配置相关语句
     <page>标签里面有<select>筛选字段，<from>来自哪个表格，<where>条件筛选，<order>字段排序，处理需要有分页的读取操作
     
  ### 3.对于分页数据使用了特定标签page实现，免去插件或写复杂的分页的sql语句
@@ -144,7 +145,38 @@
     自建实体请继承：com.netcorner.sqlmapper.entity.Entity
     @Table注解表示映射哪个库的哪个表如：@Table("datasource.user") 会映射于datasource中的user表
 
-
+ ### 14.xml 拦截配置功能
+    可以在 base.xml 中配置相应 statement，然后业务 xml 继承 base.xml
+    此时statement语句体可以进行拦截配置。
+    执行体中设置afterExecId 属性 表示执行体执行完以后，会调用该对应的 statement id="$afterExecId"的声明体,$afterExecId 多个用逗号分开。如果另外文件配置文件，可配置如datasource.user.add 这样可以调用 user 表中的 statement="add"的声明体
+    执行体中设置beforeExecId 属性 表示执行体执行完以后，会调用该对应的 statement id="$beforeExecId"的声明体,$beforeExecId 多个用逗号分开。如果另外文件配置文件，可配置如datasource.user.add 这样可以调用 user 表中的 statement="add"的声明体
+    执行体中设置 execAppendSql 属性 表示执行体语句追加语句，可以是宏函数也可以是普通常量
+    示例：
+    <statement id="fun2">
+    		<select>
+    			#getTable2('a')
+    		</select>
+    	</statement>
+    	<statement id="AfterExecId">
+    		<select afterExecId="AfterExecId1">
+    			select*from $table where 1=1 and 2=2
+    		</select>
+    	</statement>
+    	<statement id="BeforeExecId">
+    		<select beforeExecId="fun2">
+    			select*from $table where 1=1
+    		</select>
+    	</statement>
+    	<statement id="ExecAppendSql">
+    		<select execAppendSql="#appendFun()">
+    			<query id="aa" primary="indexid">
+    			select *,1 indexid from $table where 1=1
+    			</query>
+    			<query id="bb" parent="aa" primary="indexid" foreign="indexid">
+    				select *,1 indexid from $table where 1=2
+    			</query>
+    		</select>
+    	</statement>
 
 
 
