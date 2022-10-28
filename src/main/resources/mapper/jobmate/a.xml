@@ -62,8 +62,11 @@
 
 
 	<statement id="AfterExecId3">
-		<update id="status" afterExecId="returnResult">
+		<update id="status" beforeExecId="returnResult">
 			update $table set id=1 where 1=2
+		</update>
+		<update id="status1" afterExecId="returnResult">
+			update $table set id=1 where 1=3
 		</update>
 	</statement>
 

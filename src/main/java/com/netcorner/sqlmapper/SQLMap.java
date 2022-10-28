@@ -1262,32 +1262,19 @@ public class SQLMap   implements Serializable {
 		for(String key:exes){
 			Statement statement=getStatement(key);
 			int index=0;
+			List<CRUDBase> list=new ArrayList<CRUDBase>();
 			for (CRUDBase crudBase : statement.getSqlList()) {
-				boolean flag=false;
-
-
-
+				list.add(crudBase);
+			}
+			for (CRUDBase crudBase : statement.getSqlList()) {
 				if(!StringTools.isNullOrEmpty(crudBase.getBeforeExecId())) {
 					String[] slist=crudBase.getBeforeExecId().split(",");
 					int index1=0;
 					for(String s:slist) {
-
-						String[] arr = s.split("\\.");
-						Statement exeStatement;
-						if (arr.length == 1) {
-							exeStatement = getStatement(s);
-						} else if (arr.length == 2) {
-							SQLMap sqlMap = SQLMap.getMap(getDbName()+"."+arr[0]);
-							exeStatement = sqlMap.getStatement(arr[1]);
-						}else {
-							SQLMap sqlMap = SQLMap.getMap(arr[0]+"."+arr[1]);
-							exeStatement = sqlMap.getStatement(arr[2]);
-						}
-
+						Statement exeStatement=getExeStatement(s);
 						if (exeStatement != null) {
 							for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
-								statement.getSqlList().add(index+index1, crudBaseAdd);
-								flag = true;
+								list.add(index+index1, crudBaseAdd);
 								break;
 							}
 						}
@@ -1298,39 +1285,35 @@ public class SQLMap   implements Serializable {
 					String[] slist=crudBase.getAfterExecId().split(",");
 					int index1=0;
 					for(String s:slist) {
-						String[] arr = s.split("\\.");
-						Statement exeStatement;
-						if (arr.length == 1) {
-							exeStatement = getStatement(s);
-						} else if (arr.length == 2) {
-							SQLMap sqlMap = SQLMap.getMap(getDbName()+"."+arr[0]);
-							exeStatement = sqlMap.getStatement(arr[1]);
-						}else {
-							SQLMap sqlMap = SQLMap.getMap(arr[0]+"."+arr[1]);
-							exeStatement = sqlMap.getStatement(arr[2]);
-						}
-
+						Statement exeStatement=getExeStatement(s);
 						if (exeStatement != null) {
 							for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
-								statement.getSqlList().add(index + 1+index1, crudBaseAdd);
-								flag = true;
+								list.add(index + 1+index1, crudBaseAdd);
 								break;
 							}
 						}
 						index1++;
 					}
 				}
-
-
-
-
-
-
-
-				if(flag) break;
-				index++;
+				index=list.size()-1;
 			}
+			statement.setSqlList(list);
 		}
+	}
+
+	private Statement getExeStatement(String s){
+		Statement exeStatement;
+		String[] arr = s.split("\\.");
+		if (arr.length == 1) {
+			exeStatement = getStatement(s);
+		} else if (arr.length == 2) {
+			SQLMap sqlMap = SQLMap.getMap(getDbName()+"."+arr[0]);
+			exeStatement = sqlMap.getStatement(arr[1]);
+		}else {
+			SQLMap sqlMap = SQLMap.getMap(arr[0]+"."+arr[1]);
+			exeStatement = sqlMap.getStatement(arr[2]);
+		}
+		return exeStatement;
 	}
 
 
