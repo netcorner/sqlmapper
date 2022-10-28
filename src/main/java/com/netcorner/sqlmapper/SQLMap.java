@@ -490,6 +490,16 @@ public class SQLMap   implements Serializable {
     		return (List<Map<String,Object>>)obj;
     	}
     }
+
+	/**
+	 * 执行操作返回Map,单条数据
+	 * @param statementid
+	 * @param properties
+	 * @return
+	 */
+	public Map<String,Object> executeForMap(String statementid, Map<String,Object> properties){
+		return executeForMap(statementid,properties,false);
+	}
     /**
      * 执行操作返回Map,单条数据
      * @param statementid
