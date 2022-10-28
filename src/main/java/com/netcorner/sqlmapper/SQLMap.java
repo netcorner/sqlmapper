@@ -1252,8 +1252,7 @@ public class SQLMap   implements Serializable {
         	}
 
 
-			setExecIds(afterExecIds);
-			setExecIds(beforeExecIds);
+			setExecIds(execIds);
 
 
         }
@@ -1378,14 +1377,13 @@ public class SQLMap   implements Serializable {
 	}
 	private void setExecIds(Statement statement,CRUDBase crudBase){
 		if(!StringTools.isNullOrEmpty(crudBase.getAfterExecId())) {
-			if(!afterExecIds.contains(statement.getId()))afterExecIds.add(statement.getId());
+			if(!execIds.contains(statement.getId()))execIds.add(statement.getId());
 		}
 		if(!StringTools.isNullOrEmpty(crudBase.getBeforeExecId())) {
-			if(!beforeExecIds.contains(statement.getId())) beforeExecIds.add(statement.getId());
+			if(!execIds.contains(statement.getId())) execIds.add(statement.getId());
 		}
 	}
-	private List<String> afterExecIds=new ArrayList<String>();
-	private List<String> beforeExecIds=new ArrayList<String>();
+	private List<String> execIds=new ArrayList<String>();
 	/**
      * 分页标签语句
      * @param statement
