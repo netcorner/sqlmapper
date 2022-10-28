@@ -1,5 +1,5 @@
 \#macro(Update)
-update ${struct.table} set
+update ${struct.table} a set
 \#set($flag=false)
 #set($tmp="map.")
 #foreach($f in $struct.fields)
