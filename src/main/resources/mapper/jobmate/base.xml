@@ -59,7 +59,7 @@
 		<page></page>
 	</statement>
 	<statement id="AfterExecId1">
-		<select afterExecId="fun2">
+		<select>
 			select*from $table where 1=2
 		</select>
 	</statement>

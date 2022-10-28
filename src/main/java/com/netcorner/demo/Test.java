@@ -21,13 +21,13 @@ public class Test {
 		db.setPassword("sjf2008");
 		db.setUrl("jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
 		JdbcTemplate jdbcTemplate=new JdbcTemplate(db);
-		SQLMap.setJdbcTemplates("Jobmate",jdbcTemplate);
+		SQLMap.setJdbcTemplates("jobmate",jdbcTemplate);
 
 
-		//System.out.println(SQLMap.exportDBStructure("Jobmate"));
+		//System.out.println(SQLMap.exportDBStructure("jobmate"));
 
 
-        //System.out.println(SQLMap.exportDBData("Jobmate"));
+        //System.out.println(SQLMap.exportDBData("jobmate"));
 
 		//TestExecAppendSql();
 
@@ -114,27 +114,34 @@ public class Test {
 		TestEntity();
 	}
 
-
 	public static void TestExecAppendSql(){
 
 		Map<String,Object> properties=new HashMap<String,Object>();
-		SQLMap map=SQLMap.getMap("Jobmate.a");
-		System.out.println(map.execute("ExecAppendSql", properties));
-
-	}
-
-	public static void TestBeforeExecId(){
-
-		Map<String,Object> properties=new HashMap<String,Object>();
-		SQLMap map=SQLMap.getMap("Jobmate.a");
-		System.out.println(map.execute("BeforeExecId", properties));
+		SQLMap map=SQLMap.getMap("jobmate.a");
+		System.out.println(map.execute("AfterExecId", properties));
 
 	}
 
 	public static void TestAfterExecId(){
 
 		Map<String,Object> properties=new HashMap<String,Object>();
-		SQLMap map=SQLMap.getMap("Jobmate.a");
+		SQLMap map=SQLMap.getMap("jobmate.a");
+		System.out.println(map.execute("AfterExecId2", properties));
+
+	}
+
+	public static void TestBeforeExecId(){
+
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("jobmate.a");
+		System.out.println(map.execute("BeforeExecId", properties));
+
+	}
+
+	public static void TestAfterExecId2(){
+
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("jobmate.a");
 		System.out.println(map.execute("AfterExecId", properties));
 
 	}
@@ -143,7 +150,7 @@ public class Test {
 	public static void TestFun2(){
 
 		Map<String,Object> properties=new HashMap<String,Object>();
-		SQLMap map=SQLMap.getMap("Jobmate.a");
+		SQLMap map=SQLMap.getMap("jobmate.a");
 		System.out.println(map.execute("fun2", properties));
 
 	}
@@ -153,7 +160,7 @@ public class Test {
 	 */
 	public static void TestGen(){
 
-		SQLMap.genEntities("Jobmate","com.netcorner.test.model.entity");
+		SQLMap.genEntities("jobmate","com.netcorner.test.model.entity");
 	}
 
 
@@ -173,7 +180,7 @@ public class Test {
 
 
 
-//		List list=DBTools.pageData("Jobmate.b._page",new QueryPage(),"a");
+//		List list=DBTools.pageData("jobmate.b._page",new QueryPage(),"a");
 //		System.out.println(list.size());
 
 
@@ -256,7 +263,7 @@ public class Test {
 	}
 
 	public static void TestMutilSql(){
-		SQLMap map=SQLMap.getMap("Jobmate.b");
+		SQLMap map=SQLMap.getMap("jobmate.b");
 		HashMap<String,Object> obj=new HashMap<String,Object>();
 		System.out.println(map.execute("mutile1", obj));
 	}
@@ -273,7 +280,7 @@ public class Test {
     
     public static void TestFun(){
     	Map<String,Object> properties=new HashMap<String,Object>();
-    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	SQLMap map=SQLMap.getMap("jobmate.b");
     	System.out.println(map.execute("fun", properties));
     }
 	/**
@@ -297,7 +304,7 @@ public class Test {
 		list.add(hash);
 		properties.put("a", list);
 
-		SQLMap map=SQLMap.getMap("Jobmate.b");
+		SQLMap map=SQLMap.getMap("jobmate.b");
 		System.out.println(map.execute("extMore", properties));
 	}
 
@@ -322,14 +329,14 @@ public class Test {
     	list.add(hash);
     	properties.put("a", list);
     	
-    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	SQLMap map=SQLMap.getMap("jobmate.b");
     	System.out.println(map.execute("ext", properties));
 	}
 	/**
 	 * 测试合并功能
 	 */
 	public static void TestMerge(){
-		SQLMap map=SQLMap.getMap("Jobmate.b");
+		SQLMap map=SQLMap.getMap("jobmate.b");
     	Map<String,Object> properties=new HashMap<String,Object>();
     	properties.put("a", "abc");
 		System.out.println(map.execute("add", properties));
@@ -349,14 +356,14 @@ public class Test {
     	list.add(hash);
     	properties.put("list", list);
     	
-    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	SQLMap map=SQLMap.getMap("jobmate.b");
     	System.out.println(map.execute("insert", properties));
 	}
 	/**
 	 * 多条语句同时执行（事务级的）
 	 */
 	public static  void TestMulti(){
-		SQLMap map=SQLMap.getMap("Jobmate.b");
+		SQLMap map=SQLMap.getMap("jobmate.b");
     	Map<String,Object> properties=new HashMap<String,Object>();
 		System.out.println(map.execute("multi", properties));
 	}
@@ -364,7 +371,7 @@ public class Test {
 	 * statement的子标签的id作用
 	 */
 	public static void TestUseStatementID(){
-		SQLMap map=SQLMap.getMap("Jobmate.b");
+		SQLMap map=SQLMap.getMap("jobmate.b");
     	Map<String,Object> properties=new HashMap<String,Object>();
 
 
@@ -376,7 +383,7 @@ public class Test {
 	 * select的使用，可得到子集合
 	 */
 	public static void TestSelect(){
-		SQLMap map=SQLMap.getMap("Jobmate.b");
+		SQLMap map=SQLMap.getMap("jobmate.b");
     	Map<String,Object> properties=new HashMap<String,Object>();
 		System.out.println(map.execute("select", properties));
 	}
@@ -385,7 +392,7 @@ public class Test {
     	QueryPage qpage=new QueryPage();
     	qpage.setCurrent(2);
     	qpage.setSize(2);
-    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	SQLMap map=SQLMap.getMap("jobmate.b");
     	System.out.println(map.executeForList("simplepage1", qpage));
     	System.out.println(qpage.getTotal());
 	}
@@ -393,7 +400,7 @@ public class Test {
     	QueryPage qpage=new QueryPage();
     	qpage.setCurrent(2);
     	qpage.setSize(2);
-    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	SQLMap map=SQLMap.getMap("jobmate.b");
     	System.out.println(map.executeForList("simplepage2", qpage));
     	System.out.println(qpage.getTotal());
 	}
@@ -401,7 +408,7 @@ public class Test {
     	QueryPage qpage=new QueryPage();
     	qpage.setCurrent(2);
     	qpage.setSize(2);
-    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	SQLMap map=SQLMap.getMap("jobmate.b");
     	System.out.println(map.executeForList("simplepage3", qpage));
     	System.out.println(qpage.getCountResult());
 	}
@@ -409,7 +416,7 @@ public class Test {
     	QueryPage qpage=new QueryPage();
     	qpage.setCurrent(2);
     	qpage.setSize(2);
-    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	SQLMap map=SQLMap.getMap("jobmate.b");
     	System.out.println(map.executeForList("simplepage4", qpage));
     	System.out.println(qpage.getCountResult());
 	}
@@ -417,7 +424,7 @@ public class Test {
     	QueryPage qpage=new QueryPage();
     	qpage.setCurrent(2);
     	qpage.setSize(2);
-    	SQLMap map=SQLMap.getMap("Jobmate.b");
+    	SQLMap map=SQLMap.getMap("jobmate.b");
     	System.out.println(map.executeForList("simplepage5", qpage));
     	System.out.println(qpage.getTotal());
 	}

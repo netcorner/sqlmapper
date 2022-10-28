@@ -121,7 +121,7 @@ public class SQLMap   implements Serializable {
 //	//		db.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 //	//		db.setUsername("sa");
 //	//		db.setPassword("sjf@2008");
-//	//		db.setUrl("jdbc:sqlserver://localhost:1433;DatabaseName=Jobmate");
+//	//		db.setUrl("jdbc:sqlserver://localhost:1433;DatabaseName=jobmate");
 //	
 //	//		db.setDriverClassName("sun.jdbc.odbc.JdbcOdbcDriver");
 //	//		String fpath=getRootPath()+"config/test/a.mdb";
@@ -1267,8 +1267,11 @@ public class SQLMap   implements Serializable {
 						Statement exeStatement;
 						if (arr.length == 1) {
 							exeStatement = getStatement(s);
-						} else {
-							SQLMap sqlMap = SQLMap.getMap(s);
+						} else if (arr.length == 2) {
+							SQLMap sqlMap = SQLMap.getMap(getDbName()+"."+arr[0]);
+							exeStatement = sqlMap.getStatement(arr[1]);
+						}else {
+							SQLMap sqlMap = SQLMap.getMap(arr[0]+"."+arr[1]);
 							exeStatement = sqlMap.getStatement(arr[2]);
 						}
 
@@ -1290,8 +1293,11 @@ public class SQLMap   implements Serializable {
 						Statement exeStatement;
 						if (arr.length == 1) {
 							exeStatement = getStatement(s);
-						} else {
-							SQLMap sqlMap = SQLMap.getMap(s);
+						} else if (arr.length == 2) {
+							SQLMap sqlMap = SQLMap.getMap(getDbName()+"."+arr[0]);
+							exeStatement = sqlMap.getStatement(arr[1]);
+						}else {
+							SQLMap sqlMap = SQLMap.getMap(arr[0]+"."+arr[1]);
 							exeStatement = sqlMap.getStatement(arr[2]);
 						}
 
@@ -1801,7 +1807,7 @@ public class SQLMap   implements Serializable {
 	 * @param userPath
 	 */
 	public static void genEntities(String dbName,String packages,String userPath){
-//		String dbName="Jobmate";
+//		String dbName="jobmate";
 //		String packages="com.netcorner.test.model.entity";
 
 		String path=userPath+"/src/main/java/"+packages.replace(".","/");

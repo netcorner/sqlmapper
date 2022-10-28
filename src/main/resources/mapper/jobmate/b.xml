@@ -111,9 +111,9 @@
 	</statement>
 	<!--调用其它表相关操作,区分大小写 事务级-->
 	<!--调用其它xml文档的statement时通过大括号({})包起来调用-->
-	<!--示例调用{Jobmate.b.insert} 调用jobmate数据库下的b表的statementid为add的statement语句-->
+	<!--示jobmatemate.b.insert} 调用jobmate数据库下的b表的statementid为add的statement语句-->
 	<!--ext的内容里面可以调用其它xml文档的statement，但是里面只能有一个调用-->
-	<!--ext中的key属性是传递过来的map下对应key值（该key指对应的类型必须为hashmap,若为list<map>类型将插入多条对应的如{Jobmate.b.add}插入）-->
+	<!--ext中的key属性是传递过来的map下对应key值（该key指对应的类型必须为hashmap,若为list<map>类型将插入多条对jobmatemate.b.add}插入）-->
 	<statement id="ext">
 		<ext id="i" key="b">
 			{Jobmate.b.add}
@@ -293,6 +293,16 @@
 			<query id="children" parent="user" foreign="a">
 				select *from a limit 0,1
 			</query>
+		</select>
+	</statement>
+	<statement id="fun2">
+		<select>
+			select*from $table
+		</select>
+	</statement>
+	<statement id="fun1">
+		<select>
+			select*from $table where 1=2
 		</select>
 	</statement>
 </sqlMap>

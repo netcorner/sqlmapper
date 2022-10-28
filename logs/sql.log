@@ -1,0 +1,31 @@
+[ERROR] 2022-10-28 08:39:15,374  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.a.AfterExecId,错误为：StatementCallback; bad SQL grammar [
+
+
+			
+
+			select*from a where 1=1
+ order by $primary desc
+		]; nested exception is java.sql.SQLSyntaxErrorException: Unknown column '$primary' in 'order clause'
+[ERROR] 2022-10-28 10:34:38,530  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:35:26,538  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:36:05,149  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:37:18,105  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:40:33,618  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:40:58,043  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:42:30,742  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:45:39,303  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:46:13,986  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:46:34,519  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:48:01,412  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:48:28,010  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:48:45,581  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:50:13,985  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.a.fun不存在
+[ERROR] 2022-10-28 10:52:20,687  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:54:17,353  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:54:45,732  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:55:29,312  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:59:17,201  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 10:59:51,806  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 11:00:48,824  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 11:01:40,880  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:Jobmate.b.fun2不存在
+[ERROR] 2022-10-28 11:03:25,346  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.b.fun2不存在

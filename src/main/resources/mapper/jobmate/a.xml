@@ -59,6 +59,12 @@
 			select*from $table where 1=1 and 2=2
 		</select>
 	</statement>
+
+	<statement id="AfterExecId2">
+		<select afterExecId="jobmate.b.fun1,b.fun2">
+			select*from $table where 1=1 and 2=2
+		</select>
+	</statement>
 	<statement id="BeforeExecId">
 		<select beforeExecId="fun2">
 			select*from $table where 1=1
