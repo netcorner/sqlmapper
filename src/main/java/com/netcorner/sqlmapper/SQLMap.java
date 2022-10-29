@@ -1261,42 +1261,26 @@ public class SQLMap   implements Serializable {
     private void setExecIds(List<String> exes){
 		for(String key:exes){
 			Statement statement=getStatement(key);
-			int index=0;
 			List<CRUDBase> list=new ArrayList<CRUDBase>();
 			for (CRUDBase crudBase : statement.getSqlList()) {
+				addCRUDBase(crudBase.getBeforeExecId(),list);
 				list.add(crudBase);
-			}
-			for (CRUDBase crudBase : statement.getSqlList()) {
-				int index1=0;
-				if(!StringTools.isNullOrEmpty(crudBase.getBeforeExecId())) {
-					String[] slist=crudBase.getBeforeExecId().split(",");
-					for(String s:slist) {
-						Statement exeStatement=getExeStatement(s);
-						if (exeStatement != null) {
-							for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
-								list.add(index+index1, crudBaseAdd);
-								index1++;
-							}
-						}
-
-					}
-				}
-				if(!StringTools.isNullOrEmpty(crudBase.getAfterExecId())) {
-					String[] slist=crudBase.getAfterExecId().split(",");
-					for(String s:slist) {
-						Statement exeStatement=getExeStatement(s);
-						if (exeStatement != null) {
-							for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
-								list.add(index + 1+index1, crudBaseAdd);
-								index1++;
-							}
-						}
-
-					}
-				}
-				index=list.size()-1;
+				addCRUDBase(crudBase.getAfterExecId(),list);
 			}
 			statement.setSqlList(list);
+		}
+	}
+	private void addCRUDBase(String key,List<CRUDBase> list){
+		if(!StringTools.isNullOrEmpty(key)) {
+			String[] slist=key.split(",");
+			for(String s:slist) {
+				Statement exeStatement=getExeStatement(s);
+				if (exeStatement != null) {
+					for (CRUDBase crudBaseAdd : exeStatement.getSqlList()) {
+						list.add(crudBaseAdd);
+					}
+				}
+			}
 		}
 	}
 

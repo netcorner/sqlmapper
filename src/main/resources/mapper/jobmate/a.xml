@@ -56,12 +56,27 @@
 	</statement>
 	<statement id="fun3">
 		<select>
-			select*from $table b where 2=3
+			select 3
 		</select>
 	</statement>
 	<statement id="fun4">
 		<select>
-			select*from $table b where 2=34
+			select 4
+		</select>
+	</statement>
+	<statement id="fun5">
+		<select>
+			select 5
+		</select>
+	</statement>
+	<statement id="fun6">
+		<select>
+			select 6
+		</select>
+	</statement>
+	<statement id="fun7">
+		<select>
+			select 7
 		</select>
 	</statement>
 	<statement id="AfterExecId">
@@ -87,7 +102,15 @@
 		</select>
 	</statement>
 
-
+	<statement id="ConfigTest">
+		<config>
+			#set($map.test="1111")
+			select 1
+		</config>
+		<select>
+			select $map.test
+		</select>
+	</statement>
 
 
 	<statement id="AfterExecId2">
@@ -109,5 +132,28 @@
 				select *,1 indexid from $table where 1=2
 			</query>
 		</select>
+	</statement>
+
+
+
+
+	<statement id="AfterExecId5">
+		<select id="status" beforeExecId="fun3" afterExecId="fun2">
+			select 11
+		</select>
+		<config afterExecId="fun5">
+			#set($map.OrgIDs=$map.AllotOrgIDs)
+			#set($map.EntIDs=$map.AllotEntIDs)
+			#set($map.UserIDs=$map.AllotUserIDs)
+			#set($map.type="${table}_allot")
+			select 22
+		</config>
+		<config afterExecId="fun6,fun7">
+			#set($map.OrgIDs=$map.LimitOrgIDs)
+			#set($map.EntIDs=$map.LimtEntIDs)
+			#set($map.UserIDs=$map.LimitUserIDs)
+			#set($map.type="${table}_limit")
+			select 33
+		</config>
 	</statement>
 </sqlMap>

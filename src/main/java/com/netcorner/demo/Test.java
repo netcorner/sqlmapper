@@ -56,11 +56,11 @@ public class Test {
 //		System.out.print(Entity.toJson(hash));
 
 
-		TestAfterExecId();
+		//TestAfterExecId();
 		//TestBeforeExecId();
+		//TestConfig();
 
-
-
+		TestAfterExecId5();
     }
 
 
@@ -115,6 +115,16 @@ public class Test {
 	}
 
 
+
+
+	public static void TestConfig(){
+
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("jobmate.a");
+		System.out.println(map.execute("ConfigTest", properties));
+
+	}
+
 	public static void TestAfterExecId(){
 
 		Map<String,Object> properties=new HashMap<String,Object>();
@@ -123,7 +133,13 @@ public class Test {
 
 	}
 
+	public static void TestAfterExecId5(){
 
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("jobmate.a");
+		System.out.println(map.execute("AfterExecId5", properties));
+
+	}
 
 	public static void TestAfterExecId4(){
 
