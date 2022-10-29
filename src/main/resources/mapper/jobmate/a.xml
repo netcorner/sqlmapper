@@ -140,6 +140,7 @@
 	<statement id="AfterExecId5">
 		<select id="status" beforeExecId="fun3" afterExecId="fun2">
 			select 11
+
 		</select>
 		<config afterExecId="fun5">
 			#set($map.OrgIDs=$map.AllotOrgIDs)
