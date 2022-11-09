@@ -1,5 +1,5 @@
 \#macro(Delete)
-delete from ${struct.table} a
+delete from ${struct.table}
 where
 #if($$struct.primarys.size()>0)
 #set($tmp="map.")
