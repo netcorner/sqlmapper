@@ -1412,6 +1412,9 @@ public class SQLMap   implements Serializable {
 			page.setWhere(page.getWhere()+execAppendSql);
 		}
 
+		
+
+
 
 
         page.setOrder(getInnerText(node.getElementsByTagName("order")));
