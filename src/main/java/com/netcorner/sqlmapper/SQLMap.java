@@ -1400,7 +1400,7 @@ public class SQLMap   implements Serializable {
         {
         	page.setTable(table);
         }else{
-        	page.setWhere(this.commonTemplate+page.getTable());
+        	page.setTable(this.commonTemplate+page.getTable());
         }
         page.setWhere(getInnerText(node.getElementsByTagName("where")));
         if(page.getWhere() == null){
