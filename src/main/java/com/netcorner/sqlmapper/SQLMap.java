@@ -1413,6 +1413,7 @@ public class SQLMap   implements Serializable {
 		}
 
 
+
         page.setOrder(getInnerText(node.getElementsByTagName("order")));
         page.setCount(getInnerText(node.getElementsByTagName("count")));
         
