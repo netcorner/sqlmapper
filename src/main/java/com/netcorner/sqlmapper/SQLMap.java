@@ -767,7 +767,7 @@ public class SQLMap   implements Serializable {
             generationTreeHash(pageList, children,page.getPrimary(), result, selectDictionary,statementid);
 		}
 
-		setFieldFilter(statementid,crud,pageList,hash);
+		setFieldFilter(statementid,crud,pageList,qpage.getForm());
 
 		return pageList;
     }
