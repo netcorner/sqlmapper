@@ -11,7 +11,9 @@ public class CRUDBase implements Serializable {
 	private String afterExecId;
 	private String beforeExecId;
 	private String execAppendSql;
+	private String fieldFilter;
 	private boolean filter;
+
 	/**
 	 * 得到id
 	 * @return
@@ -103,5 +105,14 @@ public class CRUDBase implements Serializable {
 
 	public void setExecAppendSql(String execAppendSql) {
 		this.execAppendSql = execAppendSql;
+	}
+
+
+	public String getFieldFilter() {
+		return fieldFilter;
+	}
+
+	public void setFieldFilter(String fieldFilter) {
+		this.fieldFilter = fieldFilter;
 	}
 }

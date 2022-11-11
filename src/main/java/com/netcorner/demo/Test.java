@@ -59,10 +59,18 @@ public class Test {
 		//TestAfterExecId();
 		//TestBeforeExecId();
 		//TestConfig();
-
-		TestAfterExecId5();
+		//TestAfterExecId5();
+		fieldFilterTest();
     }
 
+
+    public static void fieldFilterTest(){
+		TestFieldFilter testFieldFilter=new TestFieldFilter();
+		Map<String,Object> properties=new HashMap<String,Object>();
+		properties.put("id",1);
+		SQLMap map=SQLMap.getMap("jobmate.a");
+		System.out.println(map.execute("fieldFilter", properties));
+	}
 
 
     public void testAll(){

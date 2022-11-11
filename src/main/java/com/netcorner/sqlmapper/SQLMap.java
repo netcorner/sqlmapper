@@ -766,8 +766,23 @@ public class SQLMap   implements Serializable {
             }
             generationTreeHash(pageList, children,page.getPrimary(), result, selectDictionary,statementid);
 		}
+
+		setFieldFilter(statementid,crud,pageList,hash);
+
 		return pageList;
     }
+
+    private void setFieldFilter(String statementid,CRUDBase crud,Object result,Map<String,Object> params){
+		if(!StringTools.isNullOrEmpty(crud.getFieldFilter())){
+			//执行字段过滤器
+			FieldFilter fieldFilter=FieldFilter.getFieldFilter(crud.getFieldFilter());
+			if(fieldFilter!=null){
+				fieldFilter.filterResult(result,params);
+			}else{
+				throw new DALException(this.key+"."+statementid+"===>"+crud.getId()+"中找不到字段过滤器："+crud.getFieldFilter());
+			}
+		}
+	}
     
     /**
      * 执行筛选sql语句
@@ -816,7 +831,9 @@ public class SQLMap   implements Serializable {
         		}
         	}
 		}
-		return properties.get(select.getId());
+		Object result = properties.get(select.getId());
+		setFieldFilter(statementid,crud,result,properties);
+		return result;
     }
     /**
      * 执行insert,update,delete的sql
@@ -853,6 +870,10 @@ public class SQLMap   implements Serializable {
 	    		}
 	    	}
 		}
+
+		//对 cud 操作不需要过滤字段信息
+		//setFieldFilter(statementid,crud,returnValue,properties);
+
 		return returnValue;
     }
     
@@ -1317,9 +1338,10 @@ public class SQLMap   implements Serializable {
         	}
         }
 
-		String afterExecId = getAttributesValue(node, "afterExecId");
-		String beforeExecId = getAttributesValue(node, "beforeExecId");
-		String execAppendSql = getAttributesValue(node, "execAppendSql");
+		String afterExecId = getAttributesValue(node, "afterExecId");//语句体执行后执行的语句体，可以多个，用逗号分开
+		String beforeExecId = getAttributesValue(node, "beforeExecId");//语句体执行前先执行的语句体，可以多个，用逗号分开
+		String execAppendSql = getAttributesValue(node, "execAppendSql");//追加 sql 语句，
+
 
     	String sql=getInnerText(node);
 		if(!StringTools.isNullOrEmpty(execAppendSql)) sql+=execAppendSql;
@@ -1370,9 +1392,11 @@ public class SQLMap   implements Serializable {
 		String afterExecId = getAttributesValue(node, "afterExecId");
 		String beforeExecId = getAttributesValue(node, "beforeExecId");
 		String execAppendSql = getAttributesValue(node, "execAppendSql");
+		String fieldFilter=getAttributesValue(node, "fieldFilter");//字段过滤器
 		page.setAfterExecId(afterExecId);
 		page.setBeforeExecId(beforeExecId);
 		page.setExecAppendSql(execAppendSql);
+		page.setFieldFilter(fieldFilter);
 
 		setExecIds(statement,page);
 
@@ -1412,7 +1436,7 @@ public class SQLMap   implements Serializable {
 			page.setWhere(page.getWhere()+execAppendSql);
 		}
 
-		
+
 
 
 
@@ -1473,6 +1497,7 @@ public class SQLMap   implements Serializable {
 		String afterExecId = getAttributesValue(node, "afterExecId");
 		String beforeExecId = getAttributesValue(node, "beforeExecId");
 		String execAppendSql = getAttributesValue(node, "execAppendSql");
+		String fieldFilter=getAttributesValue(node, "fieldFilter");//字段过滤器
 
 
 
@@ -1486,6 +1511,7 @@ public class SQLMap   implements Serializable {
 		crud.setAfterExecId(afterExecId);
 		crud.setBeforeExecId(beforeExecId);
 		crud.setExecAppendSql(execAppendSql);
+		crud.setFieldFilter(fieldFilter);
 		setExecIds(statement,crud);
 		String filter = getAttributesValue(node, "filter");
 		if(filter.equals("true")){
@@ -1568,9 +1594,13 @@ public class SQLMap   implements Serializable {
 		String afterExecId = getAttributesValue(xmlNode, "afterExecId");
 		String beforeExecId = getAttributesValue(xmlNode, "beforeExecId");
 		String execAppendSql = getAttributesValue(xmlNode, "execAppendSql");
+		String fieldFilter=getAttributesValue(xmlNode, "fieldFilter");//字段过滤器
+
+
 		get.setAfterExecId(afterExecId);
 		get.setBeforeExecId(beforeExecId);
 		get.setExecAppendSql(execAppendSql);
+		get.setFieldFilter(fieldFilter);
 		setExecIds(statement,get);
         //单条记录也是列表形式出现
         String tolist = getAttributesValue(xmlNode, "tolist");
