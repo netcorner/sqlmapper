@@ -13,6 +13,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import com.netcorner.sqlmapper.utils.FileTools;
 import com.netcorner.sqlmapper.utils.SpringTools;
 import com.netcorner.sqlmapper.utils.StringTools;
+import com.netcorner.sqlmapper.utils.TmplUtils;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import org.slf4j.Logger;
@@ -1179,6 +1180,7 @@ public class SQLMap   implements Serializable {
     	this.commonTemplate+=structure.getWhereScript().get(this.table);
     	
     }
+    private static TmplUtils  tmplUtils=new TmplUtils();
     /**
      * 得到模板值
      * @param template
@@ -1197,6 +1199,7 @@ public class SQLMap   implements Serializable {
         }
 
         vcontext.put("map", context);
+		vcontext.put("util", tmplUtils);
         StringWriter w = new StringWriter(); 
         
         //System.out.println("default============="+template);

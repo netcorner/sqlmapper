@@ -170,4 +170,18 @@
 			select 33
 		</config>
 	</statement>
+
+
+	<statement id="utils">
+		<select id="status">
+
+
+
+			select from $table
+			where
+			$util.eval($map.str,$map)
+
+		</select>
+
+	</statement>
 </sqlMap>

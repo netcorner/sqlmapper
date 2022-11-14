@@ -60,9 +60,21 @@ public class Test {
 		//TestBeforeExecId();
 		//TestConfig();
 		//TestAfterExecId5();
-		fieldFilterTest();
+		//fieldFilterTest();
+		utilsTest();
     }
 
+	/**
+	 * 模板中的模板应用
+	 */
+	public static void utilsTest(){
+		Map<String,Object> properties=new HashMap<String,Object>();
+		properties.put("str","$map.field1='$map.value'");
+		properties.put("field1",1);
+		properties.put("value",2);
+		SQLMap map=SQLMap.getMap("jobmate.a");
+		System.out.println(map.execute("utils", properties));
+	}
 
     public static void fieldFilterTest(){
 		TestFieldFilter testFieldFilter=new TestFieldFilter();
