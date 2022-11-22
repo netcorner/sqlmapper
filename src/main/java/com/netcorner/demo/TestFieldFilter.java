@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class TestFieldFilter extends FieldFilter {
     public TestFieldFilter(){
-        super("testFieldFilter");
+        super("testFieldFilter","测试过滤器");
     }
 
 
