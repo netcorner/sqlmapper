@@ -773,16 +773,30 @@ public class SQLMap   implements Serializable {
 		return pageList;
     }
 
-    private void setFieldFilter(String statementid,CRUDBase crud,Object result,Map<String,Object> params){
+    private void setFieldFilter(String statementid,CRUDBase crud,final Object result,final Map<String,Object> params){
 		if(!StringTools.isNullOrEmpty(crud.getFieldFilter())){
 
 			String filter =crud.getFieldFilter();
 			String[] arr=filter.split(",");
 			for(String f:arr) {
 				//执行字段过滤器
-				FieldFilter fieldFilter = FieldFilter.getFieldFilter(f);
+				final FieldFilter fieldFilter = FieldFilter.getFieldFilter(f);
 				if (fieldFilter != null) {
-					fieldFilter.filterResult(result, params);
+					if(fieldFilter.isAnsy()) {
+
+						Thread t = new Thread(){
+							@Override
+							public void run() {
+								fieldFilter.filterResult(result, params);
+							}
+						};
+
+						t.start();
+
+
+					}else {
+						fieldFilter.filterResult(result, params);
+					}
 				} else {
 					throw new DALException(this.key + "." + statementid + "===>" + crud.getId() + "中找不到字段过滤器：" + crud.getFieldFilter());
 				}

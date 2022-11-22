@@ -60,8 +60,8 @@ public class Test {
 		//TestBeforeExecId();
 		//TestConfig();
 		//TestAfterExecId5();
-		//fieldFilterTest();
-		utilsTest();
+		fieldFilterTest();
+		//utilsTest();
 
 
 
@@ -80,13 +80,33 @@ public class Test {
 	}
 
     public static void fieldFilterTest(){
-		TestFieldFilter testFieldFilter=new TestFieldFilter();
+		TestFieldFilter testFieldFilter=new TestFieldFilter(true);
 		Map<String,Object> properties=new HashMap<String,Object>();
 		properties.put("id",1);
 		SQLMap map=SQLMap.getMap("jobmate.a");
-		System.out.println(map.execute("fieldFilter", properties));
+		Object r1=map.execute("fieldFilter", properties);
+		System.out.println(r1);
+		System.out.println("xxxx");
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println(r1);
 	}
 
+
+	public static void fieldFilterTest2(){
+		TestFieldFilter testFieldFilter=new TestFieldFilter(false);
+		Map<String,Object> properties=new HashMap<String,Object>();
+		properties.put("id",1);
+		SQLMap map=SQLMap.getMap("jobmate.a");
+		Object r1=map.execute("fieldFilter", properties);
+		System.out.println(r1);
+
+	}
 
     public void testAll(){
 

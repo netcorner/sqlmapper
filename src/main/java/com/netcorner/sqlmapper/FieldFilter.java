@@ -15,19 +15,43 @@ public abstract class FieldFilter<T> {
         return description;
     }
 
+
+
+    private boolean isAnsy=false;
+
+    /**
+     * 是否异步执行,默认是同步执行
+     * @return
+     */
+    public boolean isAnsy() {
+        return isAnsy;
+    }
+
+    public void setAnsy(boolean ansy) {
+        isAnsy = ansy;
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }
 
     public static Map<String,FieldFilter> filterMap=new HashMap<String, FieldFilter>();
     public FieldFilter(String name,String description){
+        init(name,description,false);
+    }
+    public FieldFilter(String name,String description,boolean ansy){
+        init(name,description,ansy);
+    }
+    private void init(String name,String description,boolean ansy){
         if(!filterMap.containsKey(name)) {
             filterMap.put(name, this);
             setDescription(description);
+            setAnsy(ansy);
         }else{
             new DALException(name+"字段过滤名已经存在！");
         }
     }
+
     public static FieldFilter getFieldFilter(String name){
         if(filterMap.containsKey(name)) {
             return filterMap.get(name);
