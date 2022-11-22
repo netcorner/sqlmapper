@@ -10,12 +10,19 @@ import java.util.Map;
  */
 public abstract class FieldFilter<T> {
     private String description;
+    private String name;
 
     public String getDescription() {
         return description;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
     private boolean isAnsy=false;
 
@@ -46,6 +53,7 @@ public abstract class FieldFilter<T> {
         if(!filterMap.containsKey(name)) {
             filterMap.put(name, this);
             setDescription(description);
+            setName(name);
             setAnsy(ansy);
         }else{
             new DALException(name+"字段过滤名已经存在！");
