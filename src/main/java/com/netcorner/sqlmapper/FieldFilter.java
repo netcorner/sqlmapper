@@ -9,10 +9,21 @@ import java.util.Map;
  * 字段过滤器抽象类
  */
 public abstract class FieldFilter<T> {
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public static Map<String,FieldFilter> filterMap=new HashMap<String, FieldFilter>();
-    public FieldFilter(String name){
+    public FieldFilter(String name,String description){
         if(!filterMap.containsKey(name)) {
             filterMap.put(name, this);
+            setDescription(description);
         }else{
             new DALException(name+"字段过滤名已经存在！");
         }

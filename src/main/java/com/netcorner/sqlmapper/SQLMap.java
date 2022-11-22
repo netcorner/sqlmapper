@@ -775,12 +775,17 @@ public class SQLMap   implements Serializable {
 
     private void setFieldFilter(String statementid,CRUDBase crud,Object result,Map<String,Object> params){
 		if(!StringTools.isNullOrEmpty(crud.getFieldFilter())){
-			//执行字段过滤器
-			FieldFilter fieldFilter=FieldFilter.getFieldFilter(crud.getFieldFilter());
-			if(fieldFilter!=null){
-				fieldFilter.filterResult(result,params);
-			}else{
-				throw new DALException(this.key+"."+statementid+"===>"+crud.getId()+"中找不到字段过滤器："+crud.getFieldFilter());
+
+			String filter =crud.getFieldFilter();
+			String[] arr=filter.split(",");
+			for(String f:arr) {
+				//执行字段过滤器
+				FieldFilter fieldFilter = FieldFilter.getFieldFilter(f);
+				if (fieldFilter != null) {
+					fieldFilter.filterResult(result, params);
+				} else {
+					throw new DALException(this.key + "." + statementid + "===>" + crud.getId() + "中找不到字段过滤器：" + crud.getFieldFilter());
+				}
 			}
 		}
 	}
