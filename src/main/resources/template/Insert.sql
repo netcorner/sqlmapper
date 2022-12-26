@@ -1,5 +1,5 @@
 \#macro(Insert)
-
+#set($flag="$flag")
 #set($tmp="map.")
 insert into ${struct.table}(
 	\#set($flag=false)

@@ -84,7 +84,7 @@ public class MySqlStructure extends DBStructure  {
 		for(String table:getTables()){
 			Map<String,Object> hash=new HashMap<String,Object>();
 			hash.put("table",table);
-			hash.put("commend",getTableComments().get(table));
+			hash.put("comment",getTableComments().get(table));
 			hash.put("fields",getFields().get(table));
 			hash.put("primarys",getPrimarys().get(table));
 			String tmp=StringTools.evaluate(s,hash);

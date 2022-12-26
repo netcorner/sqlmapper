@@ -1,7 +1,7 @@
 \#macro(Delete)
 delete from ${struct.table}
 where
-#if($$struct.primarys.size()>0)
+#if($struct.primarys.size()>0)
 #set($tmp="map.")
 	#set($flag=false)
 	#foreach($f in $struct.primarys)

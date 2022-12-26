@@ -1211,7 +1211,8 @@ public class SQLMap   implements Serializable {
         //if (context == null) return template;
         VelocityContext vcontext = new VelocityContext();
         vcontext.put("table", table);
-        
+		vcontext.put("comment",getDbStructure().getTableComments().get(table));
+
         if(getDbStructure().getFields().containsKey(table)){
 	        vcontext.put("primarys", getDbStructure().getPrimarys().get(table));
 	        vcontext.put("fields", getDbStructure().getFields().get(table));

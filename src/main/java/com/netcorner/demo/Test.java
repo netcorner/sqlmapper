@@ -24,6 +24,11 @@ public class Test {
 		SQLMap.setJdbcTemplates("jobmate",jdbcTemplate);
 
 
+
+		//TestComment();
+
+
+
 		//System.out.println(SQLMap.exportDBStructure("jobmate"));
 
 
@@ -60,12 +65,18 @@ public class Test {
 		//TestBeforeExecId();
 		//TestConfig();
 		//TestAfterExecId5();
-		fieldFilterTest();
+		//fieldFilterTest();
 		//utilsTest();
 
 
 
     }
+
+	private static void TestComment() {
+		Map<String,Object> properties=new HashMap<String,Object>();
+		SQLMap map=SQLMap.getMap("jobmate.a");
+		System.out.println(map.execute("comment", properties));
+	}
 
 	/**
 	 * 模板中的模板应用

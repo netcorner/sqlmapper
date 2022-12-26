@@ -1,4 +1,5 @@
 \#macro(Update)
+#set($flag="$flag")
 update ${struct.table} a set
 \#set($flag=false)
 #set($tmp="map.")
@@ -15,7 +16,7 @@ update ${struct.table} a set
 	\#end
 #end
 where
-#if($$struct.primarys.size()>0)
+#if($struct.primarys.size()>0)
 	#set($flag=false)
 	#foreach($f in $struct.primarys)
 		#if($flag) and #end

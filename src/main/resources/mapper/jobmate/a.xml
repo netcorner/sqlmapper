@@ -20,7 +20,12 @@
 		#end
 	</function>
 
+	<statement id="comment">
 
+		<insert>
+			$comment
+		</insert>
+	</statement>
 	<statement id="add">
 		<config>
 		set names utf8mb4;
