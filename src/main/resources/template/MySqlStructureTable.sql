@@ -29,6 +29,7 @@ CREATE TABLE `$map.table` (
   #end
 
 
+
 #if($map.primarys),
   PRIMARY KEY (
   #set($flag=false)
