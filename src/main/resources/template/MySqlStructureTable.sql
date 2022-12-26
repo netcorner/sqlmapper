@@ -14,6 +14,7 @@ CREATE TABLE `$map.table` (
 
 
 
+
 #set($flag=false)
   #foreach($field in $map.fields)
     #if(!$field.isPrimary)
