@@ -1,10 +1,40 @@
-[ERROR] 2022-12-24 19:50:20,003  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a.comment不存在
-[ERROR] 2022-12-24 19:50:42,799  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a.comment,错误为：StatementCallback; bad SQL grammar [
+[ERROR] 2022-12-30 11:21:41,016  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a.AfterExecId4,错误为：StatementCallback; bad SQL grammar [
+
 null
 			
 
-			333
-	]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null
+			select 4
+		]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null
 			
 
-			333' at line 1
+			select 4' at line 1
+[ERROR] 2022-12-30 11:22:01,248  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a.AfterExecId4,错误为：StatementCallback; bad SQL grammar [
+
+null
+			
+
+			select 4
+		]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null
+			
+
+			select 4' at line 1
+[ERROR] 2022-12-30 11:25:30,593  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a.AfterExecId4,错误为：StatementCallback; bad SQL grammar [
+
+nullnull
+			
+
+			select 4
+		]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nullnull
+			
+
+			select 4' at line 1
+[ERROR] 2022-12-30 11:25:48,827  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a.AfterExecId4,错误为：StatementCallback; bad SQL grammar [
+
+	nullnullnullnull
+			
+
+			select 4
+		]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nullnullnullnull
+			
+
+			select 4' at line 1

@@ -76,12 +76,9 @@ public abstract  class DBStructure  implements Serializable{
         	hash.put("primarys",primarys.get(tbl));
 			hash.put("flag",true);
         	insertScript.put(tbl,getTemplateValue(readFile(insertName),hash));
-
         	updateScript.put(tbl,getTemplateValue(readFile(updateName),hash));
-
-
         	deleteScript.put(tbl,getTemplateValue(readFile(deleteName),hash));
-        	//whereScript.put(tbl, getTemplateValue(readFile(whereName),hash));
+        	whereScript.put(tbl, getTemplateValue(readFile(whereName),hash));
         }
 	}
 

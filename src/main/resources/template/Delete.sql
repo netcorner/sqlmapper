@@ -2,7 +2,7 @@
 delete from ${struct.table}
 where
 #if($struct.primarys.size()>0)
-#set($tmp="map.")
+  #set($tmp="map.")
 	#set($flag=false)
 	#foreach($f in $struct.primarys)
 		#if($flag) and #end

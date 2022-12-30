@@ -61,7 +61,7 @@ public class Test {
 //		System.out.print(Entity.toJson(hash));
 
 
-		//TestAfterExecId();
+		TestAfterExecId();
 		//TestBeforeExecId();
 		//TestConfig();
 		//TestAfterExecId5();

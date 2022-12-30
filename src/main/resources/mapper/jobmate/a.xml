@@ -21,9 +21,8 @@
 	</function>
 
 	<statement id="comment">
-
 		<insert>
-			$comment
+			$!comment
 		</insert>
 	</statement>
 	<statement id="add">
