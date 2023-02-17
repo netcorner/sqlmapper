@@ -69,6 +69,31 @@ public  class FileTools {
 	}
 
 	/**
+	 * 读取路径文件的文本内容
+	 * @param filepath
+	 * @return
+	 */
+	public static String getPathFile(String filepath){
+		File file = new File(filepath);
+
+		BufferedReader br;
+		StringBuilder strBlder = new StringBuilder("");
+		try {
+			br = new BufferedReader(new FileReader(file));
+			String line = "";
+			while (null != (line = br.readLine())) {
+				strBlder.append(line + "\n");
+			}
+			br.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return strBlder.toString();
+	}
+
+	/**
 	 * 使用时间戳和后缀的方式重命名上传文件的名称
 	 * @param suffix
 	 * @param filename
