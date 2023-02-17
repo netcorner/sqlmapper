@@ -1,9 +1,11 @@
 package com.netcorner.sqlmapper;
 
 import com.netcorner.sqlmapper.utils.StringTools;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 
+import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -289,4 +291,91 @@ public class DBTools {
 		pageInfo.setQueryPage(queryPage);
 		return pageInfo;
 	}
+
+
+	/**
+	 * 初始化数据库
+	 * @param dataSource
+	 * @param dbName
+	 */
+	public static void initDB(DataSource dataSource,String dbName){
+		JdbcTemplate jdbcTemplate=new JdbcTemplate(dataSource);
+		SQLMap.setJdbcTemplates(dbName,jdbcTemplate);
+	}
+
+	/**
+	 * select 返回多条记录
+	 * @param sql
+	 * @return
+	 */
+	public static List<Map<String,Object>> executeForList(String sql){
+		return executeForList("datasource",sql);
+	}
+	/**
+	 * select 返回多条记录
+	 * @param dbName
+	 * @param sql
+	 * @return
+	 */
+	public static List<Map<String,Object>> executeForList(String dbName,String sql){
+		SQLMap sqlMap=SQLMap.getMapByName(dbName);
+		return sqlMap.executeForList(sql);
+	}
+
+	/**
+	 * select 返回一条记录
+	 * @param sql
+	 * @return
+	 */
+	public static Map<String,Object> executeForMap(String sql){
+		return executeForMap("datasource",sql);
+	}
+
+	/**
+	 * select 返回一条记录
+	 * @param dbName
+	 * @param sql
+	 * @return
+	 */
+	public static Map<String,Object> executeForMap(String dbName,String sql){
+		SQLMap sqlMap=SQLMap.getMapByName(dbName);
+		return sqlMap.executeForMap(sql);
+	}
+
+	/**
+	 * insert、update、delete 执行
+	 * @param sql
+	 * @return
+	 */
+	public static int update(String sql){
+		return update("datasource",sql);
+	}
+	/**
+	 * insert、update、delete 执行
+	 * @param dbName
+	 * @param sql
+	 * @return
+	 */
+	public static int update(String dbName,String sql){
+		SQLMap sqlMap=SQLMap.getMapByName(dbName);
+		return sqlMap.update(sql);
+	}
+
+	/**
+	 *  执行字符串sql
+	 * @param sql
+	 */
+	public static void execute(String sql){
+		execute("datasource",sql);
+	}
+	/**
+	 * 执行字符串sql
+	 * @param dbName
+	 * @param sql
+	 */
+	public static void execute(String dbName,String sql){
+		SQLMap sqlMap=SQLMap.getMapByName(dbName);
+		sqlMap.execute(sql);
+	}
+
 }

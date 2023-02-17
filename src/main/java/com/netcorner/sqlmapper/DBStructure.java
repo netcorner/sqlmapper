@@ -59,7 +59,10 @@ public abstract  class DBStructure  implements Serializable{
         if (context == null) return template;
         VelocityContext vcontext = new VelocityContext();
         vcontext.put("struct", context);
-        StringWriter w = new StringWriter();  
+        StringWriter w = new StringWriter();
+
+
+
         Velocity.evaluate(vcontext, w, "structure", template );  
         //System.out.println(" string : " + w );
         return w.toString();

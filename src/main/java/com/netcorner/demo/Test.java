@@ -14,15 +14,19 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args)  {
-		Test testMain=new Test();
 		DruidDataSource db=new DruidDataSource();
 		db.setDriverClassName("com.mysql.jdbc.Driver");
 		db.setUsername("root");
 		db.setPassword("sjf2008");
 		db.setUrl("jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull");
-		JdbcTemplate jdbcTemplate=new JdbcTemplate(db);
-		SQLMap.setJdbcTemplates("jobmate",jdbcTemplate);
 
+		DBTools.initDB(db,"jobmate");
+
+
+
+
+
+		testSql("jobmate");
 
 
 		//TestComment();
@@ -61,7 +65,7 @@ public class Test {
 //		System.out.print(Entity.toJson(hash));
 
 
-		TestAfterExecId();
+		//TestAfterExecId();
 		//TestBeforeExecId();
 		//TestConfig();
 		//TestAfterExecId5();
@@ -71,6 +75,18 @@ public class Test {
 
 
     }
+
+	/**
+	 * 使用 sql 语句处理
+	 */
+	private static void testSql(String dbName) {
+		System.out.println(DBTools.executeForList(dbName,"select *from a"));
+		System.out.println(DBTools.executeForMap(dbName,"select *from a"));
+		System.out.println(DBTools.update(dbName,"update a set a='111' where id=2"));
+		System.out.println(DBTools.update(dbName,"insert into  a(id,a) values(1,'xxx')"));
+		System.out.println(DBTools.update(dbName,"delete from a where id=1"));
+		DBTools.execute(dbName,"delete from a where id=1");
+	}
 
 	private static void TestComment() {
 		Map<String,Object> properties=new HashMap<String,Object>();

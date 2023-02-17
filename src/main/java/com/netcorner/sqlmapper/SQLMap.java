@@ -150,7 +150,11 @@ public class SQLMap   implements Serializable {
 		}else {
 			jdbcTemplate=  jdbcTemplateMap.get(dbName);
 		}
-		SqlSessionFactory.setSessions(dbName,jdbcTemplate.getDataSource());
+		if(jdbcTemplate!=null)
+			SqlSessionFactory.setSessions(dbName,jdbcTemplate.getDataSource());
+		else{
+			throw new DALException("请设置数据源！");
+		}
 		return jdbcTemplate;
 	}
 	private static Map<String,JdbcTemplate> jdbcTemplateMap;
@@ -202,10 +206,33 @@ public class SQLMap   implements Serializable {
 		return dbVersion;
 	}
 
+	/**
+	 * 得到sqlmap对象 的静态方法
+	 * @param dbName
+	 * @return
+	 */
+	public static SQLMap getMapByName(String dbName){
+		CacheManager manager = CacheManager.create();
+		Cache cache = manager.getCache(DBCache);
+
+		if(cache==null){
+			manager.addCache(DBCache);
+			cache = manager.getCache(DBCache);
+		}
+		net.sf.ehcache.Element element = cache.get(dbName);
+		SQLMap map= (SQLMap)(element == null ? null : element.getObjectValue());
+
+		if(map==null){
+			map=new SQLMap(dbName);
+			element = new net.sf.ehcache.Element(dbName, map);
+			cache.put(element);
+		}
+		return map;
+	}
 
 	/**
 	 * 得到sqlmap对象 的静态方法（文件存缓存）
-	 * @param key
+	 * @param key 映射路径如：datasource.sys_user
 	 * @return
 	 */
 	public static SQLMap getMap(String key)
@@ -491,6 +518,53 @@ public class SQLMap   implements Serializable {
     		return (List<Map<String,Object>>)obj;
     	}
     }
+
+
+	/**
+	 * select 返回多条记录
+	 * @param sql
+	 * @return
+	 */
+	public List<Map<String,Object>> executeForList(String sql){
+		JdbcTemplate jdbc=getJdbcTemplate();
+		List<Map<String,Object>> list=jdbc.queryForList(sql);
+		return list;
+	}
+
+	/**
+	 * select 返回一条记录
+	 * @param sql
+	 * @return
+	 */
+	public Map<String,Object> executeForMap(String sql){
+		List<Map<String,Object>> list=executeForList(sql);
+		if(list.size()>0){
+			return list.get(0);
+		}else{
+			return null;
+		}
+	}
+
+	/**
+	 * insert、update、delete 执行
+	 * @param sql
+	 * @return
+	 */
+	public int update(String sql){
+		JdbcTemplate jdbc=getJdbcTemplate();
+		return jdbc.update(sql);
+	}
+
+	/**
+	 * 执行字符串sql
+	 * @param sql
+	 */
+	public void execute(String sql){
+		JdbcTemplate jdbc=getJdbcTemplate();
+		jdbc.execute(sql);
+	}
+
+
 
 	/**
 	 * 执行操作返回Map,单条数据
@@ -1790,7 +1864,7 @@ public class SQLMap   implements Serializable {
 	 * @param dbName
 	 */
 	public static String exportDBStructure(String dbName) {
-		SQLMap sqlMap=new SQLMap(dbName);
+		SQLMap sqlMap=getMapByName(dbName);
 		return sqlMap.getDbStructure().exportStructure();
 	}
 
@@ -1800,7 +1874,7 @@ public class SQLMap   implements Serializable {
      * @return
      */
     public static String exportDBData(String dbName) {
-        SQLMap sqlMap=new SQLMap(dbName);
+        SQLMap sqlMap=getMapByName(dbName);
         StringBuffer sqlList = new StringBuffer();
         for(String table:sqlMap.getDbStructure().getTables()){
             List<Map<String,Object>> list=sqlMap.getJdbcTemplate().queryForList("select * from "+table);
@@ -1830,14 +1904,16 @@ public class SQLMap   implements Serializable {
     }
 
 
-
+	public static void genEntities(String dbName,String packages,String userPath){
+		genEntities(dbName,packages,userPath,null);
+	}
 	/**
 	 * 自动产生实体
 	 * @param dbName
 	 * @param packages
 	 * @param userPath
 	 */
-	public static void genEntities(String dbName,String packages,String userPath){
+	public static void genEntities(String dbName,String packages,String userPath,String tmplPath){
 //		String dbName="jobmate";
 //		String packages="com.netcorner.test.model.entity";
 
@@ -1845,7 +1921,7 @@ public class SQLMap   implements Serializable {
 
 		String xmlpath=userPath+"/src/main/resources/mapper/"+dbName;
 
-		SQLMap sqlMap=new SQLMap(dbName);
+		SQLMap sqlMap=getMapByName(dbName);
 
 		for(String table:sqlMap.getDbStructure().getTables()){
 			List<Field> fields=sqlMap.getDbStructure().getFields().get(table);
@@ -1867,8 +1943,12 @@ public class SQLMap   implements Serializable {
 			hash.put("Table",table);
 			hash.put("TableComment",tableComment+"");
 			hash.put("Fields",fields);
-
-			String template= FileTools.getResFile("/template/Entity.tpl");
+			String template;
+			if(StringTools.isNullOrEmpty(tmplPath)) {
+				template = FileTools.getResFile("/template/Entity.tpl");
+			}else{
+				template = FileTools.getPathFile(tmplPath);
+			}
 
 
 
