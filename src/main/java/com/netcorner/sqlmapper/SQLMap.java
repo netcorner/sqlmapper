@@ -1968,7 +1968,7 @@ public class SQLMap   implements Serializable {
 			String tmp=FileTools.getResFile("/template/base.xml");
 			createFile(xmlpath+"/base.xml",tmp,false);
 			tmp=FileTools.getResFile("/template/table.xml");
-			createFile(xmlpath+"/"+table+".xml",tmp,false);
+			createFile(xmlpath+"/"+table+".xml",tmp,true);
 
 
 		}
