@@ -29,7 +29,7 @@ public class Test {
 
 
 
-		//testPageSetTotal
+		testPageSetTotal();
 		//testSql("jobmate");
 
 
