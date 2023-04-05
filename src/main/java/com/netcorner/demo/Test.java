@@ -26,7 +26,11 @@ public class Test {
 
 
 
-		testSql("jobmate");
+
+
+
+		//testPageSetTotal
+		//testSql("jobmate");
 
 
 		//TestComment();
@@ -75,6 +79,15 @@ public class Test {
 
 
     }
+	private static void testPageSetTotal(){
+		//设置total后会取消执行count(*)统计数量的语句
+		QueryPage qpage=new QueryPage();
+		qpage.setCurrent(2);
+		qpage.setSize(2);
+		qpage.setTotal(100);
+		SQLMap map=SQLMap.getMap("jobmate.b");
+		System.out.println(map.executeForList("simplepage1", qpage));
+	}
 
 	/**
 	 * 使用 sql 语句处理
