@@ -1022,7 +1022,11 @@ public class SQLMap   implements Serializable {
 
         if (StringTools.isNullOrEmpty(page.getCount()))
         {
-            context.put("return", qpage.getSize() > 0);
+			if(qpage.getTotal()>0) {
+				context.put("return", false);
+			}else {
+				context.put("return", qpage.getSize() > 0);
+			}
         }
         else
         {

@@ -182,7 +182,7 @@ public class QueryPage  {
 		return total;
 	}
 	/**
-	 * 设置记录数，数据处理后返回
+	 * 设置记录数，数据处理后返回,若传递过去固定值后，count(*)语句会不执行
 	 * @param total
 	 */
 	public void setTotal(int total) {
