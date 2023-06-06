@@ -30,6 +30,9 @@
 	<statement id="_list">
 		<select>
 			select*from $table where #Where()
+			#if($map.where.sql&amp;&amp;$map.where.sql!="")
+				and $map.where.sql
+			#end
 		</select>
 	</statement>
 	<statement id="_page">

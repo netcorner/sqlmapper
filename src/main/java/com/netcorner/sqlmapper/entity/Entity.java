@@ -385,6 +385,16 @@ public abstract class Entity<T>  implements Serializable {
         return list1;
     }
 
+    private String whereSql;
+
+
+    /**
+     * 设置条件
+     * @param whereSql
+     */
+    public void where(String whereSql){
+        this.whereSql=whereSql;
+    }
 
 
     public static Object map2Entity(Map<String,Object> obj,Class<?> clazz) {
@@ -392,7 +402,13 @@ public abstract class Entity<T>  implements Serializable {
     }
 
     public static Map<String,Object> entity2Map(Entity obj) {
-        return fromJson(toJson(obj).replaceAll("\\\\u0027","''"),Map.class);
+        Map map= fromJson(toJson(obj).replaceAll("\\\\u0027","''"),Map.class);
+        if(map.containsKey("whereSql")){
+            Map<String,Object> sql=new HashMap();
+            sql.put("sql",(map.get("whereSql")+"").replaceAll("''","'"));
+            map.put("where",sql);
+        }
+        return map;
     }
 
 

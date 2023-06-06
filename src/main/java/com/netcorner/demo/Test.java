@@ -1,6 +1,7 @@
 package com.netcorner.demo;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.netcorner.demo.entity.A;
 import com.netcorner.demo.entity.User;
 import com.netcorner.sqlmapper.*;
 import com.netcorner.sqlmapper.entity.Entity;
@@ -24,12 +25,19 @@ public class Test {
 
 
 
+		A a=new A();
+		a.where("a='1'");
+
+		a.get();
 
 
 
 
 
-		testPageSetTotal();
+
+
+
+		//testPageSetTotal();
 		//testSql("jobmate");
 
 
