@@ -407,6 +407,7 @@ public abstract class Entity<T>  implements Serializable {
             Map<String,Object> sql=new HashMap();
             sql.put("sql",(map.get("whereSql")+"").replaceAll("''","'"));
             map.put("where",sql);
+
         }
         return map;
     }
