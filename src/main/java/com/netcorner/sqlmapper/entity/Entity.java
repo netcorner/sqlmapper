@@ -402,6 +402,7 @@ public abstract class Entity<T>  implements Serializable {
     }
 
 
+
     public static Map<String,Object> entity2Map(Entity obj) {
         Map map= fromJson(toJson(obj).replaceAll("\\\\u0027","''"),Map.class);
         if(map.containsKey("whereSql")){
