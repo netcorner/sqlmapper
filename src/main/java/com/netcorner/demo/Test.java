@@ -23,15 +23,12 @@ public class Test {
 
 		DBTools.initDB(db,"jobmate");
 
+		testFilePath();
 
-
-		A a=new A();
-		a.where("a='1'");
-
-		a.get();
-
-
-
+//		A a=new A();
+//		a.where("a='1'");
+//
+//		a.get();
 
 
 
@@ -87,6 +84,10 @@ public class Test {
 
 
     }
+	private static void testFilePath(){
+		SQLMap sqlMap=SQLMap.getMapByFile("jobmate.a","/Users/shijiufeng/Documents/idea/sqlmapper/src/main/resources/mapper/jobmate/update.xml");
+		sqlMap.execute("utils",new HashMap<String, Object>());
+	}
 	private static void testPageSetTotal(){
 		//设置total后会取消执行count(*)统计数量的语句
 		QueryPage qpage=new QueryPage();

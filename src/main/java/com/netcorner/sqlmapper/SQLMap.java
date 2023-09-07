@@ -230,6 +230,25 @@ public class SQLMap   implements Serializable {
 		return map;
 	}
 
+
+	/**
+	 * 直接通过文件
+	 * @param key
+	 * @param path
+	 * @return
+	 */
+	public static SQLMap getMapByFile(String key,String path)
+	{
+		File file = new File(path);
+		if(file.exists()){
+			long time =file.lastModified();
+			SQLMap map=new SQLMap(key,path);
+			map.setFileTime(time);
+			return map;
+		}
+		return null;
+	}
+
 	/**
 	 * 得到sqlmap对象 的静态方法（文件存缓存）
 	 * @param key 映射路径如：datasource.sys_user

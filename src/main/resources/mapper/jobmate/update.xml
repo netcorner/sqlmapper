@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--DOCTYPE sqlMap SYSTEM "https://raw.githubusercontent.com/netcorner/sqlmapper/master/files/sqlMap.dtd"-->
+<sqlMap>
+
+
+	<statement id="utils">
+		<select id="status">
+
+
+select*from a
+
+		</select>
+
+	</statement>
+</sqlMap>
