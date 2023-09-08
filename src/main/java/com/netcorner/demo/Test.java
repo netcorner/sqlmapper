@@ -23,7 +23,11 @@ public class Test {
 
 		DBTools.initDB(db,"jobmate");
 
-		testFilePath();
+
+		testBatchSqlScript();
+
+
+		//testFilePath();
 
 //		A a=new A();
 //		a.where("a='1'");
@@ -84,6 +88,12 @@ public class Test {
 
 
     }
+
+	private static void testBatchSqlScript() {
+		SQLMap sqlMap=SQLMap.getMap("jobmate.a");
+		sqlMap.executeBySqlFile("/Users/shijiufeng/Documents/idea/sqlmapper/files/script.sql");
+	}
+
 	private static void testFilePath(){
 		SQLMap sqlMap=SQLMap.getMapByFile("jobmate.a","/Users/shijiufeng/Documents/idea/sqlmapper/src/main/resources/mapper/jobmate/update.xml");
 		sqlMap.execute("utils",new HashMap<String, Object>());

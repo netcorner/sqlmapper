@@ -497,6 +497,41 @@ public class SQLMap   implements Serializable {
     	return executeForList(statementid,qpage);
     }
 
+
+	/**
+	 * 执行sql脚本
+	 * @param filePath
+	 * @return
+	 */
+	public boolean executeBySqlFile(String filePath){
+		BufferedReader reader = null;
+		try {
+			reader = new BufferedReader(new FileReader(filePath));
+		} catch (FileNotFoundException e) {
+			logger.error(e.toString());
+			return false;
+		}
+		String line;
+		StringBuilder sql = new StringBuilder();
+		JdbcTemplate jdbc=this.getJdbcTemplate();
+		try {
+			while ((line = reader.readLine()) != null) {
+				sql.append(line);
+				// 如果一行以分号结尾，表示一个完整的SQL语句，执行它
+				if (line.trim().endsWith(";")) {
+					String sqlStatement = sql.toString();
+					jdbc.execute(sqlStatement);
+					sql.setLength(0); // 清空StringBuilder，准备下一个语句
+				}
+			}
+		}catch (Exception e){
+			logger.error(e.toString());
+			return false;
+		}
+		return true;
+	}
+
+
 	/**
      * 带有分页的操作
      */
@@ -581,6 +616,7 @@ public class SQLMap   implements Serializable {
 	public void execute(String sql){
 		JdbcTemplate jdbc=getJdbcTemplate();
 		jdbc.execute(sql);
+
 	}
 
 

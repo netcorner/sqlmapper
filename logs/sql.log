@@ -1,32 +1,6 @@
-[ERROR] 2023-06-06 14:29:04,566  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - 配置文件'Users/shijiufeng/Documents/idea/sqlmapper/target/classes/mapper/datasource/a.xml'或资源文件mapper/datasource/a.xml不存在！
-[ERROR] 2023-06-06 14:29:04,569  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - 配置文件'Users/shijiufeng/Documents/idea/sqlmapper/target/classes/mapper/datasource/a.xml'或资源文件mapper/datasource/a.xml不存在！
-[ERROR] 2023-06-06 14:45:28,033  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a._list,错误为：StatementCallback; bad SQL grammar [
-
-
-			
-
-			a=''1''
-			select*from a where 1=1
-
-		]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a=''1''
-			select*from a where 1=1' at line 1
-[ERROR] 2023-06-06 14:46:13,077  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a._list,错误为：StatementCallback; bad SQL grammar [
-
-
-			
-
-
-			select*from a where 1=1
-
-				a=''1''
-		]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a=''1''' at line 3
-[ERROR] 2023-06-06 14:46:24,811  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a._list,错误为：StatementCallback; bad SQL grammar [
-
-
-			
-
-
-			select*from a where 1=1
-
-				and a=''1''
-		]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1''' at line 3
+[ERROR] 2023-09-08 08:23:27,989  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a.jobmate.a不存在
+[ERROR] 2023-09-08 08:29:46,076  logback [main]  com.netcorner.sqlmapper.SQLMap [SQLMap.java : 521] - sql连接失败===>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select*from b' at line 2
+[ERROR] 2023-09-08 08:30:18,610  logback [main]  com.netcorner.sqlmapper.SQLMap [DALException.java : 34] - dal配置文件有误:jobmate.a.jobmate.a不存在
+[ERROR] 2023-09-08 08:34:53,818  logback [main]  com.netcorner.sqlmapper.SQLMap [SQLMap.java : 511] - java.io.FileNotFoundException: /Users/shijiufeng/Documents/idea/sqlmapper/files/scrip1t.sql (No such file or directory)
+[ERROR] 2023-09-08 08:34:53,823  logback [main]  com.netcorner.sqlmapper.SQLMap [SQLMap.java : 527] - java.lang.NullPointerException
+[ERROR] 2023-09-08 08:35:30,100  logback [main]  com.netcorner.sqlmapper.SQLMap [SQLMap.java : 511] - java.io.FileNotFoundException: /Users/shijiufeng/Documents/idea/sqlmapper/files/scrip1t.sql (No such file or directory)
