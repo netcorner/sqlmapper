@@ -233,16 +233,16 @@ public class SQLMap   implements Serializable {
 
 	/**
 	 * 直接通过文件
-	 * @param key
+	 * @param dbname
 	 * @param path
 	 * @return
 	 */
-	public static SQLMap getMapByFile(String key,String path)
+	public static SQLMap getMapByFile(String dbname,String path)
 	{
 		File file = new File(path);
 		if(file.exists()){
 			long time =file.lastModified();
-			SQLMap map=new SQLMap(key,path);
+			SQLMap map=SQLMap.getMapByName(dbname);
 			map.setFileTime(time);
 			return map;
 		}
