@@ -21,6 +21,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.*;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
+import org.springframework.util.ResourceUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -257,6 +258,7 @@ public class SQLMap   implements Serializable {
 	public static SQLMap getMap(String key)
     {
         String path = getPath(getConfigPath(),key);
+
         CacheManager manager = CacheManager.create(); 
         Cache cache = manager.getCache(DBCache);
 
@@ -270,9 +272,15 @@ public class SQLMap   implements Serializable {
 
         SQLMap map= (SQLMap)(element == null ? null : element.getObjectValue());
 
-        
-    	File file = new File(path); 
-    	if(file.exists()){
+
+		File file = null;//new File(path);
+		try {
+			file = ResourceUtils.getFile(path);
+		} catch (FileNotFoundException e) {
+			logger.error("找不到文件"+path);
+		}
+
+		if(file.exists()){
 	    	long time =file.lastModified();
 	        if(map==null){
 	        	map=new SQLMap(key,path);
@@ -336,7 +344,7 @@ public class SQLMap   implements Serializable {
     	if(rootPath==null){
 			rootPath=SpringTools.getEnvironmentValue("spring.sqlmapper.location");
 			if(rootPath==null){
-				rootPath=getAppPath();
+				rootPath="/resources/";//getAppPath();
 			}
     		/*
             if(isWebApp()){
@@ -1256,16 +1264,23 @@ public class SQLMap   implements Serializable {
     private void mergeXML(Document doc,Element root){
         String merge=getAttributesValue(root,"merge");
         if(!StringTools.isNullOrEmpty(merge)){
-
         	Element root1=getXMLDoc(getPath(getConfigPath(),merge)).getDocumentElement();
     		NodeList children=root1.getChildNodes();
+
+
     		for (int j=0;j<children.getLength();j++){
     			Node tmp=children.item(j);
+
+				logger.error("hhh====>"+tmp.getTextContent());
+
     			if(!tmp.getNodeName().equals("#text")&&!tmp.getNodeName().equals("#comment")){
     				Element child=(Element)tmp;
     				String tag=child.getTagName();
         			if(tag.equals("statement")){
         				String id1=this.getAttributesValue(child, "id");
+
+
+
         				NodeList children1=root.getElementsByTagName("statement");
         				if(children1!=null){
         					boolean flag=true;
@@ -1303,8 +1318,8 @@ public class SQLMap   implements Serializable {
         Document doc=null; 
         try{
 	        DocumentBuilder builder=factory.newDocumentBuilder();
-        	File file=new File(path);
-        	if(file.exists()){
+        	File file=ResourceUtils.getFile(path);//new File(path);
+			if(file.exists()){
 	        	//实际文件
 	        	doc=builder.parse(file); 
         	}else{

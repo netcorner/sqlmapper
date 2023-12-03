@@ -24,15 +24,14 @@ public class Test {
 		DBTools.initDB(db,"jobmate");
 
 
-		testBatchSqlScript();
+		//testBatchSqlScript();
 
 
 		//testFilePath();
 
-//		A a=new A();
-//		a.where("a='1'");
-//
-//		a.get();
+		A a=new A();
+		a.where("a='1'");
+		a.get();
 
 
 
