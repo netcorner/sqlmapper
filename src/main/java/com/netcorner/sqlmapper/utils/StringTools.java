@@ -118,7 +118,7 @@ public  class StringTools {
         }
         else
         {
-            return String.format("%.2f bytes", filesize);
+            return String.format("%d bytes", filesize);
         }
     }
 	/**
